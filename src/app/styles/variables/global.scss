@@ -11,4 +11,7 @@
   --font-line-l: 24px;//размер линии обычно на 8px больше самого шрифта
   //Объединяющая переменная
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+  //Размеры
+  --navbar-height: 50px;
 }
