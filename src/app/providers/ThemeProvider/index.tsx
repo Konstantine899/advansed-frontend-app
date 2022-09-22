@@ -1,5 +1,6 @@
-//src/app/providers/ThemeProvider/index.ts
-import ThemeProvider from "./ui/ThemeProvider";
-import { useTheme } from "./lib/useTheme";
-import { Theme } from "./lib/ThemeContext";
+// src/app/providers/ThemeProvider/index.ts
+import ThemeProvider from './ui/ThemeProvider';
+import { useTheme } from './lib/useTheme';
+import { Theme } from './lib/ThemeContext';
+
 export { ThemeProvider, useTheme, Theme };

@@ -1,5 +1,5 @@
-//build/types/config.ts
-export type BuildMode = "production" | "development";
+// build/types/config.ts
+export type BuildMode = 'production' | 'development';
 
 export type BuildPath = {
   entry: string;
