@@ -1,24 +1,24 @@
-//src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss
-.Sidebar{
-  height: calc(100vh - var(--navbar-height)); //от всей высоты браузера отнимаю высоту navbar
-  width: var(--sidebar-width);
-  background: var(--inverted-bg-color);
-  position: relative; //Для того что бы кнопку поставить на правильное место
-  transition: 0.5s; //длительность анимации
+/* src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss */
+.Sidebar {
+    height: calc(100vh - var(--navbar-height)); /* от всей высоты браузера отнимаю высоту navbar */
+    width: var(--sidebar-width);
+    background: var(--inverted-bg-color);
+    position: relative; /* Для того что бы кнопку поставить на правильное место */
+    transition: 0.5s; /* длительность анимации */
 }
 
-.collapsed{
-  width: var(--sidebar-width-collapsed);
+.collapsed {
+    width: var(--sidebar-width-collapsed);
 }
 
-.switchers{
-  position: absolute; // для этого мы делали для Sidebar  position: relative
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.switchers {
+    position: absolute; /* для этого мы делали для Sidebar  position: relative */
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.lang{
-  margin-left: 20px;
+.lang {
+    margin-left: 20px;
 }

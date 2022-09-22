@@ -1,17 +1,17 @@
-//src/widgets/Navbar/ui/Navbar.module.scss
+/* src/widgets/Navbar/ui/Navbar.module.scss */
 .Navbar {
-  width: 100%;
-  height: var(--navbar-height);
-  background: var(--inverted-bg-color);
-  display: flex;
-  align-items: center;
-  padding: 20px;
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
-.link{
-  margin-left: auto;
+.link {
+    margin-left: auto;
 }
 
-.mainLink{
-  margin-right: 15px;
+.mainLink {
+    margin-right: 15px;
 }
