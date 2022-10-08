@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from "path";
+
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -28,11 +30,23 @@ export default {
   // Массив имен каталогов для рекурсивного поиска вверх от местоположения требуемого модуля.
   moduleDirectories: ["node_modules"],
 
+  // Настройка для работы с абсолютными путями. rootDir - это корень проекта. А src - это путь до директории, где лежат тесты.
+  modulePaths: ["<rootDir>", "src"],
+
   // Паттерны которые Jest использует для обнаружения тестовых файлов
   testMatch: [
     // Для одинаковой работы на MackOS и windows
     "<rootDir>src/**/*(*.)+(spec|test).[tj]s?(x)",
   ],
+  // In jest.config.js add (if you haven't already)
+  setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
+  // Обработка модулей module.scss
+  moduleNameMapper: {
+    // обработка css и scss
+    "\\.(s?css)$": "identity-obj-proxy",
+    // mapper для svg
+    "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+  },
   // Корневой каталог, в котором Jest должен сканировать тесты и модули.
   rootDir: "../../",
 

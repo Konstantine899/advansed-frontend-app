@@ -35,10 +35,23 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
-    "max-len": ["error", { ignoreComments: true }],
-    "i18next/no-literal-string": ["error", { markupOnly: true }],
+    "max-len": ["error", { ignoreComments: true, code: 150 }],
+    "i18next/no-literal-string": [
+      "error",
+      { markupOnly: true, ignoreProperty: ["data-testid"] },
+    ],
   },
   globals: {
     __IS_DEV__: true,
   },
+  /* overrides переопределяю правила */
+  overrides: [
+    {
+      files: ["**/src/**/*.test.{ts.tsx}"] /* ищу тестовые файлы */,
+      rules: {
+        "i18next/no-literal-string":
+          "off" /* отключаю правило переводов для тестовых файлов */,
+      },
+    },
+  ],
 };
