@@ -38,7 +38,7 @@ module.exports = {
     "max-len": ["error", { ignoreComments: true, code: 150 }],
     "i18next/no-literal-string": [
       "error",
-      { markupOnly: true, ignoreProperty: ["data-testid"] },
+      { markupOnly: true, ignoreAttribute: ["data-testid", "to"] },
     ],
   },
   globals: {
