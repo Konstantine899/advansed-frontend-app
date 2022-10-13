@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "i18next"],
   rules: {
+    "object-curly-newline": "warn",
     "react/jsx-indent": "off",
     "react/jsx-indent-props": "off",
     indent: "off",
