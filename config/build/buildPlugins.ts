@@ -9,7 +9,7 @@ export function buildPlugins({
   paths,
   isDev,
 }: BuildOptions): webpack.ProgressPlugin[] {
-  return [
+  const plugins = [
     new webpack.ProgressPlugin(),
     new HTMLWebpackPlugin({
       template: paths.html,
@@ -21,7 +21,13 @@ export function buildPlugins({
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({ openAnalyzer: false }),
   ];
+
+  // если isDev = true то мы добавляем плагины которые нужны только для development
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+  }
+
+  return plugins;
 }
