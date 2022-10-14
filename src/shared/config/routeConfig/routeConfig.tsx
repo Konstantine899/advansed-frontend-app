@@ -12,7 +12,7 @@ export enum AppRoutes {
 }
 
 // путь до соответствующего компонента
-export const routePath: Record<AppRoutes, string> = {
+export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
   [AppRoutes.ABOUT]: "/about",
   // Последний
@@ -22,15 +22,15 @@ export const routePath: Record<AppRoutes, string> = {
 // Объявление роутов
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN]: {
-    path: routePath.main,
+    path: RoutePath.main,
     element: <MainPage />,
   },
   [AppRoutes.ABOUT]: {
-    path: routePath.about,
+    path: RoutePath.about,
     element: <AboutPage />,
   },
   [AppRoutes.NOT_FOUND]: {
-    path: routePath.not_found,
+    path: RoutePath.not_found,
     element: <NotFoundPage />,
   },
 };
