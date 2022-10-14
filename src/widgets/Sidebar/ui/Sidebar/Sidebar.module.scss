@@ -7,10 +7,6 @@
     transition: 0.5s; /* длительность анимации */
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-}
-
 .switchers {
     position: absolute; /* для этого мы делали для Sidebar  position: relative */
     bottom: 20px;
@@ -21,4 +17,55 @@
 
 .lang {
     margin-left: 20px;
+}
+
+.collapseBtn {
+    position: absolute; // что бы с позиционировать в нужное место
+    right: -30px;
+    bottom: 30px;
+}
+
+// Стили для Sidebar items
+.items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+// Стили для svg иконок
+
+.item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.link {
+    margin-left: 10px;
+}
+
+.icon {
+    fill: var(--inverted-primary-color);
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    // Переопределяю стили для переключателей
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lang {
+        margin-left: 0;
+    }
+
+    // Переопределяю стили для ссылок
+    .link {
+        opacity: 0; // прозрачные
+        transition: 0.3s opacity; // анимация на прозрачность
+        width: 0;
+    }
 }
