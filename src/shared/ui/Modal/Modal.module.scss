@@ -1,0 +1,55 @@
+// shared/ui/Modal/Modal.module.scss
+.Modal {
+    position: fixed;
+
+    /* top, bottom, right, left растягиваю на всю ширину и высоту экрана */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0; // Когда isOpen = false
+    pointer-events: none; // полностью игнорируем любые события
+    z-index: -1;
+    color: var(--primary-color); // это только для примера ни в коем случае так не делай
+}
+
+.Modal.dark {
+    --bg-color: #090949; // это только для примера ни в коем случае так не делай
+    --primary-color: #04ff04; // это только для примера ни в коем случае так не делай
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    transition: 0.3s transform; // Вешаю анимацию на transform
+    transform: scale(0.5); // делаю контент часть в два раза меньше обычного
+    max-width: 60%;
+}
+
+// Когда isOpen = true навешивается класс opened
+.opened {
+    opacity: 1; // Снимаю прозрачность
+    pointer-events: auto; // Можно использовать любые события
+    z-index: var(--modal-z-index); // по хорошему вынести в переменную
+}
+
+.contentOpened {
+    transform: scale(1); // делаю размер контента обычным
+}
+
+// Стили при закрытии Modal
+.isCosing {
+    .content {
+        transform: scale(0.2); // размер до которого уменьшается контентная часть
+    }
+}
