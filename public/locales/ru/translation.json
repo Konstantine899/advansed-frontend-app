@@ -10,5 +10,7 @@
   "Главная Страница": "Главная Страница",
   "О Сайте": "О Сайте",
   "Короткий язык": "Ru",
-  "Lorem": "Lorem"
+  "Lorem": "Lorem",
+  "increment": "increment",
+  "decrement": "decrement"
 }

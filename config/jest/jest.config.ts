@@ -15,6 +15,11 @@ export default {
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\Konstantine899\\AppData\\Local\\Temp\\jest",
 
+  // Набор глобальных переменных, которые должны быть доступны во всех тестовых средах.
+  globals: {
+    __IS_DEV__: true
+  },
+
   // Автоматически очищайте фиктивные вызовы, экземпляры и результаты перед каждым тестом
   clearMocks: true,
 
@@ -89,9 +94,6 @@ export default {
 
   // A path to a module which exports an async function that is triggered once after all test suites
   // globalTeardown: undefined,
-
-  // A set of global variables that need to be available in all test environments
-  // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",

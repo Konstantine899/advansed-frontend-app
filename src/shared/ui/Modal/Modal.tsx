@@ -21,7 +21,9 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-  const { className, children, isOpen, onClose } = props;
+  const {
+ className, children, isOpen, onClose
+} = props;
 
   const { theme } = useTheme(); // тема модального окна
   const [isCosing, setIsClosing] = useState(false); // состояние закрытия модального окна
