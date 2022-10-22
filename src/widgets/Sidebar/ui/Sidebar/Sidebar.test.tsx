@@ -6,17 +6,17 @@ import { ComponentRender } from "shared/lib/tests/ComponentRender/ComponentRende
 import { Sidebar } from "./Sidebar";
 
 describe("Sidebar", () => {
-  test("", () => {
-    const SidebarWithTranslation = withTranslation()(Sidebar);
-    ComponentRender(<SidebarWithTranslation />);
-    expect(screen.getByTestId("sidebar")).toBeInTheDocument();
-  });
+    test("", () => {
+        const SidebarWithTranslation = withTranslation()(Sidebar);
+        ComponentRender(<SidebarWithTranslation />);
+        expect(screen.getByTestId("sidebar")).toBeInTheDocument();
+    });
 
-  test("test toggle", () => {
-    ComponentRender(<Sidebar />);
-    const toggleBtn = screen.getByTestId("sidebar-toggle");
-    expect(screen.getByTestId("sidebar")).toBeInTheDocument();
-    fireEvent.click(toggleBtn);
-    expect(screen.getByTestId("sidebar")).toHaveClass("collapsed");
-  });
+       test("test toggle", () => {
+        ComponentRender(<Sidebar />);
+        const toggleBtn = screen.getByTestId("sidebar-toggle");
+        expect(screen.getByTestId("sidebar")).toBeInTheDocument();
+        fireEvent.click(toggleBtn);
+        expect(screen.getByTestId("sidebar")).toHaveClass("collapsed");
+    });
 });
