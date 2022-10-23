@@ -25,9 +25,9 @@ export const Modal = (props: ModalProps) => {
  className, children, isOpen, onClose
 } = props;
 
-  const { theme } = useTheme(); // тема модального окна
   const [isCosing, setIsClosing] = useState(false); // состояние закрытия модального окна
   const timerRef = useRef<ReturnType<typeof setTimeout>>(); // инициализирую
+  const { theme } = useTheme(); // тема модального окна
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -68,7 +68,6 @@ export const Modal = (props: ModalProps) => {
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
     [cls.isCosing]: isCosing,
-    [cls[theme]]: true, // В зависимости от того какая тема true такую и добавляю в каскадную таблицу стилей
   };
 
   const modsChildren: Record<string, boolean> = {
