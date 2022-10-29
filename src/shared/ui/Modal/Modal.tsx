@@ -16,18 +16,27 @@ interface ModalProps {
   children?: ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
+  lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
   const {
- className, children, isOpen, onClose
+ className, children, isOpen, onClose, lazy
 } = props;
 
-  const [isCosing, setIsClosing] = useState(false); // состояние закрытия модального окна
+  const [isCosing, setIsClosing] = useState(false); // состояние закрытия модального окн
+  const [isMounted, setIsMounted] = useState(false); // состояние вмонтирования элемента в DOM
   const timerRef = useRef<ReturnType<typeof setTimeout>>(); // инициализирую
   const { theme } = useTheme(); // тема модального окна
+
+  // useEffect отвечающий за вмонтирование элемента в DOM
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+  }, [isOpen]);
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -73,6 +82,11 @@ export const Modal = (props: ModalProps) => {
   const modsChildren: Record<string, boolean> = {
     [cls.contentOpened]: isOpen,
   };
+
+  // Если в props мы передали lazy и isMounted false, то модальное окно мы не монтируем в DOM
+  if (lazy && !isMounted) {
+    return null;
+  }
 
   return (
     <Portal>
