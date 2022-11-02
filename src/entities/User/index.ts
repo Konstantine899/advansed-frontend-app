@@ -1,7 +1,4 @@
 // entities/User/index.ts
-import { userReducer, userActions } from "./model/slice/userSlice";
-import { UserSchema, User } from "./model/types/user";
-
-export {
- userReducer, userActions, UserSchema, User
-};
+export { userReducer, userActions } from "./model/slice/userSlice";
+export { UserSchema, User } from "./model/types/user";
+export { getUserAuthData } from "./model/selectors/getUserAuthData/getUserAuthData";

@@ -68,3 +68,8 @@
 .size_xl {
     font: var(--font-xl);
 }
+
+// стили для отключенной кнопки
+.disabled {
+    opacity: 0.5;
+}
