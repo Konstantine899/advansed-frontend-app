@@ -1,5 +1,5 @@
 // src/widget/Navbar/ui/Navbar.tsx
-import React, { useCallback, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
@@ -12,7 +12,7 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = memo((props: NavbarProps) => {
     const { className } = props;
     const { t } = useTranslation();
     const dispatch = useDispatch();
@@ -44,7 +44,6 @@ export const Navbar = (props: NavbarProps) => {
                 >
                     {t("ВЫЙТИ")}
                 </Button>
-                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
             </div>
         );
     }
@@ -61,4 +60,4 @@ export const Navbar = (props: NavbarProps) => {
             {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
         </div>
     );
-};
+});

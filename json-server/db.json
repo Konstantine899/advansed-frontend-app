@@ -21,6 +21,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstname": "Константин",
+    "lastname": "Атрощенко",
+    "age": 33,
+    "currency": "BY",
+    "country": "Belarus",
+    "city": "Vitebsk",
+    "username": "admin",
+    "avatar": "https://lh3.googleusercontent.com/a/ALm5wu2H6i4ToUydkIesZvSSPDSq5I_1wuNFdrzBJisYvg=s360-p-rw-no"
   }
 }

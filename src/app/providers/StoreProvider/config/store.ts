@@ -14,7 +14,7 @@ export function createReduxStore(
   asyncReducers?: ReducersMapObject<StateSchema>
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
-      ...asyncReducers,
+    ...asyncReducers,
     counter: counterReducer,
     user: userReducer,
   };
@@ -32,3 +32,5 @@ export function createReduxStore(
 
   return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"]; // Типизирую dispatch

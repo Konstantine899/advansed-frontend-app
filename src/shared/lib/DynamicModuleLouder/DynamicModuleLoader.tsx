@@ -14,30 +14,30 @@ export type ReducersList = {
 };
 
 // Типизирую кортеж
-type ReducerListEntry = [StateSchemaKey, Reducer]
+type ReducersListEntry = [StateSchemaKey, Reducer]
 
 interface DynamicModuleLouderProps {
   reducers: ReducersList;
   removeAfterUnmount?: boolean;
 }
 
-export const DynamicModuleLouder: FC<DynamicModuleLouderProps> = (props) => {
+export const DynamicModuleLoader: FC<DynamicModuleLouderProps> = (props) => {
   const { children, reducers, removeAfterUnmount } = props;
 
   const store = useStore() as ReduxStoreWithManager;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    Object.entries(reducers).forEach(([name, reducer]:ReducerListEntry) => {
+    Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
       store.reducerManager.add(name, reducer);
-      dispatch({ type: `UNIT ${name} reducer` });
+      dispatch({ type: `@INIT ${name} reducer` });
     });
 
     return () => {
       if (removeAfterUnmount) {
-        Object.entries(reducers).forEach(([name, reducer]:ReducerListEntry) => {
+        Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
           store.reducerManager.remove(name);
-          dispatch({ type: `DESTROY ${name} reducer` });
+          dispatch({ type: `@DESTROY ${name} reducer` });
         });
       }
     };

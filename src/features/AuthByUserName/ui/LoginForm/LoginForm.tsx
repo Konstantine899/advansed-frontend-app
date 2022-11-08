@@ -3,10 +3,14 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { Input } from "shared/ui/Input/Input";
-import { useDispatch, useSelector, useStore } from "react-redux";
-import { memo, useCallback, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { memo, useCallback } from "react";
 import { Text, TextTheme } from "shared/ui/Text/Text";
-import { DynamicModuleLouder, ReducersList } from "shared/lib/DynamicModuleLouder/DynamicModuleLouder";
+import {
+  DynamicModuleLoader,
+  ReducersList,
+} from "shared/lib/DynamicModuleLouder/DynamicModuleLoader";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { loginByUserName } from "../../model/services/loginByUserName/loginByUserName";
 import { loginActions, loginReducer } from "../../model/slice/loginSlice";
 import { getLoginUsername } from "../../model/selectors/getLoginUsername/getLoginUsername";
@@ -17,6 +21,7 @@ import cls from "./LoginForm.module.scss";
 
 export interface LoginFormProps {
   className?: string;
+  onSuccess: ()=> void
 }
 
 // Выношу инициализацию reducers для того что бы при каждом перерендере компонента не создавалась новая ссылка
@@ -25,10 +30,10 @@ const initialReducers: ReducersList = {
 };
 
 const LoginForm = memo((props: LoginFormProps) => {
-  const { className } = props;
+  const { className, onSuccess } = props;
 
   const { t } = useTranslation();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const username = useSelector(getLoginUsername);
   const password = useSelector(getLoginPassword);
   const isLoading = useSelector(getLoginIsLoading);
@@ -49,13 +54,17 @@ const LoginForm = memo((props: LoginFormProps) => {
   );
 
   // Функция обработчик нажатия кнопки
-  const onLoginClick = useCallback(() => {
-    dispatch(loginByUserName({ username, password }));
-  }, [dispatch, password, username]);
+  const onLoginClick = useCallback(async () => {
+  const result = await dispatch(loginByUserName({ username, password }));
+  // Если авторизация пользователя прошла успешно
+      if (result.meta.requestStatus === 'fulfilled') {
+          onSuccess();
+      }
+  }, [dispatch, onSuccess, password, username]);
 
   return (
 
-    <DynamicModuleLouder removeAfterUnmount reducers={initialReducers}>
+    <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Text title={t("Форма авторизации")} />
             {error && (
@@ -88,7 +97,7 @@ const LoginForm = memo((props: LoginFormProps) => {
                 {t("Войти")}
             </Button>
         </div>
-    </DynamicModuleLouder>
+    </DynamicModuleLoader>
   );
 });
 
