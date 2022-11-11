@@ -1,12 +1,13 @@
 // shared/ui/Modal/Modal.tsx
 import React, {
+  MutableRefObject,
   ReactNode,
   useCallback,
   useEffect,
   useRef,
   useState,
 } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames, Mods } from "shared/lib/classNames/classNames";
 import { Portal } from "shared/ui/Portal/Portal";
 import { useTheme } from "app/providers/ThemeProvider";
 import cls from "./Modal.module.scss";
@@ -28,7 +29,7 @@ export const Modal = (props: ModalProps) => {
 
   const [isCosing, setIsClosing] = useState(false); // состояние закрытия модального окн
   const [isMounted, setIsMounted] = useState(false); // состояние вмонтирования элемента в DOM
-  const timerRef = useRef<ReturnType<typeof setTimeout>>(); // инициализирую
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>; // инициализирую
   const { theme } = useTheme(); // тема модального окна
 
   // useEffect отвечающий за вмонтирование элемента в DOM
@@ -74,12 +75,12 @@ export const Modal = (props: ModalProps) => {
     };
   }, [isOpen, onKeyDown]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.isCosing]: isCosing,
   };
 
-  const modsChildren: Record<string, boolean> = {
+  const modsChildren: Mods = {
     [cls.contentOpened]: isOpen,
   };
 

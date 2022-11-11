@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
   rules: {
+    "no-undef": "off",
     "no-param-reassign": "off",
     "implicit-arrow-linebreak": "warn",
     "jsx-a11y/click-events-have-key-events": "off",

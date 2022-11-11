@@ -6,15 +6,15 @@ import { StateSchemaKey } from "app/providers/StoreProvider/config/StateSchema";
 import { Reducer } from "@reduxjs/toolkit";
 
 /* типизирую props reducers
-* props - всегда объект
-* Так вот ключом будет name типа StateSchemaKey - где у нас описаны соответствующие ключи
-* А значением будет сам Reducer  */
+ * props - всегда объект
+ * Так вот ключом будет name типа StateSchemaKey - где у нас описаны соответствующие ключи
+ * А значением будет сам Reducer  */
 export type ReducersList = {
   [name in StateSchemaKey]?: Reducer;
 };
 
 // Типизирую кортеж
-type ReducersListEntry = [StateSchemaKey, Reducer]
+type ReducersListEntry = [StateSchemaKey, Reducer];
 
 interface DynamicModuleLouderProps {
   reducers: ReducersList;
@@ -28,15 +28,15 @@ export const DynamicModuleLoader: FC<DynamicModuleLouderProps> = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
-      store.reducerManager.add(name, reducer);
+    Object.entries(reducers).forEach(([name, reducer]) => {
+      store.reducerManager.add(name as StateSchemaKey, reducer);
       dispatch({ type: `@INIT ${name} reducer` });
     });
 
     return () => {
       if (removeAfterUnmount) {
-        Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
-          store.reducerManager.remove(name);
+        Object.entries(reducers).forEach(([name, reducer]) => {
+          store.reducerManager.remove(name as StateSchemaKey);
           dispatch({ type: `@DESTROY ${name} reducer` });
         });
       }

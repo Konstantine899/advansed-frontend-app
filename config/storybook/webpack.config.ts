@@ -11,9 +11,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
     entry: "", // не интересующие нас поля
     src: path.resolve(__dirname, "..", "..", "src"),
   };
-  config.resolve.modules.push(paths.src); // прокидываем путь до папки с исходным кодом
-  config.resolve.extensions.push("ts", "tsx"); // указываю расширения скриншотный файлов для файлов stories
-  config.module.rules.push(buildCssLoader(true)); // добавляю loader в правила. true будет использоваться только для development
+  config.resolve!.modules!.push(paths.src); // прокидываем путь до папки с исходным кодом
+  config.resolve!.extensions!.push("ts", "tsx"); // указываю расширения скриншотный файлов для файлов stories
+  config.module!.rules!.push(buildCssLoader(true)); // добавляю loader в правила. true будет использоваться только для development
 
   /* Правила для обработки svg */
   /* rules содержится массив loader-ов. Пробегаюсь по каждому loader и его полю test.
@@ -21,7 +21,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
    * Если true, данное правило найдено, и я его исключаю, выключаю.
    * Делаю это с помощью поля exclude и передачей в него выражения. В котором описываю то что хочу выключить, исключить */
   // eslint-disable-next-line no-param-reassign
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+  // @ts-ignore
+  config.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/i };
     }
@@ -29,15 +30,17 @@ export default ({ config }: { config: webpack.Configuration }) => {
   });
 
   // Добавляю правило для обработки svg
-  config.module.rules.push({
+  config.module!.rules.push({
     test: /\.svg$/,
     use: ["@svgr/webpack"],
   });
 
-  config.plugins.push(new DefinePlugin({
-    __IS_DEV__: JSON.stringify(true),
-    __API__: JSON.stringify(''),
-  }),);
+  config.plugins!.push(
+    new DefinePlugin({
+      __IS_DEV__: JSON.stringify(true),
+      __API__: JSON.stringify(""),
+    })
+  );
 
   return config;
 };

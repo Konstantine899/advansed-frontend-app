@@ -1,5 +1,4 @@
 // features/AuthByUserName/model/selectors/getLoginError/getLoginError.test.ts
-import { DeepPartial } from "@reduxjs/toolkit";
 import { StateSchema } from "app/providers/StoreProvider";
 import { getLoginError } from "./getLoginError";
 
@@ -11,7 +10,7 @@ describe("getLoginError.test", () => {
         error: "error",
       },
     };
-    expect(getLoginError(state as StateSchema)).toEqual('error');
+    expect(getLoginError(state as StateSchema)).toEqual("error");
   });
 
   test("should work with empty state", () => {

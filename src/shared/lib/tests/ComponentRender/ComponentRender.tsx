@@ -8,7 +8,7 @@ import i18nForTests from "../../../config/i18n/i18nForTests";
 
 export interface ComponentRenderOptions {
   route?: string;
-  initialState?: DeepPartial<StateSchema>
+  initialState?: DeepPartial<StateSchema>;
 }
 
 export function ComponentRender(
@@ -17,10 +17,10 @@ export function ComponentRender(
 ) {
   const { route = "/", initialState } = options;
   return render(
-    <StoreProvider initialState={initialState}>
-      <MemoryRouter initialEntries={[route]}>
+    <MemoryRouter initialEntries={[route]}>
+      <StoreProvider initialState={initialState}>
         <I18nextProvider i18n={i18nForTests}>{component}</I18nextProvider>
-      </MemoryRouter>
-    </StoreProvider>
+      </StoreProvider>
+    </MemoryRouter>
   );
 }

@@ -42,7 +42,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 // Типизация extra аргумента
 export interface ThunkExtraArg {
   api: AxiosInstance;
-  navigate: (to: To, options?: NavigateOptions) => void; // делаю это поле обязательным
+  navigate?: (to: To, options?: NavigateOptions) => void; // делаю это поле обязательным
 }
 
 // interface для третьего аргумента, generic-ка async thunk
