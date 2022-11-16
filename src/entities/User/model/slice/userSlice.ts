@@ -1,4 +1,4 @@
-// entities/model/slice/userSlice.ts
+// entities/model/slice/profileSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localstorage";
 import { User, UserSchema } from "../types/user";
@@ -21,7 +21,7 @@ export const userSlice = createSlice({
     logout: (state) => {
       state.authData = undefined;
       localStorage.removeItem(USER_LOCALSTORAGE_KEY);
-    }
+    },
   },
 });
 

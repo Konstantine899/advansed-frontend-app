@@ -1,6 +1,6 @@
 // src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx
 import { classNames } from "shared/lib/classNames/classNames";
-import React, { memo, useState } from "react";
+import React, { memo, useMemo, useState } from "react";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/ui/LangSwitcher";
 import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
@@ -19,33 +19,37 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     setCollapsed((prev) => !prev);
   };
 
+  const itemList = useMemo(
+    () =>
+      SidebarItemsList.map((item) => (
+        <SidebarItem key={item.path} item={item} collapsed={collapsed} />
+      )),
+    [collapsed]
+  );
+
   return (
-      <div
-          data-testid="sidebar"
-          className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-            className,
-          ])}
+    <div
+      data-testid="sidebar"
+      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+        className,
+      ])}
+    >
+      <Button
+        data-testid="sidebar-toggle"
+        type="button"
+        onClick={onToggle}
+        className={cls.collapseBtn}
+        theme={ButtonTheme.BACKGROUND_INVERTED}
+        size={ButtonSize.XL}
+        square
       >
-        <Button
-            data-testid="sidebar-toggle"
-            type="button"
-            onClick={onToggle}
-            className={cls.collapseBtn}
-            theme={ButtonTheme.BACKGROUND_INVERTED}
-            size={ButtonSize.XL}
-            square
-        >
-          {collapsed ? ">" : "<"}
-        </Button>
-        <div className={cls.items}>
-          {SidebarItemsList.map((item) => (
-              <SidebarItem key={item.path} item={item} collapsed={collapsed} />
-          ))}
-        </div>
-        <div className={cls.switchers}>
-          <ThemeSwitcher />
-          <LangSwitcher short={collapsed} className={cls.lang} />
-        </div>
+        {collapsed ? ">" : "<"}
+      </Button>
+      <div className={cls.items}>{itemList}</div>
+      <div className={cls.switchers}>
+        <ThemeSwitcher />
+        <LangSwitcher short={collapsed} className={cls.lang} />
       </div>
+    </div>
   );
 });

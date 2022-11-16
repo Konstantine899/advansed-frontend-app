@@ -1,0 +1,12 @@
+// pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader.module.scss
+
+.ProfilePageHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .editBtn {
+        margin-left: auto;
+        margin-left: 10px;
+    }
+}

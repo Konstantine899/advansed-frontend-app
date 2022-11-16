@@ -4,18 +4,28 @@
     border: 2px solid var(--inverted-bg-color);
 }
 
-.header {
-    display: flex;
-}
-
-.editBtn {
-    margin-left: auto;
-}
-
-.data {
-    margin-top: 30px;
-}
-
 .input {
     margin-top: 10px;
+}
+
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+// стили для Avatar
+
+.AvatarWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+// стили для режима редактирования
+
+.editing {
+    border: 2px solid var(--inverted-secondary-color);
 }
