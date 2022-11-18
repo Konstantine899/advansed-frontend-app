@@ -10,14 +10,17 @@ import {
   fetchProfileData,
   getProfileForm,
   getProfileReadonly,
+  getProfileValidateErrors,
   profileActions,
   ProfileCard,
   profileReducer,
+  ValidateProfileError,
 } from "entities/Profile";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
 import { Currency } from "entities/Currency";
 import { Country } from "entities/Country";
+import { Text, TextTheme } from "shared/ui/Text/Text";
 import { ProfilePageHeader } from "../ui/ProfilePageHeader/ProfilePageHeader";
 import {
   getProfileError,
@@ -33,13 +36,24 @@ interface ProfilePageProps {
 
 const ProfilePage = memo((props: ProfilePageProps) => {
   const { className } = props;
-  const { t } = useTranslation();
+  const { t } = useTranslation("profile");
   const dispatch = useAppDispatch();
 
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
   const error = useSelector(getProfileError);
   const readonly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
+
+  const validateErrorTranslates = {
+    [ValidateProfileError.SERVER_ERROR]: t("Серверная ошибка при сохранении"),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t(
+      "Не корректное название страны"
+    ),
+    [ValidateProfileError.NO_DATA]: t("Данные не указаны"),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t("Имя и фамилия обязательны"),
+    [ValidateProfileError.INCORRECT_AGE]: t("Не корректный возраст"),
+  };
 
   useEffect(() => {
     dispatch(fetchProfileData());
@@ -110,6 +124,14 @@ const ProfilePage = memo((props: ProfilePageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <ProfilePageHeader />
+      {validateErrors?.length
+        && validateErrors.map((validateError) => (
+          <Text
+            theme={TextTheme.ERROR}
+            text={validateErrorTranslates[validateError]}
+            key={validateError}
+          />
+        ))}
       <div className={classNames(cls.ProfilePage, {}, [className])}>
         <ProfileCard
           data={formData}
