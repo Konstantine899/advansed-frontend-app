@@ -12,60 +12,60 @@ const initialState: ProfileSchema = {
 };
 
 export const profileSlice = createSlice({
-  name: "profile",
-  initialState,
-  reducers: {
-    setReadonly: (state, action: PayloadAction<boolean>) => {
-      state.readonly = action.payload;
+    name: "profile",
+    initialState,
+    reducers: {
+        setReadonly: (state, action: PayloadAction<boolean>) => {
+            state.readonly = action.payload;
+        },
+        updateProfile: (state, action: PayloadAction<Profile>) => {
+            state.form = {
+                ...state.form,
+                ...action.payload,
+            };
+        },
+        cancelEdit: (state) => {
+            state.readonly = true; // возвращаю форму в состояние только для чтения
+            state.form = state.data; // возвращаю значения которые мы получали с сервера
+            state.validateErrors = undefined;
+        },
     },
-    updateProfile: (state, action: PayloadAction<Profile>) => {
-      state.form = {
-        ...state.form,
-        ...action.payload,
-      };
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchProfileData.pending, (state) => {
+                state.error = undefined;
+                state.isLoading = true;
+            })
+            .addCase(
+                fetchProfileData.fulfilled,
+                (state, action: PayloadAction<Profile>) => {
+                    state.isLoading = false;
+                    state.data = action.payload;
+                    state.form = action.payload; // так же полученные данные сохраняю в form
+                }
+            )
+            .addCase(fetchProfileData.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload;
+            })
+            .addCase(updateProfileData.pending, (state) => {
+                state.validateErrors = undefined;
+                state.isLoading = true;
+            })
+            .addCase(
+                updateProfileData.fulfilled,
+                (state, action: PayloadAction<Profile>) => {
+                    state.isLoading = false;
+                    state.data = action.payload;
+                    state.form = action.payload; // так же полученные данные сохраняю в form
+                    state.readonly = true; // после обновления данных возвращаюсь в режим чтения
+                }
+            )
+            .addCase(updateProfileData.rejected, (state, action) => {
+                state.isLoading = false;
+                state.validateErrors = action.payload;
+            });
     },
-    cancelEdit: (state) => {
-      state.readonly = true; // возвращаю форму в состояние только для чтения
-      state.form = state.data; // возвращаю значения которые мы получали с сервера
-      state.validateErrors = undefined;
-    },
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchProfileData.pending, (state) => {
-        state.error = undefined;
-        state.isLoading = true;
-      })
-      .addCase(
-        fetchProfileData.fulfilled,
-        (state, action: PayloadAction<Profile>) => {
-          state.isLoading = false;
-          state.data = action.payload;
-          state.form = action.payload; // так же полученные данные сохраняю в form
-        }
-      )
-      .addCase(fetchProfileData.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-      })
-      .addCase(updateProfileData.pending, (state) => {
-        state.validateErrors = undefined;
-        state.isLoading = true;
-      })
-      .addCase(
-        updateProfileData.fulfilled,
-        (state, action: PayloadAction<Profile>) => {
-          state.isLoading = false;
-          state.data = action.payload;
-          state.form = action.payload; // так же полученные данные сохраняю в form
-          state.readonly = true; // после обновления данных возвращаюсь в режим чтения
-        }
-      )
-      .addCase(updateProfileData.rejected, (state, action) => {
-        state.isLoading = false;
-        state.validateErrors = action.payload;
-      });
-  },
 });
 
 export const { actions: profileActions } = profileSlice;

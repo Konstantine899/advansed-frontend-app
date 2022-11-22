@@ -12,6 +12,11 @@ export const fetchProfileData = createAsyncThunk<
   const { extra, rejectWithValue } = thunkAPI;
   try {
     const response = await extra.api.get("/profile");
+
+    // Если данные с сервера не вернулись.
+    if (!response.data) {
+      throw new Error();
+    }
     return response.data;
   } catch (error) {
     return rejectWithValue("error");

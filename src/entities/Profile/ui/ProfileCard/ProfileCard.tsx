@@ -5,7 +5,6 @@ import { Text, TextAlign, TextTheme } from "shared/ui/Text/Text";
 import { Input } from "shared/ui/Input/Input";
 import { Loader } from "shared/ui/Loader/Loader";
 import { Avatar } from "shared/ui/Avatar/Avatar";
-import { Select } from "shared/ui/Select/Select";
 import { Currency } from "entities/Currency/modal/types/currency";
 import { CurrencySelect } from "entities/Currency";
 import { Country } from "entities/Country/model/types/country";

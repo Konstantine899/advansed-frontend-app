@@ -21,6 +21,7 @@ declare module "*.jpeg";
 
 declare const __IS_DEV__: boolean;
 declare const __API__: string;
+declare const __PROJECT__: "storybook" | "frontend" | "jest"; // что бы был автокомплит
 
 /* Создаю новый тип который ссылается сам на себя. И использую в файлах stories.
  * Позволяет делать поля state не обязательными
