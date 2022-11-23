@@ -14,10 +14,22 @@ interface UseThemeResult {
 export function useTheme(): UseThemeResult {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
-  /* вешаем обязательно иначе будет проблемы с Portal
-       и возможно придется переопределять переменные для того что бы все работало.
-       если newTheme вешаем на самый главный корневой элемент body, то мы всего этого избежим */
+  let newTheme: Theme; // объявляю но не инициализирую переменную
+
+  switch (theme) {
+    case Theme.DARK:
+      newTheme = Theme.LIGHT;
+      break;
+    case Theme.LIGHT:
+      newTheme = Theme.ORANGE;
+      break;
+    case Theme.ORANGE:
+      newTheme = Theme.DARK;
+      break;
+    default:
+      newTheme = Theme.LIGHT;
+  }
+
   document.body.className = newTheme;
 
   const toggleTheme = () => {
