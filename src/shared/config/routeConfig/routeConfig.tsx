@@ -6,7 +6,7 @@ import { NotFoundPage } from "pages/NotFoundPage";
 import { ProfilePage } from "pages/ProfilePage";
 
 // Расширяю стандартные props библиотеки react-router-dom
-type AppRoutesProps = RouteProps & {
+export type AppRoutesProps = RouteProps & {
   authOnly?: boolean;
 };
 
