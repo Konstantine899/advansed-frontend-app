@@ -11,7 +11,6 @@ import { getUserInited, userActions } from "entities/User";
 export const App = () => {
   const dispatch = useDispatch();
   const inited = useSelector(getUserInited);
-  console.log('inited', inited);
   useEffect(() => {
     dispatch(userActions.initAuthData());
   }, [dispatch]);

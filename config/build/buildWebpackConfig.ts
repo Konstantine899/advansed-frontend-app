@@ -17,6 +17,7 @@ export function buildWebpackConfig(
         output: {
             filename: '[name].[contenthash].js',
             path: paths.build,
+            publicPath: '/', // базовый путь для всех ресурсов в приложении, статических файлов и т.д.
             clean: true,
         },
         plugins: buildPlugins(options),
