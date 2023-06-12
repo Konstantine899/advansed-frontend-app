@@ -1,5 +1,4 @@
 // shared/ui/Select/Select.stories.tsx
-// shared/ui/Avatar/Avatar.stories.tsx
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Select } from "./Select";

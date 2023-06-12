@@ -13,6 +13,7 @@ import { ProfileSchema } from "entities/Profile";
 import { AxiosInstance } from "axios";
 import { To } from "react-router-dom";
 import { NavigateOptions } from "react-router";
+import { ArticleDetailsSchema } from "entities/Article";
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -21,6 +22,7 @@ export interface StateSchema {
   // Асинхронные reducers
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
+  articleDetails?: ArticleDetailsSchema;
 }
 
 // Конструкция, с помощью которой достаю ключи. Которые являются названиями reducers

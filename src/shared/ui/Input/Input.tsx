@@ -1,12 +1,7 @@
 // shared/ui/Input/Input.tsx
 import { classNames, Mods } from "shared/lib/classNames/classNames";
 import {
-  ChangeEvent,
-  InputHTMLAttributes,
-  memo,
-  useEffect,
-  useRef,
-  useState,
+ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from "react";
 import cls from "./Input.module.scss";
 

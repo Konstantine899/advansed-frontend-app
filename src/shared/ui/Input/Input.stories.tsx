@@ -4,11 +4,11 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Input } from "./Input";
 
 export default {
-    title: "shared/Input", // название stories
-    component: Input, // компонент с которым мы работаем указываем здесь
-    argTypes: {
-        backgroundColor: { control: "color" },
-    },
+  title: "shared/Input", // название stories
+  component: Input, // компонент с которым мы работаем указываем здесь
+  argTypes: {
+    backgroundColor: { control: "color" },
+  },
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
