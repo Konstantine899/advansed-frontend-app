@@ -3,6 +3,12 @@
     cursor: pointer;
     color: var(--primary-color);
     padding: 6px 15px;
+
+    &:hover {
+        opacity: 0.7;
+        fill-opacity: 0.7;
+        stroke-opacity: 0.7;
+    }
 }
 
 .clear,
@@ -48,7 +54,7 @@
 
 .square.size_m {
     width: var(--font-size-m); // размер ширины кнопки
-    height: var(--font-line-m);// размер высоты кнопки
+    height: var(--font-line-m); // размер высоты кнопки
 }
 
 .square.size_l {
@@ -58,7 +64,7 @@
 
 .square.size_xl {
     width: var(--font-size-xl); // размер ширины кнопки
-    height: var(--font-line-xl);// размер высоты кнопки
+    height: var(--font-line-xl); // размер высоты кнопки
 }
 
 // размеры шрифта

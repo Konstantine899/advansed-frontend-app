@@ -2,30 +2,52 @@
 
 // Стили темы PRIMARY
 .title {
-    font: var(--font-l);
     color: var(--primary-color);
 }
 
 .text {
-    font: var(--font-m);
     color: var(--secondary-color);
 }
 
 // Стили темы ERROR
 .error {
     .title {
-        font: var(--font-l);
         color: var(--red-light);
     }
 
     .text {
-        font: var(--font-m);
         color: var(--red-dark);
     }
 }
 
-.right { text-align: right; }
+.right {
+    text-align: right;
+}
 
-.left { text-align: left; }
+.left {
+    text-align: left;
+}
 
-.center { text-align: center; }
+.center {
+    text-align: center;
+}
+
+.size_m {
+    .title {
+        font: var(--font-l); // для title делаем на 1 размер больше
+    }
+
+    .text {
+        font: var(--font-m);
+    }
+}
+
+.size_l {
+    .title {
+        font: var(--font-xl); // для title делаем на 1 размер больше
+    }
+
+    .text {
+        font: var(--font-l);
+    }
+}

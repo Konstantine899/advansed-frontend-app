@@ -1,4 +1,4 @@
-// entities/Article/model/article.ts
+// entities/Article/model/types/article.ts
 
 /* Под каждый тип блока создаю собственный interface, т.е. под каждый тип блока из которого строится наша статья */
 

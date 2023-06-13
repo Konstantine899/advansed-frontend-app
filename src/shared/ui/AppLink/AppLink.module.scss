@@ -1,6 +1,10 @@
 /* src/shared/ui/AppLink.module.scss */
 .AppLink {
     color: var(--primary-color);
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .primary {
