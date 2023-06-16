@@ -6,12 +6,12 @@ import { Profile } from "../../types/Profile";
 
 export const fetchProfileData = createAsyncThunk<
   Profile,
-  void,
+  string,
   ThunkConfig<string>
->("profile/fetchProfileData", async (_, thunkAPI) => {
+>("profile/fetchProfileData", async (profileId, thunkAPI) => {
   const { extra, rejectWithValue } = thunkAPI;
   try {
-    const response = await extra.api.get("/profile");
+    const response = await extra.api.get(`/profile/${profileId}`);
 
     // Если данные с сервера не вернулись.
     if (!response.data) {

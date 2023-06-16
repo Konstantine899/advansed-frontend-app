@@ -1,7 +1,7 @@
 // pages/ProfilePage/ui/ProfilePage.tsx
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
-import { memo, useCallback, useEffect } from "react";
+import { memo, useCallback } from "react";
 import {
   DynamicModuleLoader,
   ReducersList,
@@ -21,6 +21,8 @@ import { useSelector } from "react-redux";
 import { Currency } from "entities/Currency";
 import { Country } from "entities/Country";
 import { Text, TextTheme } from "shared/ui/Text/Text";
+import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { useParams } from "react-router-dom";
 import { ProfilePageHeader } from "../ui/ProfilePageHeader/ProfilePageHeader";
 import {
   getProfileError,
@@ -37,6 +39,7 @@ interface ProfilePageProps {
 const ProfilePage = memo((props: ProfilePageProps) => {
   const { className } = props;
   const { t } = useTranslation("profile");
+  const { id } = useParams<{ id: string }>();
   const dispatch = useAppDispatch();
 
   const formData = useSelector(getProfileForm);
@@ -55,11 +58,11 @@ const ProfilePage = memo((props: ProfilePageProps) => {
     [ValidateProfileError.INCORRECT_AGE]: t("Не корректный возраст"),
   };
 
-  useEffect(() => {
-    if (__PROJECT__ !== "storybook") {
-      dispatch(fetchProfileData());
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id));
     }
-  }, [dispatch]);
+  });
 
   const onChangeFirstName = useCallback(
     (value?: string) => {

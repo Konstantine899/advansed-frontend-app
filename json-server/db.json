@@ -97,6 +97,12 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Тест отправки комментария",
+      "id": "GB6SJ3c"
     }
   ],
   "users": [
@@ -109,20 +115,34 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "Heisenberg",
       "password": "123",
       "role": "USER",
       "avatar": "https://sun9-61.userapi.com/impf/o87a8-ygpu1OBx-PG7-pbcqVz0HEtYBmHVhzVg/LT89A1qYQuw.jpg?size=774x1032&quality=96&sign=062579801b03614f63ccf7817ce0b0c6&c_uniq_tag=JqqG5CeNlytGBPpSFLyZ-3w6VTLOeO-2PR37T8g0q5s&type=album"
     }
   ],
-  "profile": {
-    "firstname": "Константин",
-    "lastname": "Атрощенко",
-    "age": 33,
-    "currency": "UAH",
-    "country": "Ukraine",
-    "city": "Vitebsk44",
-    "username": "admin",
-    "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Константин",
+      "lastname": "Атрощенко",
+      "age": 33,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Kiev",
+      "username": "admin",
+      "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
+    },
+    {
+      "id": "2",
+      "firstname": "Heisenberg",
+      "lastname": "Heisenberg",
+      "age": 33,
+      "currency": "BYN",
+      "country": "Belarus",
+      "city": "Vitebsk",
+      "username": "admin",
+      "avatar": "https://sun9-61.userapi.com/impf/o87a8-ygpu1OBx-PG7-pbcqVz0HEtYBmHVhzVg/LT89A1qYQuw.jpg?size=774x1032&quality=96&sign=062579801b03614f63ccf7817ce0b0c6&c_uniq_tag=JqqG5CeNlytGBPpSFLyZ-3w6VTLOeO-2PR37T8g0q5s&type=album"
+    }
+  ]
 }
