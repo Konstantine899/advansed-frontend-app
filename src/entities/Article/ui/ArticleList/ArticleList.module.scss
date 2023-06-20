@@ -1,0 +1,19 @@
+// entities/Article/ui/ArticleList/ArticleList.module.scss
+
+
+.BIG {
+  .card {
+    margin-bottom: 30px;
+
+  }
+}
+
+.SMALL {
+  display: flex;
+  flex-wrap: wrap; // для того что бы элементы переносились на новую строчку
+
+  .card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}

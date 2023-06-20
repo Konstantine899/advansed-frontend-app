@@ -2,6 +2,8 @@
 
 /* Под каждый тип блока создаю собственный interface, т.е. под каждый тип блока из которого строится наша статья */
 
+import { User } from "entities/User";
+
 export enum ArticleBlockType {
   CODE = "CODE",
   IMAGE = "IMAGE",
@@ -32,7 +34,10 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 }
 
 /* Объединяем все блоки */
-export type ArticleBlock = ArticleCodeBlock | ArticleTextBlock | ArticleImageBlock
+export type ArticleBlock =
+  | ArticleCodeBlock
+  | ArticleTextBlock
+  | ArticleImageBlock;
 
 export enum ArticleType {
   IT = "IT",
@@ -40,9 +45,16 @@ export enum ArticleType {
   ECONOMICS = "ECONOMICS",
 }
 
+/* Отображение списка статей */
+export enum ArticleView {
+  BIG = "BIG",
+  SMALL = "SMALL",
+}
+
 export interface Article {
   id: string;
   title: string;
+  user: User;
   subtitle: string;
   img: string;
   views: number;

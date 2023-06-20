@@ -1,0 +1,115 @@
+// shared/ui/ArticleListItemSkeleton/ArticleListItemSkeleton.module.scss
+
+.ArticleListItemSkeleton {
+}
+
+// entities/Article/ui/ArticleListItem/ArticleListItem.module.scss
+.BIG {
+  .views {
+    margin-left: auto;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .username {
+    margin-left: 8px;
+  }
+
+  .date {
+    margin-left: auto; // для того что бы отодвинуть в правый верхний угол
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 16px 0;
+  }
+
+  .textBlock {
+    max-height: 200px;
+    overflow-y: hidden; // Все что не вмещается в 200px, по вертикали, будем просто обрезать
+    margin-top: 16px;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.SMALL {
+  width: 230px; // ширина карточки
+
+
+  .date {
+    position: absolute; // позиционируем относительно imageWrapper
+    transition: 0.2s; // transform длится 0.2s
+    right: 0;
+    top: 0;
+    display: none; // по умолчанию дата скрыта
+  }
+
+  &:hover {
+    opacity: 0.8; // прозрачность карточки
+    transform: scale(1.01); // увеличение карточки
+    cursor: pointer;
+
+    .date {
+      display: block
+    }
+  }
+
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* Относительное позиционирование сдвигает элемент относительно его обычного положения,
+        что бы потом относительно спозиционировать дату создания картинки относительно карточки */
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-fit: cover;
+  }
+
+
+  .infoWrapper {
+    display: flex;
+    align-items: center; // выравниваю по вертикали
+    margin-top: 8px;
+  }
+
+  .types p {
+    width: 115px;
+    white-space: nowrap; // что бы не было переноса текста
+    overflow: hidden; // обрезаю, если элементы выходят за область заданных размеров
+    text-overflow: ellipsis; // добавляет шматкроп`е в конце если элементы не помещаются
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .title p {
+    width: 200px;
+    white-space: nowrap; // что бы не было переноса текста
+    overflow: hidden; // обрезаю, если элементы выходят за область заданных размеров
+    text-overflow: ellipsis; // добавляет шматкроп`е в конце если элементы не помещаются
+  }
+}
