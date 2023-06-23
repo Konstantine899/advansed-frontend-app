@@ -23,6 +23,7 @@ import { Country } from "entities/Country";
 import { Text, TextTheme } from "shared/ui/Text/Text";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useParams } from "react-router-dom";
+import { Page } from "shared/ui/Page/Page";
 import { ProfilePageHeader } from "../ui/ProfilePageHeader/ProfilePageHeader";
 import {
   getProfileError,
@@ -128,31 +129,33 @@ const ProfilePage = memo((props: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <ProfilePageHeader />
-      {validateErrors?.length
-        && validateErrors.map((validateError) => (
-          <Text
-            theme={TextTheme.ERROR}
-            text={validateErrorTranslates[validateError]}
-            key={validateError}
+      <Page>
+        <ProfilePageHeader />
+        {validateErrors?.length
+          && validateErrors.map((validateError) => (
+            <Text
+              theme={TextTheme.ERROR}
+              text={validateErrorTranslates[validateError]}
+              key={validateError}
+            />
+          ))}
+        <div className={classNames(cls.ProfilePage, {}, [className])}>
+          <ProfileCard
+            data={formData}
+            onChangeFirstName={onChangeFirstName}
+            onChangeLastName={onChangeLastName}
+            onChangeCity={onChangeCity}
+            onChangeAge={onChangeAge}
+            onChangeUsername={onChangeUsername}
+            onChangeAvatar={onChangeAvatar}
+            onChangeCurrency={onChangeCurrency}
+            onChangeCountry={onChangeCountry}
+            isLoading={isLoading}
+            error={error}
+            readonly={readonly}
           />
-        ))}
-      <div className={classNames(cls.ProfilePage, {}, [className])}>
-        <ProfileCard
-          data={formData}
-          onChangeFirstName={onChangeFirstName}
-          onChangeLastName={onChangeLastName}
-          onChangeCity={onChangeCity}
-          onChangeAge={onChangeAge}
-          onChangeUsername={onChangeUsername}
-          onChangeAvatar={onChangeAvatar}
-          onChangeCurrency={onChangeCurrency}
-          onChangeCountry={onChangeCountry}
-          isLoading={isLoading}
-          error={error}
-          readonly={readonly}
-        />
-      </div>
+        </div>
+      </Page>
     </DynamicModuleLoader>
   );
 });

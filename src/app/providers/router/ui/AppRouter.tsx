@@ -8,14 +8,13 @@ import {
 } from "shared/config/routeConfig/routeConfig";
 import { PageLoader } from "widgets/PageLoader/ui/PageLoader";
 import { RequireAuth } from "app/providers/router/ui/RequireAuth";
+import { Page } from "shared/ui/Page/Page";
 
 const AppRouter = () => {
   // Функция обертка обработки маршрутов
   const renderWithWrapper = useCallback((route: AppRoutesProps) => {
     const element = (
-      <Suspense fallback={<PageLoader />}>
-        <div className="page-wrapper">{route.element}</div>
-      </Suspense>
+      <Suspense fallback={<PageLoader />}>{route.element}</Suspense>
     );
     return (
       <Route
