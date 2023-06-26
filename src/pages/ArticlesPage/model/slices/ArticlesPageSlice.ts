@@ -29,6 +29,7 @@ const articlesPageSlice = createSlice({
     view: ArticleView.SMALL,
     page: 1,
     hasMore: true,
+    _inited: false,
   }),
   reducers: {
     setView: (state, action: PayloadAction<ArticleView>) => {
@@ -40,9 +41,12 @@ const articlesPageSlice = createSlice({
     },
 
     initState: (state) => {
-      const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE_KEY) as ArticleView; // получаю значение
+      const view = localStorage.getItem(
+        ARTICLE_VIEW_LOCALSTORAGE_KEY
+      ) as ArticleView; // получаю значение
       state.view = view; // сохраняю в state
       state.limit = view === ArticleView.BIG ? 4 : 9;
+      state._inited = true; // меняю на true тем самым говорю что state проинициализировался
     },
   },
   extraReducers: (builder) => builder
@@ -53,9 +57,9 @@ const articlesPageSlice = createSlice({
       .addCase(
         fetchArticlesList.fulfilled,
         (state, action: PayloadAction<Article[]>) => {
-            state.isLoading = false;
-            articlesAdapter.addMany(state, action.payload);
-            state.hasMore = action.payload.length > 0; // если в массиве есть хот 1 элемент, то на сервере еще данные есть
+          state.isLoading = false;
+          articlesAdapter.addMany(state, action.payload);
+          state.hasMore = action.payload.length > 0; // если в массиве есть хот 1 элемент, то на сервере еще данные есть
         }
       )
       .addCase(fetchArticlesList.rejected, (state, action) => {

@@ -11,8 +11,6 @@ import {
 } from "@reduxjs/toolkit";
 import { ProfileSchema } from "entities/Profile";
 import { AxiosInstance } from "axios";
-import { To } from "react-router-dom";
-import { NavigateOptions } from "react-router";
 import { ArticleDetailsSchema } from "entities/Article";
 import { ArticleDetailsCommentsSchema } from "pages/ArticleDetailsPage";
 import { AddCommentFormSchema } from "features/addCommentForm";
@@ -28,11 +26,12 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticleDetailsCommentsSchema;
   addCommentForm?: AddCommentFormSchema;
-  articlesPage?: ArticlesPageSchema
+  articlesPage?: ArticlesPageSchema;
 }
 
 // Конструкция, с помощью которой достаю ключи. Которые являются названиями reducers
 export type StateSchemaKey = keyof StateSchema;
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 // Описываю интерфейс ReducerManager
 export interface ReducerManager {
@@ -40,6 +39,8 @@ export interface ReducerManager {
   reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
   add: (key: StateSchemaKey, reducer: Reducer) => void;
   remove: (key: StateSchemaKey) => void;
+  // true-вмонтирован, false-демонтирован
+  getMountedReducers: () => MountedReducers;
 }
 
 // тип для reducerManager
@@ -50,7 +51,6 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 // Типизация extra аргумента
 export interface ThunkExtraArg {
   api: AxiosInstance;
-  navigate?: (to: To, options?: NavigateOptions) => void; // делаю это поле обязательным
 }
 
 // interface для третьего аргумента, generic-ка async thunk

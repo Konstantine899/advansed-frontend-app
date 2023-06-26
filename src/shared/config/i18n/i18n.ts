@@ -11,7 +11,8 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    debug: __IS_DEV__, // вывод переводов в консоль
+    // debug: __IS_DEV__, // вывод переводов в консоль
+    debug: false,
 
     interpolation: {
       escapeValue: false,
