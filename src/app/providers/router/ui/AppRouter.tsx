@@ -8,7 +8,6 @@ import {
 } from "shared/config/routeConfig/routeConfig";
 import { PageLoader } from "widgets/PageLoader/ui/PageLoader";
 import { RequireAuth } from "app/providers/router/ui/RequireAuth";
-import { Page } from "shared/ui/Page/Page";
 
 const AppRouter = () => {
   // Функция обертка обработки маршрутов
