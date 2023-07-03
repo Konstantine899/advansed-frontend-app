@@ -22,6 +22,6 @@ export const fetchNextArticlesPage = createAsyncThunk<
 
   if (hasMore && !isLoading) {
     dispatch(articlesPageActions.setPage(page + 1)); // изменяю станицу в state
-    dispatch(fetchArticlesList({ page: page + 1 })); // подгружаю данные со следующей страницы
+    dispatch(fetchArticlesList({})); // подгружаю данные со следующей страницы
   }
 });

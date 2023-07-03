@@ -11,9 +11,6 @@
 .SMALL {
   display: flex;
   flex-wrap: wrap; // для того что бы элементы переносились на новую строчку
+  gap: 30px; // добавит отступы в тех местах где это необходимо.
 
-  .card {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
 }
