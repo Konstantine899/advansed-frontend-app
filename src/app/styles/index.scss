@@ -6,17 +6,34 @@
 @import "./themes/orange";
 
 body {
-    font-size: var(--font-m);
-    color: var(--primary-color);
+  font-size: var(--font-m);
+  color: var(--primary-color);
 }
 
 .app {
-    background: var(--bg-color);
-    min-height: 100vh;
+  background: var(--bg-color);
+  min-height: 100vh;
 }
 
 .content-page {
-    display: flex;
+  display: flex;
+}
+
+/* Стили для scroll */
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+ /* селектор body заменяем на * т.е. во всех блоках нашего приложения scroll bar будет одинаковым */
+*::-webkit-scrollbar-track {
+  background: var(--card-bg); /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--inverted-primary-color); /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 3px solid var(--primary-color); /* padding вокруг плашки */
 }
 
 
