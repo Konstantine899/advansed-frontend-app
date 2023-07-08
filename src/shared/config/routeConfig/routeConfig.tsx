@@ -6,6 +6,7 @@ import { NotFoundPage } from "pages/NotFoundPage";
 import { ProfilePage } from "pages/ProfilePage";
 import { ArticlesPage } from "pages/ArticlesPage";
 import { ArticleDetailsPage } from "pages/ArticleDetailsPage";
+import { ArticleEditPage } from "pages/ArticleEditPage";
 
 // Расширяю стандартные props библиотеки react-router-dom
 export type AppRoutesProps = RouteProps & {
@@ -19,6 +20,8 @@ export enum AppRoutes {
   PROFILE = "profile",
   ARTICLES = "articles",
   ARTICLE_DETAILS = "articles_details",
+  ARTICLE_CREATE = "articles_create",
+  ARTICLE_EDIT = "articles_edit",
 
   // NOT_FOUND должен идти последним
   NOT_FOUND = "not_found",
@@ -31,6 +34,8 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.PROFILE]: "/profile/", // + id
   [AppRoutes.ARTICLES]: "/articles",
   [AppRoutes.ARTICLE_DETAILS]: "/articles/", // + id
+  [AppRoutes.ARTICLE_CREATE]: "/articles/new",
+  [AppRoutes.ARTICLE_EDIT]: "/articles/:id/edit",
   // Последний
   [AppRoutes.NOT_FOUND]: "*",
 };
@@ -58,6 +63,16 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.ARTICLE_DETAILS]: {
     path: `${RoutePath.articles_details}:id`,
     element: <ArticleDetailsPage />,
+    authOnly: true, // Статья доступна только авторизованным пользователям
+  },
+  [AppRoutes.ARTICLE_CREATE]: {
+    path: `${RoutePath.articles_create}`,
+    element: <ArticleEditPage />,
+    authOnly: true, // Статья доступна только авторизованным пользователям
+  },
+  [AppRoutes.ARTICLE_EDIT]: {
+    path: `${RoutePath.articles_edit}`,
+    element: <ArticleEditPage />,
     authOnly: true, // Статья доступна только авторизованным пользователям
   },
   // NOT_FOUND должен идти последним
