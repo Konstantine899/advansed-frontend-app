@@ -12,7 +12,7 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useSelector } from "react-redux";
 import { Page } from "widgets/Page/Page";
-import { ArticlesPageFilters } from "pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters";
+import { ArticlesPageFilters } from "../../ui/ArticlesPageFilters/ArticlesPageFilters";
 import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import { initArticlePage } from "../../model/services/initArticlePage/initArticlePage";
 import {

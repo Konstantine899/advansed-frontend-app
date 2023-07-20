@@ -1,5 +1,5 @@
 // src/shared/lib/classNames/classNames.test.ts
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "../../lib/classNames/classNames";
 
 describe("classNames", () => {
   // тест первого аргумента

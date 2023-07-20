@@ -15,12 +15,9 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import AddCommentForm from "features/addCommentForm/ui/AddCommentForm/AddCommentForm";
 import { addCommentForArticle } from "features/addCommentForm/model/services/addCommentForArticle/addCommentForArticle";
 import { Page } from "widgets/Page/Page";
-import { ArticleDetailsPageHeader } from "pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
+import { ArticleDetailsPageHeader } from "../../ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
 import { articleDetailsPageReducer } from "../../model/slices";
-import {
-  getArticleRecommendationsError,
-  getArticleRecommendationsIsLoading,
-} from "../../model/selectors/recommendations";
+import { getArticleRecommendationsIsLoading } from "../../model/selectors/recommendations";
 import { getArticleRecommendations } from "../../model/slices/articleDetailsPageRecommendationsSlice";
 import { fetchArticlesRecommendations } from "../../model/services/fetchArticlesRecommendations/fetchArticlesRecommendations";
 import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";

@@ -3,7 +3,7 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 import { Article } from "entities/Article";
 import { StateSchema } from "app/providers/StoreProvider";
-import { fetchArticlesRecommendations } from "pages/ArticleDetailsPage/model/services/fetchArticlesRecommendations/fetchArticlesRecommendations";
+import { fetchArticlesRecommendations } from "../../model/services/fetchArticlesRecommendations/fetchArticlesRecommendations";
 import { ArticleDetailsRecommendationsSchema } from "../types/ArticleDetailsRecommendationsSchema";
 
 export const recommendationsAdapter = createEntityAdapter<Article>({

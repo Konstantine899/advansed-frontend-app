@@ -1,7 +1,8 @@
 // entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly.test.ts
 
 import { StateSchema } from "app/providers/StoreProvider";
-import { getProfileIsLoading, getProfileReadonly } from "entities/Profile";
+import { getProfileIsLoading } from "../getProfileIsLoading/getProfileIsLoading";
+import { getProfileReadonly } from "../getProfileReadonly/getProfileReadonly";
 
 describe("getProfileReadonly.test", () => {
   test("should return state", () => {

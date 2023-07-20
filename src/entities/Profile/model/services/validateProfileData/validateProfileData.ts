@@ -1,5 +1,5 @@
 // entities/Profile/model/services/validateProfileData/validateProfileData.ts
-import { ValidateProfileError, Profile } from "entities/Profile/model/types/profile";
+import { ValidateProfileError, Profile } from "../../types/profile";
 
 // eslint-disable-next-line consistent-return
 export const validateProfileData = (profile?: Profile) => {

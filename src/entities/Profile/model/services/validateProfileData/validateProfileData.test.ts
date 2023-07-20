@@ -2,7 +2,7 @@
 
 import { Country } from "entities/Country";
 import { Currency } from "entities/Currency";
-import { ValidateProfileError } from "entities/Profile";
+import { ValidateProfileError } from "../../types/profile";
 import { validateProfileData } from "./validateProfileData";
 
 const data = {
@@ -45,7 +45,7 @@ describe("validateProfileData.test", () => {
     expect(result).toEqual([
       ValidateProfileError.INCORRECT_USER_DATA,
       ValidateProfileError.INCORRECT_AGE,
-      ValidateProfileError.INCORRECT_COUNTRY
+      ValidateProfileError.INCORRECT_COUNTRY,
     ]);
   });
 });

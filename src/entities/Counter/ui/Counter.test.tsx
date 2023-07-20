@@ -1,8 +1,8 @@
 // entities/Counter/ui/Counter.test.tsx
 import { screen } from "@testing-library/react";
 import { ComponentRender } from "shared/lib/tests/ComponentRender/ComponentRender";
-import { Counter } from "entities/Counter";
 import { userEvent } from "@storybook/testing-library";
+import { Counter } from "../ui/Counter";
 
 describe("Counter.test", () => {
   test("test", () => {
@@ -16,7 +16,7 @@ describe("Counter.test", () => {
     ComponentRender(<Counter />, {
       initialState: { counter: { value: 10 } },
     });
-    userEvent.click(screen.getByTestId('increment-btn'));
+    userEvent.click(screen.getByTestId("increment-btn"));
     expect(screen.getByTestId("value-title")).toHaveTextContent("11");
   });
 
@@ -24,7 +24,7 @@ describe("Counter.test", () => {
     ComponentRender(<Counter />, {
       initialState: { counter: { value: 10 } },
     });
-    userEvent.click(screen.getByTestId('decrement-btn'));
+    userEvent.click(screen.getByTestId("decrement-btn"));
     expect(screen.getByTestId("value-title")).toHaveTextContent("9");
   });
 });

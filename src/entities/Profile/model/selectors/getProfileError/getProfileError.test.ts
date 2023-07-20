@@ -1,6 +1,6 @@
 // entities/Profile/model/selectors/getProfileError/getProfileError.test.ts
 import { StateSchema } from "app/providers/StoreProvider";
-import { getProfileError } from "entities/Profile";
+import { getProfileError } from "../getProfileError/getProfileError";
 
 describe("getProfileData.test", () => {
   test("should return state", () => {

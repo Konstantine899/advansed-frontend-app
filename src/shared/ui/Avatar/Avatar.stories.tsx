@@ -1,7 +1,7 @@
 // shared/ui/Avatar/Avatar.stories.tsx
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Avatar } from "shared/ui/Avatar/Avatar";
+import { Avatar } from "../../ui/Avatar/Avatar";
 import AvatarImg from "../../assets/tests/Avatar.jpg";
 
 export default {

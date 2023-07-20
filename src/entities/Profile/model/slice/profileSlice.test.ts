@@ -1,15 +1,11 @@
 // entities/Profile/model/slice/profileSlice.test.ts
 
-import {
-  fetchProfileData,
-  profileActions,
-  profileReducer,
-  ProfileSchema,
-  updateProfileData,
-  ValidateProfileError,
-} from "entities/Profile";
 import { Country } from "entities/Country";
 import { Currency } from "entities/Currency";
+import { fetchProfileData } from "../services/fetchProfileData/fetchProfileData";
+import { updateProfileData } from "../services/updateProfileData/updateProfileData";
+import { profileActions, profileReducer } from "../slice/profileSlice";
+import { ValidateProfileError, ProfileSchema } from "../types/profile";
 
 const data = {
   id: "1",

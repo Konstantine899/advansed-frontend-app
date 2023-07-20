@@ -1,7 +1,7 @@
 // entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading.test.ts
 
 import { StateSchema } from "app/providers/StoreProvider";
-import { getProfileIsLoading } from "entities/Profile";
+import { getProfileIsLoading } from "../getProfileIsLoading/getProfileIsLoading";
 
 describe("getProfileIsLoading.test", () => {
   test("should return state", () => {

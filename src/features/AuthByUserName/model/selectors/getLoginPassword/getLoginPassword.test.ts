@@ -1,6 +1,6 @@
 // features/AuthByUserName/model/selectors/getLoginPassword/getLoginPassword.test.ts
 import { StateSchema } from "app/providers/StoreProvider";
-import { getLoginPassword } from "features/AuthByUserName/model/selectors/getLoginPassword/getLoginPassword";
+import { getLoginPassword } from "../../selectors/getLoginPassword/getLoginPassword";
 
 describe("getLoginPassword.test", () => {
   test("should return true", () => {

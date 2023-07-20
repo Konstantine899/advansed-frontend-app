@@ -1,9 +1,7 @@
 // entities/Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors.test.ts
 import { StateSchema } from "app/providers/StoreProvider";
-import {
-  getProfileValidateErrors,
-  ValidateProfileError,
-} from "entities/Profile";
+import { ValidateProfileError } from "../../types/profile";
+import { getProfileValidateErrors } from "../getProfileValidateErrors/getProfileValidateErrors";
 
 describe("getProfileValidateErrors.test", () => {
   test("should return state", () => {

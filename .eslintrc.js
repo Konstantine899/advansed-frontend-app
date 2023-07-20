@@ -18,7 +18,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "i18next",
+    "react-hooks",
+    "konstantine899-plugin",
+  ],
   rules: {
     "no-undef": "off",
     "no-param-reassign": "off",
@@ -65,6 +71,7 @@ module.exports = {
     ],
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
+    "konstantine899-plugin/path-cheker": "error",
   },
   globals: {
     __IS_DEV__: true,
