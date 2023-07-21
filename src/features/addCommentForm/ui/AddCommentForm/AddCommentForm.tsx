@@ -10,6 +10,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from "shared/lib/DynamicModuleLouder/DynamicModuleLoader";
+import { HStack } from "shared/ui/Stack";
 import {
   getAddCommentFormError,
   getAddCommentFormText,
@@ -51,7 +52,7 @@ const AddCommentForm = memo((props: addCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.addCommentForm, {}, [className])}>
+      <HStack justify="between" max className={classNames(cls.addCommentForm, {}, [className])}>
         <Input
           className={cls.input}
           value={text}
@@ -61,7 +62,7 @@ const AddCommentForm = memo((props: addCommentFormProps) => {
         <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
           {t(`Отправить`)}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

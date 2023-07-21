@@ -10,6 +10,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
     html: "", // не интересующие нас поля
     entry: "", // не интересующие нас поля
     src: path.resolve(__dirname, "..", "..", "src"),
+    locales: "",
+    buildLocales: "",
   };
   config.resolve!.modules!.push(paths.src); // прокидываем путь до папки с исходным кодом
   config.resolve!.extensions!.push("ts", "tsx"); // указываю расширения скриншотный файлов для файлов stories
