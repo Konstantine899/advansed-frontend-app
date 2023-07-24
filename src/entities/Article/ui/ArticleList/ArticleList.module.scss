@@ -1,26 +1,23 @@
 // entities/Article/ui/ArticleList/ArticleList.module.scss
 
-
 .BIG {
-  .card {
-    margin-bottom: 30px;
-
-  }
+    .card {
+        margin-bottom: 30px;
+    }
 }
 
 .SMALL {
-  display: flex;
-  flex-wrap: wrap; // для того что бы элементы переносились на новую строчку
-  gap: 30px; // добавит отступы в тех местах где это необходимо.
-
-  .card {
-    display: inline-flex; // для того что бы элементы выстраивались в линию
-    height: 300px;
-  }
-
-  .row{
     display: flex;
-    gap: 30px;
-  }
+    flex-wrap: wrap; // для того что бы элементы переносились на новую строчку
+    gap: 30px; // добавит отступы в тех местах где это необходимо.
 
+    .card {
+        display: inline-flex; // для того что бы элементы выстраивались в линию
+        height: 300px;
+    }
+
+    .row {
+        display: flex;
+        gap: 30px;
+    }
 }
