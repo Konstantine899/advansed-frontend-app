@@ -1,9 +1,8 @@
 // entities/Country/ui/CountrySelect/CountrySelect.tsx
 // entities/Currency/ui//CurrencySelect/CurrencySelect.tsx
-import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
-import { Select } from "shared/ui/Select/Select";
 import { memo } from "react";
+import { ListBox } from "shared/ui/ListBox/ListBox";
 import { Country } from "../../model/types/country";
 
 interface CountrySelectProps {
@@ -32,13 +31,15 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
   };
 
   return (
-    <Select
-      className={classNames("", {}, [className])}
-      label={t("Укажите страну")}
-      options={options}
+    <ListBox
+      className={className}
+      items={options}
       value={value}
-      onChange={onChangeHandler}
+      defaultValue="Укажите страну"
+      label="Укажите страну"
       readonly={readonly}
+      direction="top"
+      onChange={onChangeHandler}
     />
   );
 });

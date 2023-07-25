@@ -50,8 +50,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
   if (isLoading) {
     return (
       <HStack
-          justify="center"
-          max
+        justify="center"
+        max
         className={classNames(cls.ProfileCard, {}, [className, cls.loading])}
       >
         <Loader />
@@ -81,7 +81,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
   };
 
   return (
-    <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
+    <VStack
+      gap="8"
+      max
+      className={classNames(cls.ProfileCard, mods, [className])}
+    >
       {data?.avatar && (
         <HStack justify="center" max className={cls.AvatarWrapper}>
           <Avatar src={data?.avatar} />
