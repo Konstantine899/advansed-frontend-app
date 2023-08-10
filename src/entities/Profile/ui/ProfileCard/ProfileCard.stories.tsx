@@ -7,7 +7,7 @@ import Avatar from 'shared/assets/tests/Avatar.jpg';
 import { ProfileCard } from "./ProfileCard";
 
 export default {
-    title: "entities/ProfileCard", // название stories
+    title: "entities/ProfileCard/ProfileCard", // название stories
     component: ProfileCard, // компонент с которым мы работаем указываем здесь
     argTypes: {
         backgroundColor: { control: "color" },

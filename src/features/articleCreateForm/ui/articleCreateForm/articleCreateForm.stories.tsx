@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ArticleCreateForm } from "./articleCreateForm";
 
 export default {
-    title: "shared/articleCreateForm",
+    title: "features/articleCreateForm/articleCreateForm",
     component: ArticleCreateForm,
     argTypes: { backgroundColor: { color: "color" } },
 } as ComponentMeta<typeof ArticleCreateForm>;

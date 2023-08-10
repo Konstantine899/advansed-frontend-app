@@ -6,7 +6,7 @@ import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDeco
 import { NotFoundPage } from "./NotFoundPage";
 
 export default {
-  title: "pages/NotFoundPage", // название stories
+  title: "pages/NotFoundPage/NotFoundPage", // название stories
   component: NotFoundPage, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },

@@ -10,7 +10,7 @@ import { Currency } from "entities/Currency";
 import ProfilePage from "./ProfilePage";
 
 export default {
-  title: "pages/ProfilePage", // название stories
+  title: "pages/ProfilePage/ProfilePage", // название stories
   component: ProfilePage, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },

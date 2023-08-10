@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ArticleEditForm } from "./articleEditForm";
 
 export default {
-  title: "shared/articleEditForm",
+  title: "features/articleEditForm/articleEditForm",
   component: ArticleEditForm,
   argTypes: { backgroundColor: { color: "color" } },
 } as ComponentMeta<typeof ArticleEditForm>;

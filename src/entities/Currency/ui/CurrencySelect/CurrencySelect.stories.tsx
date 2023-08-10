@@ -6,7 +6,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { CurrencySelect } from "./CurrencySelect";
 
 export default {
-  title: "entities/CurrencySelect", // название stories
+  title: "entities/CurrencySelect/CurrencySelect", // название stories
   component: CurrencySelect, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },

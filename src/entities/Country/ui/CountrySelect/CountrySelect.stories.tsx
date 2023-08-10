@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { CountrySelect } from "./CountrySelect";
 
 export default {
-  title: "entities/CountrySelect", // название stories
+  title: "entities/CountrySelect/CountrySelect", // название stories
   component: CountrySelect, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },
