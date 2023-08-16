@@ -97,6 +97,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         placeholder={t("Ваше имя")}
         onChange={onChangeFirstName}
         readonly={readonly}
+        data-testid="ProfileCard.firstname"
       />
       <Input
         className={cls.input}
@@ -104,6 +105,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         placeholder={t("Ваша фамилия")}
         onChange={onChangeLastName}
         readonly={readonly}
+        data-testid="ProfileCard.lastname"
       />
       <Input
         className={cls.input}
@@ -111,6 +113,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         placeholder={t("Ваша возраст")}
         onChange={onChangeAge}
         readonly={readonly}
+        data-testid="ProfileCard.age"
+
       />
       <Input
         className={cls.input}
@@ -118,6 +122,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         placeholder={t("Ваш город")}
         onChange={onChangeCity}
         readonly={readonly}
+        data-testid="ProfileCard.sity"
+
       />
       <Input
         className={cls.input}
@@ -125,6 +131,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         placeholder={t("Введите имя пользователя")}
         onChange={onChangeUsername}
         readonly={readonly}
+        data-testid="ProfileCard.username"
       />
       <Input
         className={cls.input}
@@ -132,18 +139,22 @@ export const ProfileCard = (props: ProfileCardProps) => {
         placeholder={t("Введите ссылку на аватар")}
         onChange={onChangeAvatar}
         readonly={readonly}
+        data-testid="ProfileCard.url"
       />
       <CurrencySelect
         className={cls.input}
         value={data?.currency}
         onChange={onChangeCurrency}
         readonly={readonly}
+        data-testid="ProfileCard.currencyselect"
+
       />
       <CountrySelect
         className={cls.input}
         value={data?.country}
         onChange={onChangeCountry}
         readonly={readonly}
+        data-testid="ProfileCard.countryselect"
       />
     </VStack>
   );

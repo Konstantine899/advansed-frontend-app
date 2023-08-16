@@ -14,7 +14,7 @@ export enum ValidateProfileError {
 export interface ProfileSchema {
   data?: Profile; // храним полученные данные с сервера
   form?: Profile; // храним измененное пользователем значение
-  isLoading: boolean;
+  isLoading?: boolean;
   error?: string; // при редактировании профиля возможна
   readonly: boolean; // состояние доступен ли пользователь для редактирования или он в режиме только для чтения
   validateErrors?: ValidateProfileError[]; // валидационных ошибок может быть несколько по этому массив

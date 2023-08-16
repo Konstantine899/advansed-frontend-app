@@ -123,11 +123,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <VStack
-        gap="8"
-        max
-        className={classNames('', {}, [className])}
-      >
+      <VStack gap="8" max className={classNames("", {}, [className])}>
         <EditableProfileCardHeader />
         {validateErrors?.length
           && validateErrors.map((validateError) => (
@@ -135,13 +131,10 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
               theme={TextTheme.ERROR}
               text={validateErrorTranslates[validateError]}
               key={validateError}
+              data-testid="EditableProfileCard.Error"
             />
           ))}
-        <VStack
-          gap="8"
-          max
-          className={classNames('', {}, [className])}
-        >
+        <VStack gap="8" max className={classNames("", {}, [className])}>
           <ProfileCard
             data={formData}
             onChangeFirstName={onChangeFirstName}
