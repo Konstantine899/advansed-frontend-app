@@ -23,6 +23,7 @@
     position: absolute; // что бы с позиционировать в нужное место
     right: -30px;
     bottom: 30px;
+    z-index: 100000;
 }
 
 // Стили для Sidebar items
