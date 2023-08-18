@@ -2,11 +2,11 @@
 
 import { Country } from "entities/Country";
 import { Currency } from "entities/Currency";
+import { ValidateProfileError } from "../consts/consts";
 import { fetchProfileData } from "../services/fetchProfileData/fetchProfileData";
 import { updateProfileData } from "../services/updateProfileData/updateProfileData";
 import { profileActions, profileReducer } from "../slice/profileSlice";
 import {
-  ValidateProfileError,
   ProfileSchema,
 } from "../types/editableProfileCardSchema";
 

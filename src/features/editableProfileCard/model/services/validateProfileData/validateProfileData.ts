@@ -1,6 +1,7 @@
 // features/editableProfileCard/model/services/validateProfileData/validateProfileData.ts
 import { Profile } from "entities/Profile";
-import { ValidateProfileError } from "../../types/editableProfileCardSchema";
+
+import { ValidateProfileError } from "../../consts/consts";
 
 // eslint-disable-next-line consistent-return
 export const validateProfileData = (profile?: Profile) => {

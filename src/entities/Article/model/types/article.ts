@@ -3,18 +3,7 @@
 /* Под каждый тип блока создаю собственный interface, т.е. под каждый тип блока из которого строится наша статья */
 
 import { User } from "entities/User";
-
-export enum ArticleSortField {
-  VIEWS = "views",
-  TITLE = "title",
-  CREATED = "createdAt",
-}
-
-export enum ArticleBlockType {
-  CODE = "CODE",
-  IMAGE = "IMAGE",
-  TEXT = "TEXT",
-}
+import { ArticleBlockType, ArticleType } from "../../model/consts/consts";
 
 /* ArticleBlockBase базовый тип от которого наследуются все блоки ArticleCodeBlock ArticleImageBlock ArticleTextBlock */
 export interface ArticleBlockBase {
@@ -44,19 +33,6 @@ export type ArticleBlock =
   | ArticleCodeBlock
   | ArticleTextBlock
   | ArticleImageBlock;
-
-export enum ArticleType {
-  ALL = "ALL",
-  IT = "IT",
-  SCIENCE = "SCIENCE",
-  ECONOMICS = "ECONOMICS",
-}
-
-/* Отображение списка статей */
-export enum ArticleView {
-  BIG = "BIG",
-  SMALL = "SMALL",
-}
 
 export interface Article {
   id: string;

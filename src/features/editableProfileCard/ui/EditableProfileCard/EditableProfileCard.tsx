@@ -14,8 +14,8 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from "shared/lib/DynamicModuleLouder/DynamicModuleLoader";
+import { ValidateProfileError } from "../../consts/consts";
 import { EditableProfileCardHeader } from "../EditableProfileCardHeader/EditableProfileCardHeader";
-import { ValidateProfileError } from "../../model/types/editableProfileCardSchema";
 
 import { getProfileForm } from "../../model/selectors/getProfileForm/getProfileForm";
 import { getProfileIsLoading } from "../../model/selectors/getProfileIsLoading/getProfileIsLoading";
