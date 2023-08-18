@@ -16,10 +16,6 @@ const ProfilePage = memo((props: ProfilePageProps) => {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
 
-  if (!id) {
-    return <Text text={t(`Профиль не найден`)} />;
-  }
-
   return (
     <Page>
       <VStack gap="16" max>

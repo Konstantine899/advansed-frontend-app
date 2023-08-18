@@ -1,6 +1,7 @@
 // pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters.stories.tsx
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { StoreDecorator } from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import { ArticlesPageFilters } from "./ArticlesPageFilters";
 
 export default {
@@ -15,3 +16,5 @@ const Template: ComponentStory<typeof ArticlesPageFilters> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
+
+Normal.decorators = [StoreDecorator({})];
