@@ -14,7 +14,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from "shared/lib/DynamicModuleLouder/DynamicModuleLoader";
-import { ValidateProfileError } from "../../consts/consts";
+import { ValidateProfileError } from "../../model/consts/consts";
 import { EditableProfileCardHeader } from "../EditableProfileCardHeader/EditableProfileCardHeader";
 
 import { getProfileForm } from "../../model/selectors/getProfileForm/getProfileForm";
@@ -126,7 +126,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
       <VStack gap="8" max className={classNames("", {}, [className])}>
         <EditableProfileCardHeader />
         {validateErrors?.length
-          && validateErrors.map((validateError) => (
+          && validateErrors.map((validateError: ValidateProfileError) => (
             <Text
               theme={TextTheme.ERROR}
               text={validateErrorTranslates[validateError]}

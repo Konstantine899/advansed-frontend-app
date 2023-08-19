@@ -2,14 +2,14 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { HTMLAttributeAnchorTarget, memo } from "react";
-import { ArticleListItemSkeleton } from "shared/ui/ArticleListItemSkeleton/ArticleListItemSkeleton";
 import { Text, TextSize } from "shared/ui/Text/Text";
 import { List, ListRowProps, WindowScroller } from "react-virtualized";
 import { PAGE_ID } from "widgets/Page/Page";
+import { ArticleListItemSkeleton } from "../../ui/ArticleListItemSkeleton/ArticleListItemSkeleton";
 import { ArticleView } from "../../model/consts/consts";
-import { ArticleListItem } from "../../ui/ArticleListItem/ArticleListItem";
-import { Article } from "../../model/types/article";
+import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import cls from "./ArticleList.module.scss";
+import { Article } from "../../model/types/article";
 
 interface ArticleListProps {
   className?: string;
@@ -76,8 +76,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
-      // @ts-ignore
-      <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
+    // @ts-ignore
+    <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
       {({
         width,
         height,
@@ -87,12 +87,12 @@ export const ArticleList = memo((props: ArticleListProps) => {
         onChildScroll,
       }) => (
         <div
-            // @ts-ignore
+          // @ts-ignore
           ref={registerChild}
           className={classNames(cls.ArticleList, {}, [className, cls[view]])}
         >
           {virtualized ? (
-              // @ts-ignore
+            // @ts-ignore
             <List
               height={height ?? 700}
               rowCount={rowCount}
@@ -119,7 +119,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           {isLoading && getSkeletons(view)}
         </div>
       )}
-      </WindowScroller>
+    </WindowScroller>
 
     // <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
     //     {articles.length > 0 ? articles?.map(renderArticle) : null}

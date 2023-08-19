@@ -1,8 +1,10 @@
+// entities/Article/ui/ArticleListItem/ArticleListItemSkeleton.tsx
+
 import { classNames } from "shared/lib/classNames/classNames";
 import { memo } from "react";
-import { ArticleView } from "entities/Article";
-import { Card } from "../../ui/Card/Card";
-import { Skeleton } from "../../ui/Skeleton/Skeleton";
+import { ArticleView } from "../../model/consts/consts";
+import { Card } from "../../../../shared/ui/Card/Card";
+import { Skeleton } from "../../../../shared/ui/Skeleton/Skeleton";
 import cls from "./ArticleListItemSkeleton.module.scss";
 
 interface ArticleListItemSkeletonProps {
