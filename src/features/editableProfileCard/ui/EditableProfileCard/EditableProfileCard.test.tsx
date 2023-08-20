@@ -1,11 +1,12 @@
 // features/editableProfileCard/ui/EditableProfileCard/EditableProfileCard.test.tsx
-import { ComponentRender } from "shared/lib/tests/componentRender/componentRender";
+
 import { Profile } from "entities/Profile";
 import { Currency } from "entities/Currency";
 import { Country } from "entities/Country";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { $api } from "shared/api/api";
+import { ComponentRender } from "shared/lib/tests/ComponentRender/ComponentRender";
 import { profileReducer } from "../../model/slice/profileSlice";
 import { EditableProfileCard } from "./EditableProfileCard";
 
