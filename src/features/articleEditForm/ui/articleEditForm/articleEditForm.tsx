@@ -13,7 +13,7 @@ export const ArticleEditForm = memo((
 
     return (
         <div
-            className={classNames(cls.articleEditForm, {}, [className])}
+            className={classNames('', {}, [className])}
         >
             {}
         </div>

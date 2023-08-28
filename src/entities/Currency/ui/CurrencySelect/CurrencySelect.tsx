@@ -1,7 +1,7 @@
 // entities/Currency/ui//CurrencySelect/CurrencySelect.tsx
 import { useTranslation } from "react-i18next";
 import { memo } from "react";
-import { ListBox } from "shared/ui/ListBox/ListBox";
+import { ListBox } from "shared/ui/Popups";
 import { Currency } from "../../modal/types/currency";
 
 interface CurrencySelectProps {

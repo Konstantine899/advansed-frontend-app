@@ -10,6 +10,6 @@ export const ArticleCreateForm = memo((props: articleCreateFormProps) => {
   const { className } = props;
 
   return (
-    <div className={classNames(cls.articleCreateForm, {}, [className])}>{}</div>
+    <div className={classNames('', {}, [className])}>{}</div>
   );
 });
