@@ -1,7 +1,7 @@
 // entities/Article/ui/ArticleListItem/ArticleListItem.stories.tsx
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ArticleView } from "../consts/consts";
+import { ArticleView } from "../../model/consts/consts";
 import { Article } from "../../model/types/article";
 import { ArticleListItem } from "./ArticleListItem";
 
