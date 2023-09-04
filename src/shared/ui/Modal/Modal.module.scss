@@ -11,6 +11,9 @@
     pointer-events: none; // полностью игнорируем любые события
     z-index: -1;
     color: var(--primary-color); // это только для примера ни в коем случае так не делай
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay {
