@@ -1,9 +1,8 @@
 // entities/Notification/ui/NotificationList/NotificationList.tsx
-import { classNames } from "shared/lib/classNames/classNames";
-import { useTranslation } from "react-i18next";
 import { memo } from "react";
-import { VStack } from "shared/ui/Stack";
-import { Skeleton } from "shared/ui/Skeleton/Skeleton";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { VStack } from "@/shared/ui/Stack";
+import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
 import { useNotification } from "../../api/notificationApi";
 import { NotificationItem } from "../../ui/NotificationItem/NotificationItem";
 import cls from "./NotificationList.module.scss";
@@ -14,7 +13,6 @@ interface NotificationListProps {
 
 export const NotificationList = memo((props: NotificationListProps) => {
   const { className } = props;
-  const { t } = useTranslation();
   const { data, isLoading } = useNotification(null, { pollingInterval: 5000 });
 
   if (isLoading) {

@@ -1,7 +1,7 @@
 // features/editableProfileCard/model/slice/profileSlice.test.ts
 
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
 import { ValidateProfileError } from "../consts/consts";
 import { fetchProfileData } from "../services/fetchProfileData/fetchProfileData";
 import { updateProfileData } from "../services/updateProfileData/updateProfileData";

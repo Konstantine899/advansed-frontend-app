@@ -1,15 +1,15 @@
 // pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.tsx
 
-import { classNames } from "shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import {
   DynamicModuleLoader,
   ReducersList,
-} from "shared/lib/DynamicModuleLouder/DynamicModuleLoader";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import { Page } from "widgets/Page/Page";
+} from "@/shared/lib/DynamicModuleLouder/DynamicModuleLoader";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { Page } from "@/widgets/Page/Page";
 import { ArticlesPageFilters } from "../../ui/ArticlesPageFilters/ArticlesPageFilters";
 import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import { initArticlePage } from "../../model/services/initArticlePage/initArticlePage";

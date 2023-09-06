@@ -1,5 +1,5 @@
 // features/editableProfileCard/model/selectors/getProfileError.test.ts
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getProfileError } from "../getProfileError/getProfileError";
 
 describe("getProfileData.test", () => {

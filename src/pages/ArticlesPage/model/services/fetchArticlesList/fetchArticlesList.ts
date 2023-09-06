@@ -1,9 +1,9 @@
 // pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList.ts
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Article, ArticleType } from "entities/Article";
-import { ThunkConfig } from "app/providers/StoreProvider";
-import { addQueryParams } from "shared/url/addQueryParams/addQueryParams";
+import { Article, ArticleType } from "@/entities/Article";
+import { ThunkConfig } from "@/app/providers/StoreProvider";
+import { addQueryParams } from "@/shared/url/addQueryParams/addQueryParams";
 import {
   getArticlePageLimit,
   getArticlePageNum,

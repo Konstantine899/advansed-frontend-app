@@ -1,8 +1,8 @@
 // features/editableProfileCard/model/services/updateProfileData/updateProfileData.test.ts
 
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
-import { TestAsyncThunk } from "shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
+import { TestAsyncThunk } from "@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
 import { ValidateProfileError } from "../../consts/consts";
 import { updateProfileData } from "../updateProfileData/updateProfileData";
 

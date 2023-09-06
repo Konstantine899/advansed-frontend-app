@@ -1,7 +1,7 @@
 // pages/ArticlesPage/services/fetchNextArticlesPage/fetchNextArticlesPage.ts
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { ThunkConfig } from "app/providers/StoreProvider";
+import { ThunkConfig } from "@/app/providers/StoreProvider";
 import {
   getArticlePageHasMore,
   getArticlePageIsLoading,

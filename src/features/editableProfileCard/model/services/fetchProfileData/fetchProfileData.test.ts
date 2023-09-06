@@ -1,8 +1,8 @@
 // features/editableProfileCard/model/services/fetchProfileData/fetchProfileData.test.ts
 
-import { TestAsyncThunk } from "shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
+import { TestAsyncThunk } from "@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
 import { fetchProfileData } from "../fetchProfileData/fetchProfileData";
 
 const data = {

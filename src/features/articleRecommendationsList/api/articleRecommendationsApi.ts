@@ -1,6 +1,6 @@
 // features/articleRecommendationsList/api/articleRecommendationsApi.ts
-import { rtkApi } from "shared/api/rtkApi";
-import { Article } from "entities/Article";
+import { rtkApi } from "@/shared/api/rtkApi";
+import { Article } from "@/entities/Article";
 
 const recommendationsApi = rtkApi.injectEndpoints({
   endpoints: (build) => ({

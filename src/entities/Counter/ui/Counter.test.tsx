@@ -1,7 +1,7 @@
 // entities/Counter/ui/Counter.test.tsx
 import { screen } from "@testing-library/react";
-import { ComponentRender } from "shared/lib/tests/ComponentRender/ComponentRender";
 import { userEvent } from "@storybook/testing-library";
+import { ComponentRender } from "@/shared/lib/tests/ComponentRender/ComponentRender";
 import { Counter } from "../ui/Counter";
 
 describe("Counter.test", () => {

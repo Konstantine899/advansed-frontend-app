@@ -1,6 +1,6 @@
 // entities/Article/model/selectors/articleDetails.test.ts
 
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import {
   getArticleDetailsData,
   getArticleDetailsIsError,

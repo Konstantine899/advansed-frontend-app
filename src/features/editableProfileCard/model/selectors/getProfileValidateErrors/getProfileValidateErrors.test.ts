@@ -1,5 +1,5 @@
 // features/editableProfileCard/model/selectors/getProfileValidateErrors.test.ts
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 
 import { ValidateProfileError } from "../../consts/consts";
 import { getProfileValidateErrors } from "../getProfileValidateErrors/getProfileValidateErrors";

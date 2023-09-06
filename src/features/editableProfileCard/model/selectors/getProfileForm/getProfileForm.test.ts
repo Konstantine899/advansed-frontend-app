@@ -1,8 +1,8 @@
 // features/editableProfileCard/model/selectors/getProfileForm.test.ts
 
-import { StateSchema } from "app/providers/StoreProvider";
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
 import { getProfileForm } from "../getProfileForm/getProfileForm";
 
 describe("getProfileForm.test", () => {

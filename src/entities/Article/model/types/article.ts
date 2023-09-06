@@ -2,7 +2,7 @@
 
 /* Под каждый тип блока создаю собственный interface, т.е. под каждый тип блока из которого строится наша статья */
 
-import { User } from "entities/User";
+import { User } from "@/entities/User";
 import { ArticleBlockType, ArticleType } from "../../model/consts/consts";
 
 /* ArticleBlockBase базовый тип от которого наследуются все блоки ArticleCodeBlock ArticleImageBlock ArticleTextBlock */

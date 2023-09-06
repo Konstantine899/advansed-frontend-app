@@ -1,6 +1,5 @@
-import { classNames } from "shared/lib/classNames/classNames";
 import { memo } from "react";
-import cls from "./articleCreateForm.module.scss";
+import { classNames } from "@/shared/lib/classNames/classNames";
 
 interface articleCreateFormProps {
   className?: string;

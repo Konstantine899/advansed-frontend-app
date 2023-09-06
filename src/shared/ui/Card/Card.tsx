@@ -1,6 +1,6 @@
 // shared/ui/Card/Card.tsx
-import { classNames } from "shared/lib/classNames/classNames";
 import { HTMLAttributes, memo, ReactNode } from "react";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./Card.module.scss";
 
 export enum CardTheme {

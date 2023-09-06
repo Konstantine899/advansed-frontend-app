@@ -1,6 +1,6 @@
 // features/editableProfileCard/model/selectors/getProfileReadonly.test.ts
 
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getProfileIsLoading } from "../getProfileIsLoading/getProfileIsLoading";
 import { getProfileReadonly } from "../getProfileReadonly/getProfileReadonly";
 

@@ -1,8 +1,8 @@
 // shared/ui/Popups/ui/Dropdown/Dropdown.tsx
 import { Menu } from "@headlessui/react";
-import { classNames } from "shared/lib/classNames/classNames";
 import { Fragment, ReactNode } from "react";
-import { DropDownDirection } from "shared/types/dropDownDirection";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { DropDownDirection } from "@/shared/types/dropDownDirection";
 import { mapDirectionClass } from "../styles/consts";
 import { AppLink } from "../../../AppLink/AppLink";
 import cls from "./Dropdown.module.scss";

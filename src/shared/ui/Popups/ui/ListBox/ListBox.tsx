@@ -1,8 +1,8 @@
 // shared/ui/Popups/ui/ListBox/ListBox.tsx
 import { Fragment, ReactNode } from "react";
 import { Listbox as HListBox } from "@headlessui/react";
-import { classNames } from "shared/lib/classNames/classNames";
-import { DropDownDirection } from "shared/types/dropDownDirection";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { DropDownDirection } from "@/shared/types/dropDownDirection";
 import { mapDirectionClass } from "../styles/consts";
 import { HStack } from "../../../Stack";
 import { Button } from "../../../Button/Button";

@@ -1,5 +1,5 @@
 // features/AuthByUserName/model/selectors/getLoginError/getLoginError.test.ts
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getLoginError } from "./getLoginError";
 
 describe("getLoginError.test", () => {

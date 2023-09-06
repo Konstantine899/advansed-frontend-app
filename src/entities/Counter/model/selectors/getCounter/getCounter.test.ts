@@ -1,5 +1,5 @@
 // entities/Counter/selectors/getCounter/getCounter.test.ts
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getCounter } from "../../selectors/getCounter/getCounter";
 
 describe("getCounter", () => {

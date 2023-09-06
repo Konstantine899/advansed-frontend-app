@@ -1,7 +1,7 @@
 // shared/ui/Code/Code.tsx
-import { classNames } from "shared/lib/classNames/classNames";
 import React, { memo, useCallback } from "react";
-import CopyIcon from "shared/assets/icons/copy-20-20.svg.svg";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import CopyIcon from "@/shared/assets/icons/copy-20-20.svg.svg";
 import cls from "./Code.module.scss";
 import { Button, ButtonTheme } from "../Button/Button";
 

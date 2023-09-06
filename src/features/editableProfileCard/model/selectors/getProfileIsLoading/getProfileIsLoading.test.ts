@@ -1,6 +1,6 @@
 // features/editableProfileCard/model/selectors/getProfileIsLoading.test.ts
 
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getProfileIsLoading } from "../getProfileIsLoading/getProfileIsLoading";
 
 describe("getProfileIsLoading.test", () => {

@@ -1,5 +1,5 @@
 // shared/ui/Loader/Loader.tsx
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import "./Loader.scss";
 
 interface LoaderProps {

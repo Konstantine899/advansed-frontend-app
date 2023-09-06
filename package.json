@@ -117,7 +117,8 @@
     "react-virtualized": "^9.21.21",
     "sass": "^1.54.9",
     "sass-loader": "^12.6.0",
-    "style-loader": "^3.3.1"
+    "style-loader": "^3.3.1",
+    "ts-morph": "^16.0.0"
   },
   "loki": {
     "configurations": {

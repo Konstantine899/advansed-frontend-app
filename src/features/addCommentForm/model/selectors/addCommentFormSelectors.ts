@@ -1,6 +1,6 @@
 // features/AddCommentForm/model/selectors/addCommentFormSelectors.ts
 
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 
 // нельзя использовать оператор || если в input мы введем null то он отработает не корректно
 // null для js это false значение. В таком случае для null у нас подставится пустая строка

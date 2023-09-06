@@ -1,6 +1,6 @@
 // features/editableProfileCard/model/types/editableProfileCardSchema.ts
 
-import { Profile } from "entities/Profile";
+import { Profile } from "@/entities/Profile";
 import { ValidateProfileError } from "../../model/consts/consts";
 
 export interface ProfileSchema {

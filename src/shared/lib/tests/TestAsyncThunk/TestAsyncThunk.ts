@@ -1,7 +1,7 @@
 // shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts
-import { StateSchema } from "app/providers/StoreProvider";
 import { AsyncThunkAction } from "@reduxjs/toolkit";
 import axios, { AxiosStatic } from "axios";
+import { StateSchema } from "@/app/providers/StoreProvider";
 
 type actionCreatorType<Return, Arg, RejectedValue> = (
   arg: Arg

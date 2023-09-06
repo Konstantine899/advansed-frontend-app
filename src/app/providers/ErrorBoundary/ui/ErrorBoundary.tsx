@@ -1,6 +1,6 @@
 // src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx
 import React, { ErrorInfo, ReactNode, Suspense } from "react";
-import { PageError } from "widgets/PageError";
+import { PageError } from "@/widgets/PageError";
 
 interface ErrorBoundaryProps {
   children: ReactNode;

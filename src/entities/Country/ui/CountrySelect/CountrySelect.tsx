@@ -1,7 +1,6 @@
 // entities/Currency/ui//CurrencySelect/CurrencySelect.tsx
-import { useTranslation } from "react-i18next";
 import { memo } from "react";
-import { ListBox } from "shared/ui/Popups";
+import { ListBox } from "@/shared/ui/Popups";
 import { Country } from "../../model/types/country";
 
 interface CountrySelectProps {
@@ -22,8 +21,6 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
   const {
  className, value, onChange, readonly
 } = props;
-
-  const { t } = useTranslation();
 
   const onChangeHandler = (value: string) => {
     onChange?.(value as Country);

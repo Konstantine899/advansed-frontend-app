@@ -1,6 +1,6 @@
 // features/AuthByUserName/model/selectors/getLoginUsername/getLoginUsername.test.ts
 
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getLoginUsername } from "../../selectors/getLoginUsername/getLoginUsername";
 
 describe("getLoginUsername.test", () => {

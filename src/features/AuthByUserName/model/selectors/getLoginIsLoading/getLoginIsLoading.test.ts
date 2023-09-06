@@ -1,5 +1,5 @@
 // features/AuthByUserName/model/selectors/getLoginIsLoading/getLoginIsLoading.test.ts
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getLoginIsLoading } from "../../selectors/getLoginIsLoading/getLoginIsLoading";
 
 describe("getLoginIsLoading.test", () => {
