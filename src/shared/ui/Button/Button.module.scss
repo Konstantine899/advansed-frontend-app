@@ -1,87 +1,91 @@
 /* shared/ui/Button.module.scss */
 .Button {
-    cursor: pointer;
-    color: var(--primary-color);
-    padding: 6px 15px;
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 6px 15px;
 
-    &:hover {
-        opacity: 0.7;
-        fill-opacity: 0.7;
-        stroke-opacity: 0.7;
-    }
+  &:hover {
+    opacity: 0.7;
+    fill-opacity: 0.7;
+    stroke-opacity: 0.7;
+  }
 }
 
 .clear,
 .clearInverted {
-    padding: 0;
-    border: none;
-    background: none;
-    outline: none;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 // переопределяю добавляю стили для clearInverted
 .clearInverted {
-    color: var(--inverted-primary-color);
+  color: var(--inverted-primary-color);
 }
 
 .outline {
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: none;
 }
 
 .outline_red {
-    border: 1px solid var(--red-light);
-    color: var(--red-light);
-    background: none;
+  border: 1px solid var(--red-light);
+  color: var(--red-light);
+  background: none;
 }
 
 .background {
-    background: var(--bg-color);
-    color: var(--primary-color);
-    border: none;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: none;
 }
 
 .backgroundInverted {
-    background: var(--inverted-bg-color);
-    color: var(--inverted-primary-color);
-    border: none;
+  background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+  border: none;
 }
 
 .square {
-    padding: 0;
+  padding: 0;
 }
 
 .square.size_m {
-    width: var(--font-size-m); // размер ширины кнопки
-    height: var(--font-line-m); // размер высоты кнопки
+  width: var(--font-size-m); // размер ширины кнопки
+  height: var(--font-line-m); // размер высоты кнопки
 }
 
 .square.size_l {
-    width: var(--font-size-l); // размер ширины кнопки
-    height: var(--font-line-l); // размер высоты кнопки
+  width: var(--font-size-l); // размер ширины кнопки
+  height: var(--font-line-l); // размер высоты кнопки
 }
 
 .square.size_xl {
-    width: var(--font-size-xl); // размер ширины кнопки
-    height: var(--font-line-xl); // размер высоты кнопки
+  width: var(--font-size-xl); // размер ширины кнопки
+  height: var(--font-line-xl); // размер высоты кнопки
 }
 
 // размеры шрифта
 
 .size_m {
-    font: var(--font-m);
+  font: var(--font-m);
 }
 
 .size_l {
-    font: var(--font-l);
+  font: var(--font-l);
 }
 
 .size_xl {
-    font: var(--font-xl);
+  font: var(--font-xl);
 }
 
 // стили для отключенной кнопки
 .disabled {
-    opacity: 0.5;
+  opacity: 0.5;
+}
+
+.fullWidth {
+  width: 100%;
 }

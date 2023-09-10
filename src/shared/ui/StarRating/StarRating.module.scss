@@ -1,0 +1,17 @@
+// shared/ui/StarRating/StarRating.module.scss
+
+.StarIcon {
+  cursor: pointer;
+}
+
+.normal {
+  fill: none; // цвет не выбранной звезды
+}
+
+.hovered {
+  fill: var(--primary-color); // цвет заполнения звезд
+}
+
+.selected{
+  cursor: auto; // делаю обычный курсор при наведении
+}
