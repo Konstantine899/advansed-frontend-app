@@ -1,4 +1,4 @@
-  {
+{
   "notifications": [
     {
       "id": "1",
@@ -1559,6 +1559,45 @@
       "city": "Vitebsk",
       "username": "admin",
       "avatar": "https://sun9-61.userapi.com/impf/o87a8-ygpu1OBx-PG7-pbcqVz0HEtYBmHVhzVg/LT89A1qYQuw.jpg?size=774x1032&quality=96&sign=062579801b03614f63ccf7817ce0b0c6&c_uniq_tag=JqqG5CeNlytGBPpSFLyZ-3w6VTLOeO-2PR37T8g0q5s&type=album"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 5,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "to0JO3y"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 5,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
