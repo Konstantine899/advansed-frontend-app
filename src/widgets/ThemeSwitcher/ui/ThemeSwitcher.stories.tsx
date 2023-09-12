@@ -6,7 +6,7 @@ import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default {
-  title: "widget/ThemeSwitcher", // название stories
+  title: "widgets/ThemeSwitcher", // название stories
   component: ThemeSwitcher, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },

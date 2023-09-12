@@ -14,7 +14,7 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
   },
-  decorators: [withMock], // глобальный декоратор которы добавляется на все story case
+  decorators: [withMock], // глобальный декоратор который добавляется на все story case, мокаем запросы
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
 const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (

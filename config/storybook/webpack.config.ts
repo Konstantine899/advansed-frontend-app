@@ -14,6 +14,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     buildLocales: "",
   };
   config.resolve!.modules!.push(paths.src); // прокидываем путь до папки с исходным кодом
+  config.resolve!.alias = { ...config.resolve!.alias, "@": paths.src }; // Разворачиваем старые aliases и добавляю свой alias.
   config.resolve!.extensions!.push("ts", "tsx"); // указываю расширения скриншотный файлов для файлов stories
   config.module!.rules!.push(buildCssLoader(true)); // добавляю loader в правила. true будет использоваться только для development
 

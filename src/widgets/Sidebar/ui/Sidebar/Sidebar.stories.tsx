@@ -8,7 +8,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 import { Sidebar } from "../Sidebar/Sidebar";
 
 export default {
-  title: "widget/Sidebar", // название stories
+  title: "widgets/Sidebar", // название stories
   component: Sidebar, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },

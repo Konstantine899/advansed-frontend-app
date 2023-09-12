@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { AvatarDropdown } from "./AvatarDropdown";
 
 export default {
-    title: "shared/AvatarDropdown",
+    title: "features/avatarDropdown/AvatarDropdown",
     component: AvatarDropdown,
     argTypes: { backgroundColor: { color: "color" } },
 } as ComponentMeta<typeof AvatarDropdown>;

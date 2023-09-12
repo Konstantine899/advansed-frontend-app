@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 import { PageError } from "./PageError";
 
 export default {
-  title: "widget/PageError", // название stories
+  title: "widgets/PageError", // название stories
   component: PageError, // компонент с которым мы работаем указываем здесь
   argTypes: {
     backgroundColor: { control: "color" },
