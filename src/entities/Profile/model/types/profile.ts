@@ -1,6 +1,6 @@
 // entities/Profile/model/types/profile.ts
-import { Currency } from "@/entities/Currency/modal/types/currency";
-import { Country } from "@/entities/Country/model/types/country";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
 
 export interface Profile {
   id?: string;

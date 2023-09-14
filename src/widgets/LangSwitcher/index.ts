@@ -1,3 +1,1 @@
-export interface LangSwitcherSchema {
-    id: number
-}
+export { LangSwitcher } from "./ui/LangSwitcher";

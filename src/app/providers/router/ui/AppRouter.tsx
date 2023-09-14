@@ -6,7 +6,7 @@ import {
   AppRoutesProps,
   routeConfig,
 } from "@/shared/config/routeConfig/routeConfig";
-import { PageLoader } from "@/widgets/PageLoader/ui/PageLoader";
+import { PageLoader } from "@/widgets/PageLoader";
 import { RequireAuth } from "@/app/providers/router/ui/RequireAuth";
 
 const AppRouter = () => {
@@ -19,7 +19,11 @@ const AppRouter = () => {
       <Route
         key={route.path}
         element={
-          route.authOnly ? <RequireAuth roles={route.roles}>{element}</RequireAuth> : element
+          route.authOnly ? (
+            <RequireAuth roles={route.roles}>{element}</RequireAuth>
+          ) : (
+            element
+          )
         }
         path={route.path}
       />

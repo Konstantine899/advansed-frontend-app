@@ -72,6 +72,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
     "konstantine899-plugin/path-cheker": ["error", { alias: "@" }], // вторым параметром идет объект с опциями в котором указываю наш alias
+    "konstantine899-plugin/public-api-imports": ["error", { alias: "@" }], // вторым параметром идет объект с опциями в котором указываю наш alias
   },
   globals: {
     __IS_DEV__: true,

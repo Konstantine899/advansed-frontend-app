@@ -1,7 +1,7 @@
 // pages/ProfilePage/ui/ProfilePage.tsx
 import { memo } from "react";
 import { useParams } from "react-router-dom";
-import { Page } from "@/widgets/Page/Page";
+import { Page } from "@/widgets/Page";
 import { VStack } from "@/shared/ui/Stack/VStack/VStack";
 import { EditableProfileCard } from "@/features/editableProfileCard";
 
@@ -14,7 +14,7 @@ const ProfilePage = memo((props: ProfilePageProps) => {
   const { id } = useParams<{ id: string }>();
 
   return (
-    <Page>
+    <Page className={className}>
       <VStack gap="16" max>
         <EditableProfileCard id={id} />
       </VStack>

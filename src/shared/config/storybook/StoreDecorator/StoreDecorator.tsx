@@ -1,11 +1,11 @@
 // shared/storybook/StoreDecorator/StoreDecorator.tsx
 import { Story } from "@storybook/react";
 import { StateSchema, StoreProvider } from "@/app/providers/StoreProvider";
-import { loginReducer } from "@/features/AuthByUserName/model/slice/loginSlice";
+import { loginReducer } from "@/features/AuthByUserName";
 import { ReducersList } from "@/shared/lib/DynamicModuleLouder/DynamicModuleLoader";
-import { articleDetailsReducer } from "@/entities/Article/model/slice/articleDetailsSlice";
-import { addCommentFormReducer } from "@/features/addCommentForm/model/slices/addCommentFormSlice";
-import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage/model/slices";
+import { articleDetailsReducer } from "@/entities/Article";
+import { addCommentFormReducer } from "@/features/addCommentForm";
+import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage";
 import { profileReducer } from "@/features/editableProfileCard";
 
 const defaultAsyncReducers: ReducersList = {

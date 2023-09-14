@@ -5,10 +5,8 @@ import { Text, TextAlign, TextTheme } from "@/shared/ui/Text/Text";
 import { Input } from "@/shared/ui/Input/Input";
 import { Loader } from "@/shared/ui/Loader/Loader";
 import { Avatar } from "@/shared/ui/Avatar/Avatar";
-import { Currency } from "@/entities/Currency/modal/types/currency";
-import { CurrencySelect } from "@/entities/Currency";
-import { Country } from "@/entities/Country/model/types/country";
-import { CountrySelect } from "@/entities/Country";
+import { CurrencySelect, Currency } from "@/entities/Currency";
+import { CountrySelect, Country } from "@/entities/Country";
 import { HStack, VStack } from "@/shared/ui/Stack";
 import { Profile } from "../../model/types/profile";
 import cls from "./ProfileCard.module.scss";
@@ -114,7 +112,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChange={onChangeAge}
         readonly={readonly}
         data-testid="ProfileCard.age"
-
       />
       <Input
         className={cls.input}
@@ -123,7 +120,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChange={onChangeCity}
         readonly={readonly}
         data-testid="ProfileCard.sity"
-
       />
       <Input
         className={cls.input}
@@ -147,7 +143,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChange={onChangeCurrency}
         readonly={readonly}
         data-testid="ProfileCard.currencyselect"
-
       />
       <CountrySelect
         className={cls.input}
