@@ -17,7 +17,6 @@ export {
     ArticleBlockType,
 } from "./model/consts/consts";
 export { getArticleDetailsData } from "./model/selectors/articleDetails";
-export { articleDetailsReducer, articleDetailsActions, articleDetailsSlice } from "./model/slice/articleDetailsSlice";
 
 export { ArticleList } from "./ui/ArticleList/ArticleList";
 export { ArticleViewSelector } from "./ui/ArticleViewSelector/ArticleViewSelector";
