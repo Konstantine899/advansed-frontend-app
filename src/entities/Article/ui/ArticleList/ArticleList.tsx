@@ -1,7 +1,7 @@
 // entities/Article/ui/ArticleList/ArticleList.tsx
 import { useTranslation } from "react-i18next";
 import { HTMLAttributeAnchorTarget, memo } from "react";
-import { Text, TextSize } from "@/shared/ui/Text/Text";
+import { Text, TextSize } from "@/shared/ui/Text";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ArticleListItemSkeleton } from "../../ui/ArticleListItemSkeleton/ArticleListItemSkeleton";
 import { ArticleView } from "../../model/consts/consts";
