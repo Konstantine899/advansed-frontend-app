@@ -24,8 +24,10 @@ module.exports = {
     "i18next",
     "react-hooks",
     "konstantine899-plugin",
+    "unused-imports"
   ],
   rules: {
+    "unused-imports/no-unused-imports": "error",
     "no-undef": "off",
     "no-param-reassign": "off",
     "implicit-arrow-linebreak": "warn",
