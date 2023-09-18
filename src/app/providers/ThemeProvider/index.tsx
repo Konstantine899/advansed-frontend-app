@@ -1,6 +1,5 @@
 // src/app/providers/ThemeProvider/index.ts
 import ThemeProvider from './ui/ThemeProvider';
-import { useTheme } from './lib/useTheme';
-import { Theme } from './lib/ThemeContext';
+import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
 
-export { ThemeProvider, useTheme, Theme };
+export { ThemeProvider, useTheme };

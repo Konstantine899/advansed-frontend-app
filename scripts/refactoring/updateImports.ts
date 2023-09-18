@@ -1,9 +1,9 @@
-// scripts/updateImports.js
+// scripts/refactoring/updateImports.js
 import { Project } from "ts-morph";
 
 const project = new Project({});
 
-// добавляю файлы исходного кода с которым работаю
+// добавляю файлы исходного кода с которыми работаю
 project.addSourceFilesAtPaths("src/**/*.ts");
 project.addSourceFilesAtPaths("src/**/*.tsx");
 

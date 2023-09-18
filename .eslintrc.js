@@ -76,7 +76,18 @@ module.exports = {
       "error",
       {
         alias: "@",
-        testFilesPatterns: ["**/*.test.*", "**/*.stories.*", "**/StoreDecorator.tsx"],
+        testFilesPatterns: [
+          "**/*.test.*",
+          "**/*.stories.*",
+          "**/StoreDecorator.tsx",
+        ],
+      },
+    ],
+    "konstantine899-plugin/layer-imports": [
+      "error",
+      {
+        alias: "@",
+        ignoreImportPatterns: ["**/StoreProvider", "**/testing"],
       },
     ],
   },

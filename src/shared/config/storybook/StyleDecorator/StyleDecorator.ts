@@ -1,4 +1,5 @@
 // shared/storybook/StyleDecorator/StyleDecorator.ts
+// eslint-disable-next-line konstantine899-plugin/layer-imports
 import "@/app/styles/index.scss";
 import { Story } from "@storybook/react";
 
