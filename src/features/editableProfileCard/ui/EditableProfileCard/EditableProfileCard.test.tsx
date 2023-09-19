@@ -1,6 +1,6 @@
 // features/editableProfileCard/ui/EditableProfileCard/EditableProfileCard.test.tsx
 
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Profile } from "@/entities/Profile";
 import { Currency } from "@/entities/Currency";
@@ -94,13 +94,10 @@ describe("features/EditableProfileCard", () => {
   test("Отправка PUT запроса", async () => {
     const mockPutReq = jest.spyOn($api, "put");
     ComponentRender(<EditableProfileCard id="1" />, options);
-    await userEvent.click(
-      screen.getByTestId("EditableProfileCardHeader.EditButton")
-    );
-    await userEvent.type(
-      screen.getByTestId("ProfileCard.firstname"),
-      "Константин1"
-    );
+    await act(async () => userEvent.click(
+        screen.getByTestId("EditableProfileCardHeader.EditButton")
+      ));
+    await act(async () => userEvent.type(screen.getByTestId("ProfileCard.firstname"), "Константин1"));
     await userEvent.click(
       screen.getByTestId("EditableProfileCardHeader.SaveButton")
     );

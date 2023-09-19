@@ -53,6 +53,7 @@ export default {
     "\\.(s?css)$": "identity-obj-proxy",
     // mapper для svg
     "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
   reporters: [
     "default",

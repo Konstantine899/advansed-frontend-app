@@ -14,6 +14,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'fullscreen'
 };
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT)); // default тема приложения
