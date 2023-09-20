@@ -4,15 +4,21 @@ import { useDispatch, useStore } from "react-redux";
 import { Reducer } from "@reduxjs/toolkit";
 import {
   StateSchemaKey,
-  ReduxStoreWithManager,
+  ReduxStoreWithManager, StateSchema,
 } from "@/app/providers/StoreProvider";
 
 /* типизирую props reducers
  * props - всегда объект
  * Так вот ключом будет name типа StateSchemaKey - где у нас описаны соответствующие ключи
- * А значением будет сам Reducer  */
+ * А значением будет сам Reducer
+ * В Reducer передаю generic StateSchema
+ * с помощью него мы будем сопоставлять
+ * название reducer, которое находится в ключе,
+ * с самим reducer находящимся в значении.
+ * Из StateSchema нам необходимо по ключу name получить нужный reducer
+ * С помощью NonNullable указываю что reducer не должен быть нулевым  */
 export type ReducersList = {
-  [name in StateSchemaKey]?: Reducer;
+  [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>;
 };
 
 // Типизирую кортеж
