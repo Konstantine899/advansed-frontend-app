@@ -12,8 +12,9 @@ import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitial
 import { StateSchema } from "@/app/providers/StoreProvider";
 import { useThrottle } from "@/shared/lib/hooks/useThrottle/useThrottle";
 import cls from "./Page.module.scss";
+import { TestsProps } from "@/shared/types/tests";
 
-interface PageProps {
+interface PageProps extends TestsProps {
   className?: string;
   children: ReactNode;
   onScrollEnd?: () => void;
@@ -24,8 +25,8 @@ export const PAGE_ID = "PAGE_ID";
 export const Page = memo((props: PageProps) => {
   const { className, children, onScrollEnd } = props;
   /* явно указываю тип для того что бы при использовании useInfiniteScroll TS не ругался */
-  const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>; // обрати внимание что здесь HTMLDivElement
-  const triggerRef = useRef() as MutableRefObject<HTMLDivElement>; // обрати внимание что здесь HTMLDivElement
+  const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>; // обрати внимание, что здесь HTMLDivElement
+  const triggerRef = useRef() as MutableRefObject<HTMLDivElement>; // обрати внимание, что здесь HTMLDivElement
   const dispatch = useAppDispatch();
   const { pathname } = useLocation();
   const scrollPosition = useSelector((state: StateSchema) => getUIScrollByPath(state, pathname));
@@ -55,6 +56,7 @@ export const Page = memo((props: PageProps) => {
       ref={wrapperRef}
       className={classNames(cls.Page, {}, [className])}
       id={PAGE_ID}
+      data-testid={props["data-testid"] ?? "Page"}
     >
       {children}
       {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
