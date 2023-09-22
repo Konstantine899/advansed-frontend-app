@@ -25,6 +25,7 @@ interface ProfileCardProps {
   onChangeAvatar?: (value?: string) => void;
   onChangeCurrency?: (value?: Currency) => void;
   onChangeCountry?: (value?: Country) => void;
+  size?: number;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -42,6 +43,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     onChangeAvatar,
     onChangeCurrency,
     onChangeCountry,
+    size = 100,
   } = props;
   const { t } = useTranslation("profile"); // создаю новое пространство имен
 
@@ -84,9 +86,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
       max
       className={classNames(cls.ProfileCard, mods, [className])}
     >
-      {data?.avatar && (
+      {data?.avatar ? (
         <HStack justify="center" max className={cls.AvatarWrapper}>
           <Avatar src={data?.avatar} />
+        </HStack>
+      ) : (
+        <HStack justify="center" max className={cls.AvatarWrapper}>
+          <Avatar size={size} fallbackInverted />
         </HStack>
       )}
       <Input
