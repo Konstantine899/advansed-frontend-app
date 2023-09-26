@@ -1,5 +1,3 @@
-// config/jest/setupTests.ts
 // Такой файл вы могли наблюдать при create-react-app
-import "@testing-library/jest-dom";
-import "regenerator-runtime/runtime";
-import 'whatwg-fetch';
+import '@testing-library/jest-dom';
+import 'regenerator-runtime/runtime';
