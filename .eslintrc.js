@@ -49,7 +49,7 @@ module.exports = {
     "no-unused-vars": "off",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "warn",
+    "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": "off",
     "react/no-array-index-key": "off",
     "no-shadow": "off",
