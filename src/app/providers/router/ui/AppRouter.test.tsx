@@ -1,6 +1,5 @@
 // app/providers/router/ui/AppRouter.test.tsx
 import { screen } from "@testing-library/react";
-import { ComponentRender } from "@/shared/lib/tests/ComponentRender/ComponentRender";
 import AppRouter from "./AppRouter";
 import {
   getRouteAbout,
@@ -8,25 +7,26 @@ import {
   getRouteProfile,
 } from "@/shared/const/router";
 import { UserRole } from "@/entities/User";
+import { componentRender } from "@/shared/lib/tests/componentRender/componentRender";
 
 describe("app/router/AppRouter", () => {
   test("Страница должна отрендерится", async () => {
-    ComponentRender(<AppRouter />, { route: getRouteAbout() }); // В AppRouter добавляю страницу About
+    componentRender(<AppRouter />, { route: getRouteAbout() }); // В AppRouter добавляю страницу About
     const page = await screen.findByTestId("AboutPage"); // асинхронно ищу data-testid
     expect(page).toBeInTheDocument(); // Проверяю что страница About внедрилась в DOM Tree
   });
   test("Страница не найдена", async () => {
-    ComponentRender(<AppRouter />, { route: "/ededdedededed" }); // В пути просто набор символов
+    componentRender(<AppRouter />, { route: "/ededdedededed" }); // В пути просто набор символов
     const page = await screen.findByTestId("NotFoundPage");
     expect(page).toBeInTheDocument(); // Проверяю что страница About внедрилась в DOM Tree
   });
   test("Редирект не авторизованного пользователя на главную страницу", async () => {
-    ComponentRender(<AppRouter />, { route: getRouteProfile("1") });
+    componentRender(<AppRouter />, { route: getRouteProfile("1") });
     const page = await screen.findByTestId("MainPage");
     expect(page).toBeInTheDocument(); // Проверяю что страница About внедрилась в DOM Tree
   });
   test("Доступ авторизованного пользователя к закрытой странице", async () => {
-    ComponentRender(<AppRouter />, {
+    componentRender(<AppRouter />, {
       route: getRouteProfile("1"),
       initialState: { user: { _inited: true, authData: {} } },
     });
@@ -34,7 +34,7 @@ describe("app/router/AppRouter", () => {
     expect(page).toBeInTheDocument(); // Проверяю что страница About внедрилась в DOM Tree
   });
   test("Доступ запрещен (отсутствует роль)", async () => {
-    ComponentRender(<AppRouter />, {
+    componentRender(<AppRouter />, {
       route: getRouteAdminPanel(),
       initialState: { user: { _inited: true, authData: {} } },
     });
@@ -42,7 +42,7 @@ describe("app/router/AppRouter", () => {
     expect(page).toBeInTheDocument(); // Проверяю что страница About внедрилась в DOM Tree
   });
   test("Доступ разрешен (присутствует роль)", async () => {
-    ComponentRender(<AppRouter />, {
+    componentRender(<AppRouter />, {
       route: getRouteAdminPanel(),
       initialState: {
         user: { _inited: true, authData: { roles: [UserRole.ADMIN] } },

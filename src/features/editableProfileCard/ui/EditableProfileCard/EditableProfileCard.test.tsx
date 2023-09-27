@@ -6,9 +6,9 @@ import { Profile } from "@/entities/Profile";
 import { Currency } from "@/entities/Currency";
 import { Country } from "@/entities/Country";
 import { $api } from "@/shared/api/api";
-import { ComponentRender } from "@/shared/lib/tests/ComponentRender/ComponentRender";
 import { profileReducer } from "../../model/slice/profileSlice";
 import { EditableProfileCard } from "./EditableProfileCard";
+import { componentRender } from "@/shared/lib/tests/componentRender/componentRender";
 
 const profile: Profile = {
   id: "1",
@@ -37,7 +37,7 @@ const options = {
 
 describe("features/EditableProfileCard", () => {
   test("Режим readonly должен переключится", async () => {
-    ComponentRender(<EditableProfileCard id="1" />, options);
+    componentRender(<EditableProfileCard id="1" />, options);
     await userEvent.click(
       screen.getByTestId("EditableProfileCardHeader.EditButton")
     );
@@ -48,7 +48,7 @@ describe("features/EditableProfileCard", () => {
   });
 
   test(`При отмене значения должны обнуляться`, async () => {
-    ComponentRender(<EditableProfileCard id="1" />, options);
+    componentRender(<EditableProfileCard id="1" />, options);
     await userEvent.click(
       screen.getByTestId("EditableProfileCardHeader.EditButton")
     );
@@ -76,7 +76,7 @@ describe("features/EditableProfileCard", () => {
 
   /* Валидация */
   test("Валидация firstname", async () => {
-    ComponentRender(<EditableProfileCard id="1" />, options);
+    componentRender(<EditableProfileCard id="1" />, options);
     await userEvent.click(
       screen.getByTestId("EditableProfileCardHeader.EditButton")
     );
@@ -93,7 +93,7 @@ describe("features/EditableProfileCard", () => {
   /* Отправка PUT запроса */
   test("Отправка PUT запроса", async () => {
     const mockPutReq = jest.spyOn($api, "put");
-    ComponentRender(<EditableProfileCard id="1" />, options);
+    componentRender(<EditableProfileCard id="1" />, options);
     await act(async () => userEvent.click(
         screen.getByTestId("EditableProfileCardHeader.EditButton")
       ));
