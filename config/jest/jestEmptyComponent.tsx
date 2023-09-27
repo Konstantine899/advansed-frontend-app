@@ -1,8 +1,7 @@
-// используется как Mock для svg
-import React from "react";
+import React from 'react';
 
-const JestEmptyComponent = function () {
-  return <div />;
+const jestEmptyComponent = function () {
+    return <div />;
 };
 
-export default JestEmptyComponent;
+export default jestEmptyComponent;

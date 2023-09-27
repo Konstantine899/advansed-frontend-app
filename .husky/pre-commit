@@ -3,7 +3,7 @@
 
 #npm run build:prod
 #npm run lint:ts
-npx lint-staged
+#npx lint-staged
 #npm run lint:css
 #npm run test:unit
 #npm run storybook:build

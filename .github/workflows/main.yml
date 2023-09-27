@@ -1,9 +1,9 @@
-name: linting, testing, buildin
+name: linting, testing, building
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     branches: [dev, master]
-    pull_request:
+  pull_request:
       branches: [dev, master]
 jobs:
   pipeline:
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm install
+        run: npm ci --force
       - name: build production project
         run: npm run build:prod
         if: always()
