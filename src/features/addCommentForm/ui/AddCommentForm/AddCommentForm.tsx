@@ -7,64 +7,72 @@ import { Input } from "@/shared/ui/Input";
 import { Button, ButtonTheme } from "@/shared/ui/Button";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {
-  DynamicModuleLoader,
-  ReducersList,
+    DynamicModuleLoader,
+    ReducersList,
 } from "@/shared/lib/DynamicModuleLouder/DynamicModuleLoader";
 import { HStack } from "@/shared/ui/Stack";
 import {
-  getAddCommentFormError,
-  getAddCommentFormText,
+    getAddCommentFormText,
 } from "../../model/selectors/addCommentFormSelectors";
 import {
-  addCommentFormActions,
-  addCommentFormReducer,
+    addCommentFormActions,
+    addCommentFormReducer,
 } from "../../model/slices/addCommentFormSlice";
 import cls from "./AddCommentForm.module.scss";
 
 export interface addCommentFormProps {
-  className?: string;
-  onSendComment: (text: string) => void;
+    className?: string;
+    onSendComment: (text: string) => void;
 }
 
 const reducers: ReducersList = {
-  addCommentForm: addCommentFormReducer,
+    addCommentForm: addCommentFormReducer,
 };
 
 const AddCommentForm = memo((props: addCommentFormProps) => {
-  const { className, onSendComment } = props;
-  const { t } = useTranslation();
-  const text = useSelector(getAddCommentFormText);
-  const error = useSelector(getAddCommentFormError);
-  const dispatch = useAppDispatch();
+    const { className, onSendComment } = props;
+    const { t } = useTranslation();
+    const text = useSelector(getAddCommentFormText);
+    const dispatch = useAppDispatch();
 
-  const onCommentTextChange = useCallback(
-    (value: string) => {
-      dispatch(addCommentFormActions.setText(value));
-    },
-    [dispatch]
-  );
+    const onCommentTextChange = useCallback(
+        (value: string) => {
+            dispatch(addCommentFormActions.setText(value));
+        },
+        [dispatch]
+    );
 
-  // обертка
-  const onSendHandler = useCallback(() => {
-    onSendComment(text || ""); // отправляю комментарий
-    onCommentTextChange(""); // очищаю input
-  }, [onCommentTextChange, onSendComment, text]);
+    // обертка
+    const onSendHandler = useCallback(() => {
+        onSendComment(text || ""); // отправляю комментарий
+        onCommentTextChange(""); // очищаю input
+    }, [onCommentTextChange, onSendComment, text]);
 
-  return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <HStack justify="between" max className={classNames(cls.addCommentForm, {}, [className])}>
-        <Input
-          className={cls.input}
-          value={text}
-          onChange={onCommentTextChange}
-          placeholder={t("Введите текст комментария")}
-        />
-        <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
-          {t(`Отправить`)}
-        </Button>
-      </HStack>
-    </DynamicModuleLoader>
-  );
+    return (
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            <HStack
+data-testid="AddCommentForm"
+justify="between"
+max
+                    className={classNames(cls.addCommentForm, {}, [className])}
+            >
+                <Input
+                    data-testid="AddCommentForm.Input"
+                    className={cls.input}
+                    value={text}
+                    onChange={onCommentTextChange}
+                    placeholder={t("Введите текст комментария")}
+                />
+                <Button
+                    data-testid="AddCommentForm.Button"
+                    theme={ButtonTheme.OUTLINE}
+                    onClick={onSendHandler}
+                >
+                    {t(`Отправить`)}
+                </Button>
+            </HStack>
+        </DynamicModuleLoader>
+    );
 });
 
 export default AddCommentForm;
