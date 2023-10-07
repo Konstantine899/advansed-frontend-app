@@ -5,8 +5,12 @@ describe('Пользователь заходит на страницу со с�
             cy.visit('articles');
         });
     });
-    it('Статьи успешно подгружаются', () => {
+    it('Статьи успешно подгружаются stab(fixture)', () => {
+        cy.intercept('GET', '**/articles?*', { fixture: 'articles.json' });
         cy.getByTestId('ArticleList').should('exist'); // проверяем что список отрисовался
         cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3);
+    });
+    it.skip('Тест который падает', () => {
+        cy.getByTestId('asdfasdfasd').should('exist');
     });
 });

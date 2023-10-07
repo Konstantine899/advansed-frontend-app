@@ -26,6 +26,7 @@ describe('Пользователь заходит на страницу стат
         cy.getByTestId('CommentCard.Content').should("have.length", 1);
     });
     it('Ставим оценку статье', () => {
+        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
         cy.getByTestId('ArticleDetails.Info').should('exist'); // ждем пока статья прогрузится
         cy.getByTestId('RatingCard').scrollIntoView(); // скролим к карточке rating
         cy.setRating(5, 'feedback');
