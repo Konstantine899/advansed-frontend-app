@@ -1,14 +1,14 @@
 // features/AuthByUserName/ui/LoginForm/LoginForm.stories.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import LoginForm from "./LoginForm";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import LoginForm from './LoginForm';
 
 export default {
-  title: "features/LoginForm/LoginForm", // название stories
+  title: 'features/LoginForm/LoginForm', // название stories
   component: LoginForm, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof LoginForm>;
 
@@ -20,7 +20,7 @@ export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [
   StoreDecorator({
-    loginForm: { username: "random_user_name", password: "123" },
+    loginForm: { username: 'random_user_name', password: '123' },
   }),
 ];
 
@@ -29,9 +29,9 @@ withError.args = {};
 withError.decorators = [
   StoreDecorator({
     loginForm: {
-      username: "random_user_name",
-      password: "123",
-      error: "ERROR",
+      username: 'random_user_name',
+      password: '123',
+      error: 'ERROR',
     },
   }),
 ];

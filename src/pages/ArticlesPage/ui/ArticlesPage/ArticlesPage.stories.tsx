@@ -1,19 +1,21 @@
 // pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.stories.tsx
 
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import ArticlesPage from "./ArticlesPage";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import ArticlesPage from './ArticlesPage';
 
 export default {
-  title: "pages/Article/ArticlesPage",
+  title: 'pages/Article/ArticlesPage',
   component: ArticlesPage,
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof ArticlesPage>;
 
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;
+const Template: ComponentStory<typeof ArticlesPage> = (args) => (
+  <ArticlesPage {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

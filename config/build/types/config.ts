@@ -1,5 +1,5 @@
 // build/types/config.ts
-export type BuildMode = "production" | "development";
+export type BuildMode = 'production' | 'development';
 
 export type BuildPath = {
   entry: string;
@@ -16,7 +16,7 @@ export interface BuildOptions {
   isDev: boolean;
   port: number;
   apiUrl: string;
-  project: "storybook" | "frontend" | "jest";
+  project: 'storybook' | 'frontend' | 'jest';
 }
 
 export interface BuildEnv {

@@ -1,6 +1,6 @@
 // shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts
 
-import { MutableRefObject, useEffect } from "react";
+import { MutableRefObject, useEffect } from 'react';
 
 interface useInfiniteScrollOptions {
   callback?: () => void; // должен вызваться когда мы пересекли элемент
@@ -26,7 +26,7 @@ export function useInfiniteScroll({
     if (callback) {
       const options = {
         root: wrapperElement,
-        rootMargin: "1px", // для того что бы div с высотой 1px смог попасть в viewport браузера
+        rootMargin: '1px', // для того что бы div с высотой 1px смог попасть в viewport браузера
         threshold: 1.0,
       };
 

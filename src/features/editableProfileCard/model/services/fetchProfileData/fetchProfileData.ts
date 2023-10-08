@@ -1,14 +1,14 @@
 // features/editableProfileCard/model/services/fetchProfileData/fetchProfileData.ts
 
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Profile } from "@/entities/Profile";
-import { ThunkConfig } from "@/app/providers/StoreProvider";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { Profile } from '@/entities/Profile';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
 
 export const fetchProfileData = createAsyncThunk<
   Profile,
   string,
   ThunkConfig<string>
->("profile/fetchProfileData", async (profileId, thunkAPI) => {
+>('profile/fetchProfileData', async (profileId, thunkAPI) => {
   const { extra, rejectWithValue } = thunkAPI;
   try {
     const response = await extra.api.get(`/profile/${profileId}`);
@@ -19,6 +19,6 @@ export const fetchProfileData = createAsyncThunk<
     }
     return response.data;
   } catch (error) {
-    return rejectWithValue("error");
+    return rejectWithValue('error');
   }
 });

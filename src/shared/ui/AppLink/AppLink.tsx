@@ -1,12 +1,12 @@
 // src/shared/ui/AppLink.tsx
-import { Link, LinkProps } from "react-router-dom";
-import { memo, ReactNode } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import cls from "./AppLink.module.scss";
+import { Link, LinkProps } from 'react-router-dom';
+import { memo, ReactNode } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './AppLink.module.scss';
 
 export enum AppLinkTheme {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
 }
 
 interface AppLinkProps extends LinkProps {
@@ -15,7 +15,7 @@ interface AppLinkProps extends LinkProps {
   children?: ReactNode;
 }
 
-export const AppLink = memo((props:AppLinkProps) => {
+export const AppLink = memo((props: AppLinkProps) => {
   const {
     to,
     className,
@@ -24,12 +24,12 @@ export const AppLink = memo((props:AppLinkProps) => {
     ...otherProps
   } = props;
   return (
-      <Link
-          to={to}
-          className={classNames(cls.AppLink, {}, [className, cls[theme]])}
-          {...otherProps}
-      >
-        {children}
-      </Link>
+    <Link
+      to={to}
+      className={classNames(cls.AppLink, {}, [className, cls[theme]])}
+      {...otherProps}
+    >
+      {children}
+    </Link>
   );
 });

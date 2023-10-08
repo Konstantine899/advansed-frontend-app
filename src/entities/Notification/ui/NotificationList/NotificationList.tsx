@@ -1,11 +1,11 @@
 // entities/Notification/ui/NotificationList/NotificationList.tsx
-import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { VStack } from "@/shared/ui/Stack";
-import { Skeleton } from "@/shared/ui/Skeleton";
-import { useNotification } from "../../api/notificationApi";
-import { NotificationItem } from "../../ui/NotificationItem/NotificationItem";
-import cls from "./NotificationList.module.scss";
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { VStack } from '@/shared/ui/Stack';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { useNotification } from '../../api/notificationApi';
+import { NotificationItem } from '../../ui/NotificationItem/NotificationItem';
+import cls from './NotificationList.module.scss';
 
 interface NotificationListProps {
   className?: string;
@@ -13,15 +13,13 @@ interface NotificationListProps {
 
 export const NotificationList = memo((props: NotificationListProps) => {
   const { className } = props;
-  const { data, isLoading } = useNotification(null, { pollingInterval: 5000 });
+  const { data, isLoading } = useNotification(null, {
+    pollingInterval: 5000,
+  });
 
   if (isLoading) {
     return (
-      <VStack
-        gap="16"
-        max
-        className={classNames('', {}, [className])}
-      >
+      <VStack gap="16" max className={classNames('', {}, [className])}>
         <Skeleton width="100%" border="8px" height="80px" />
         <Skeleton width="100%" border="8px" height="80px" />
         <Skeleton width="100%" border="8px" height="80px" />

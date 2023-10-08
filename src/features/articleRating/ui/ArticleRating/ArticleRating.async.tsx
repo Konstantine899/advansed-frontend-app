@@ -1,9 +1,9 @@
 // features/articleRating/ui/ArticleRating/ArticleRating.async.tsx
-import { lazy, Suspense } from "react";
-import { ArticleRatingProps } from "./ArticleRating";
-import { Skeleton } from "@/shared/ui/Skeleton";
+import { lazy, Suspense } from 'react';
+import { ArticleRatingProps } from './ArticleRating';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
-export const ArticleRatingLazy = lazy(() => import("./ArticleRating"));
+export const ArticleRatingLazy = lazy(() => import('./ArticleRating'));
 
 export const ArticleRatingAsync = (props: ArticleRatingProps) => (
   <Suspense fallback={<Skeleton width="100%" height={120} />}>

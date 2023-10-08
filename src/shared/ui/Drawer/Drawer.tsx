@@ -1,16 +1,16 @@
 // shared/ui/Drawer/Drawer.tsx
 import {
- memo, ReactNode, useCallback, useEffect
-} from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
+  memo, ReactNode, useCallback, useEffect
+} from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   AnimationProvider,
   useAnimationLibs,
-} from "@/shared/lib/AnimationProvider";
-import { Portal } from "../Portal/Portal";
-import { Overlay } from "../Overlay/Overlay";
-import cls from "./Drawer.module.scss";
-import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
+} from '@/shared/lib/AnimationProvider';
+import { Portal } from '../Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
+import cls from './Drawer.module.scss';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 interface DrawerProps {
   className?: string;
@@ -24,8 +24,8 @@ const height = window.innerHeight - 100;
 
 const DrawerContent = memo((props: DrawerProps) => {
   const {
- className, children, isOpen, onClose
-} = props;
+    className, children, isOpen, onClose
+  } = props;
   const { theme } = useTheme();
   const { Spring, Gesture } = useAnimationLibs();
   const [{ y }, api] = Spring.useSpring(() => ({ y: height }));
@@ -73,10 +73,10 @@ const DrawerContent = memo((props: DrawerProps) => {
       filterTaps: true,
       bounds: { top: 0 },
       rubberband: true,
-    }
+    },
   );
 
-  const display = y.to((py) => (py < height ? "block" : "none"));
+  const display = y.to((py) => (py < height ? 'block' : 'none'));
 
   if (!isOpen) {
     return null;
@@ -85,12 +85,16 @@ const DrawerContent = memo((props: DrawerProps) => {
   return (
     <Portal>
       <div
-        className={classNames(cls.Drawer, {}, [className, theme, "app_drawer"])}
+        className={classNames(cls.Drawer, {}, [className, theme, 'app_drawer'])}
       >
         <Overlay onClick={close} />
         <Spring.a.div
           className={cls.sheet}
-          style={{ display, bottom: `calc(-100vh + ${height - 100}px)`, y }}
+          style={{
+            display,
+            bottom: `calc(-100vh + ${height - 100}px)`,
+            y,
+          }}
           {...bind()}
         >
           {children}
@@ -110,7 +114,7 @@ const DrawerAsync = (props: DrawerProps) => {
 };
 
 export const Drawer = (props: DrawerProps) => (
-    <AnimationProvider>
-      <DrawerAsync {...props} />
-    </AnimationProvider>
-  );
+  <AnimationProvider>
+    <DrawerAsync {...props} />
+  </AnimationProvider>
+);

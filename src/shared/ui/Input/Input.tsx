@@ -1,15 +1,20 @@
 // shared/ui/Input/Input.tsx
 import {
-ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState,
-} from "react";
-import { classNames, Mods } from "@/shared/lib/classNames/classNames";
-import cls from "./Input.module.scss";
+  ChangeEvent,
+  InputHTMLAttributes,
+  memo,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import cls from './Input.module.scss';
 
 /* Исключаю типы стандартных атрибутов value и onChange */
 /* Которые позже в interface InputProps переопределяю */
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  "value" | "onChange" | "readOnly"
+  'value' | 'onChange' | 'readOnly'
 >;
 
 interface InputProps extends HTMLInputProps {
@@ -25,7 +30,7 @@ export const Input = memo((props: InputProps) => {
     className,
     value,
     onChange,
-    type = "text",
+    type = 'text',
     placeholder,
     autofocus,
     readonly,

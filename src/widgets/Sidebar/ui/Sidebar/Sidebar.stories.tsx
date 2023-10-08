@@ -1,17 +1,17 @@
 // src/widgets/Sidebar/Sidebar.stories.tsx
 
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Sidebar } from "../Sidebar/Sidebar";
-import { Theme } from "@/shared/const/theme";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Sidebar } from '../Sidebar/Sidebar';
+import { Theme } from '@/shared/const/theme';
 
 export default {
-  title: "widgets/Sidebar", // название stories
+  title: 'widgets/Sidebar', // название stories
   component: Sidebar, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof Sidebar>;
 

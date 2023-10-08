@@ -1,18 +1,18 @@
 // src/pages/ui/AboutPage/AboutPage.stories.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import AboutPage from "./AboutPage";
-import { Theme } from "@/shared/const/theme";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import AboutPage from './AboutPage';
+import { Theme } from '@/shared/const/theme';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-  title: "pages/AboutPage/AboutPage", // название stories
+  title: 'pages/AboutPage/AboutPage', // название stories
   component: AboutPage, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
-  decorators: [StoreDecorator({})]
+  decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof AboutPage>;
 
 const Template: ComponentStory<typeof AboutPage> = () => <AboutPage />;

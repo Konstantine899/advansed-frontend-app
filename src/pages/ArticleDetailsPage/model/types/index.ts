@@ -1,7 +1,7 @@
 // pages/ArticleDetailsPage/model/types/index.ts
 
-import { ArticleDetailsCommentsSchema } from "./ArticleDetailsCommentsSchema";
-import { ArticleDetailsRecommendationsSchema } from "./ArticleDetailsRecommendationsSchema";
+import { ArticleDetailsCommentsSchema } from './ArticleDetailsCommentsSchema';
+import { ArticleDetailsRecommendationsSchema } from './ArticleDetailsRecommendationsSchema';
 
 export interface ArticleDetailsPageSchema {
   comments: ArticleDetailsCommentsSchema;

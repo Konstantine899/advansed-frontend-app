@@ -17,5 +17,5 @@ export function getQueryParams(params: OptionalRecord<string, string>) {
  * */
 
 export function addQueryParams(params: OptionalRecord<string, string>) {
-  window.history.pushState("", "", getQueryParams(params));
+  window.history.pushState('', '', getQueryParams(params));
 }

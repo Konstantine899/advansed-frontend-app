@@ -1,16 +1,16 @@
 // features/editableProfileCard/ui/EditableProfileCard/EditableProfileCard.stories.tsx
 
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import { EditableProfileCard } from "./EditableProfileCard";
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { EditableProfileCard } from './EditableProfileCard';
 
 export default {
-  title: "features/EditableProfileCard/EditableProfileCard",
+  title: 'features/EditableProfileCard/EditableProfileCard',
   component: EditableProfileCard,
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof EditableProfileCard>;
 

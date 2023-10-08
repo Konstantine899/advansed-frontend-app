@@ -1,14 +1,14 @@
 // features/articleRating/ui/ArticleRating/ArticleRating.tsx
-import { useTranslation } from "react-i18next";
-import { memo, useCallback } from "react";
-import { useSelector } from "react-redux";
-import { RatingCard } from "@/entities/Rating";
+import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { RatingCard } from '@/entities/Rating';
 import {
   useGetArticleRating,
   useRateArticle,
-} from "../../api/articleRatingApi";
-import { getUserAuthData } from "@/entities/User";
-import { Skeleton } from "@/shared/ui/Skeleton";
+} from '../../api/articleRatingApi';
+import { getUserAuthData } from '@/entities/User';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 export interface ArticleRatingProps {
   className?: string;
@@ -20,7 +20,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
   const { t } = useTranslation();
   const userData = useSelector(getUserAuthData);
   const { data, isLoading } = useGetArticleRating({
-    userId: userData?.id ?? "",
+    userId: userData?.id ?? '',
     articleId,
   });
   const [rateArticleMutation] = useRateArticle();
@@ -29,7 +29,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
     (starsCount: number, feedback?: string) => {
       try {
         rateArticleMutation({
-          userId: userData?.id ?? "",
+          userId: userData?.id ?? '',
           articleId,
           rate: starsCount,
           feedback,
@@ -39,21 +39,21 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         console.log(error);
       }
     },
-    [articleId, rateArticleMutation, userData?.id]
+    [articleId, rateArticleMutation, userData?.id],
   );
 
   const onAccept = useCallback(
     (starsCount: number, feedback?: string) => {
       handleRateArticle(starsCount, feedback);
     },
-    [handleRateArticle]
+    [handleRateArticle],
   );
 
   const onCancel = useCallback(
     (starsCount: number) => {
       handleRateArticle(starsCount);
     },
-    [handleRateArticle]
+    [handleRateArticle],
   );
 
   if (isLoading) {
@@ -67,9 +67,9 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
       onCancel={onCancel}
       className={className}
       rate={rating?.rate}
-      title={t(`Оцените статью`)}
+      title={t('Оцените статью')}
       feedbackTitle={t(
-        `Оставьте свой отзыв о статье, это поможет улучшить качество`
+        'Оставьте свой отзыв о статье, это поможет улучшить качество',
       )}
       hasFeedback
     />

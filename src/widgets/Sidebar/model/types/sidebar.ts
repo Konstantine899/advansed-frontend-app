@@ -1,5 +1,5 @@
 // widgets/Sidebar/model/types/sidebar.ts
-import React from "react";
+import React from 'react';
 
 export interface SidebarItemType {
   path: string;

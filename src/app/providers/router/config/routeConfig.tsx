@@ -1,15 +1,15 @@
 // app/providers/router/config/routeConfig.tsx
 
-import { MainPage } from "@/pages/MainPage";
-import { AboutPage } from "@/pages/AboutPage";
-import { ProfilePage } from "@/pages/ProfilePage";
-import { ArticlesPage } from "@/pages/ArticlesPage";
-import { ArticleDetailsPage } from "@/pages/ArticleDetailsPage";
-import { ArticleEditPage } from "@/pages/ArticleEditPage";
-import { AdminPanelPage } from "@/pages/AdminPanelPage";
-import { UserRole } from "@/entities/User";
-import { ForbiddenPage } from "@/pages/ForbiddenPage";
-import { NotFoundPage } from "@/pages/NotFoundPage";
+import { MainPage } from '@/pages/MainPage';
+import { AboutPage } from '@/pages/AboutPage';
+import { ProfilePage } from '@/pages/ProfilePage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticleEditPage } from '@/pages/ArticleEditPage';
+import { AdminPanelPage } from '@/pages/AdminPanelPage';
+import { UserRole } from '@/entities/User';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
 import {
   AppRoutes,
   getRouteAbout,
@@ -21,8 +21,8 @@ import {
   getRouteForbidden,
   getRouteMain,
   getRouteProfile,
-} from "@/shared/const/router";
-import { AppRoutesProps } from "@/shared/types/router";
+} from '@/shared/const/router';
+import { AppRoutesProps } from '@/shared/types/router';
 
 // Объявление роутов
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
@@ -35,7 +35,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     element: <AboutPage />,
   },
   [AppRoutes.PROFILE]: {
-    path: getRouteProfile(":id"),
+    path: getRouteProfile(':id'),
     element: <ProfilePage />,
     authOnly: true, // если передаем true, то доступен только авторизованным пользователям
   },
@@ -45,7 +45,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     authOnly: true, // Статьи доступны только авторизованным пользователям
   },
   [AppRoutes.ARTICLE_DETAILS]: {
-    path: getRouteArticleDetails(":id"),
+    path: getRouteArticleDetails(':id'),
     element: <ArticleDetailsPage />,
     authOnly: true, // Статья доступна только авторизованным пользователям
   },
@@ -55,7 +55,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     authOnly: true, // Статья доступна только авторизованным пользователям
   },
   [AppRoutes.ARTICLE_EDIT]: {
-    path: getRouteArticleEdit(":id"),
+    path: getRouteArticleEdit(':id'),
     element: <ArticleEditPage />,
     authOnly: true, // Статья доступна только авторизованным пользователям
   },
@@ -73,7 +73,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   },
   // NOT_FOUND должен идти последним
   [AppRoutes.NOT_FOUND]: {
-    path: "*",
+    path: '*',
     element: <NotFoundPage />,
   },
 };

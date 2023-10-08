@@ -1,11 +1,12 @@
 // shared/lib/DynamicModuleLouder/DynamicModuleLouder.tsx
-import { ReactNode, useEffect } from "react";
-import { useDispatch, useStore } from "react-redux";
-import { Reducer } from "@reduxjs/toolkit";
+import { ReactNode, useEffect } from 'react';
+import { useDispatch, useStore } from 'react-redux';
+import { Reducer } from '@reduxjs/toolkit';
 import {
   StateSchemaKey,
-  ReduxStoreWithManager, StateSchema,
-} from "@/app/providers/StoreProvider";
+  ReduxStoreWithManager,
+  StateSchema,
+} from '@/app/providers/StoreProvider';
 
 /* типизирую props reducers
  * props - всегда объект

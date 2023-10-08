@@ -1,3 +1,3 @@
 // shared/types/index.ts
 
-export type SortOrder = "asc" | "desc";
+export type SortOrder = 'asc' | 'desc';

@@ -1,8 +1,8 @@
 // shared/ui/Tabs/Tabs.tsx
-import { memo, ReactNode, useCallback } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Card, CardTheme } from "../Card/Card";
-import cls from "./Tabs.module.scss";
+import { memo, ReactNode, useCallback } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Card, CardTheme } from '../Card/Card';
+import cls from './Tabs.module.scss';
 
 export interface TabItem {
   value: string;
@@ -18,12 +18,12 @@ interface TabsProps {
 
 export const Tabs = memo((props: TabsProps) => {
   const {
- className, tabs, value, onTabClick
-} = props;
+    className, tabs, value, onTabClick
+  } = props;
 
   const onClickHandle = useCallback(
     (tab: TabItem) => () => onTabClick(tab),
-    [onTabClick]
+    [onTabClick],
   );
 
   return (

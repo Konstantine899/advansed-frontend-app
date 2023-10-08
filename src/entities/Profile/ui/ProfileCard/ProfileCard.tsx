@@ -1,15 +1,15 @@
 // entities/Profile/ui/ProfileCard/ProfileCard.tsx
-import { useTranslation } from "react-i18next";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Text, TextAlign, TextTheme } from "@/shared/ui/Text";
-import { Input } from "@/shared/ui/Input";
-import { Loader } from "@/shared/ui/Loader";
-import { Avatar } from "@/shared/ui/Avatar";
-import { CurrencySelect, Currency } from "@/entities/Currency";
-import { CountrySelect, Country } from "@/entities/Country";
-import { HStack, VStack } from "@/shared/ui/Stack";
-import { Profile } from "../../model/types/profile";
-import cls from "./ProfileCard.module.scss";
+import { useTranslation } from 'react-i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
+import { Input } from '@/shared/ui/Input';
+import { Loader } from '@/shared/ui/Loader';
+import { Avatar } from '@/shared/ui/Avatar';
+import { CurrencySelect, Currency } from '@/entities/Currency';
+import { CountrySelect, Country } from '@/entities/Country';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Profile } from '../../model/types/profile';
+import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
   className?: string;
@@ -45,7 +45,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     onChangeCountry,
     size = 100,
   } = props;
-  const { t } = useTranslation("profile"); // создаю новое пространство имен
+  const { t } = useTranslation('profile'); // создаю новое пространство имен
 
   if (isLoading) {
     return (
@@ -68,8 +68,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
       >
         <Text
           theme={TextTheme.ERROR}
-          title={t("Произошла ошибка при загрузке профиля")}
-          text={t("Попробуйте обновить страницу")}
+          title={t('Произошла ошибка при загрузке профиля')}
+          text={t('Попробуйте обновить страницу')}
           align={TextAlign.CENTER}
         />
       </HStack>
@@ -98,7 +98,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <Input
         className={cls.input}
         value={data?.firstname}
-        placeholder={t("Ваше имя")}
+        placeholder={t('Ваше имя')}
         onChange={onChangeFirstName}
         readonly={readonly}
         data-testid="ProfileCard.firstname"
@@ -106,7 +106,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <Input
         className={cls.input}
         value={data?.lastname}
-        placeholder={t("Ваша фамилия")}
+        placeholder={t('Ваша фамилия')}
         onChange={onChangeLastName}
         readonly={readonly}
         data-testid="ProfileCard.lastname"
@@ -114,7 +114,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <Input
         className={cls.input}
         value={data?.age}
-        placeholder={t("Ваша возраст")}
+        placeholder={t('Ваша возраст')}
         onChange={onChangeAge}
         readonly={readonly}
         data-testid="ProfileCard.age"
@@ -122,7 +122,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <Input
         className={cls.input}
         value={data?.city}
-        placeholder={t("Ваш город")}
+        placeholder={t('Ваш город')}
         onChange={onChangeCity}
         readonly={readonly}
         data-testid="ProfileCard.sity"
@@ -130,7 +130,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <Input
         className={cls.input}
         value={data?.username}
-        placeholder={t("Введите имя пользователя")}
+        placeholder={t('Введите имя пользователя')}
         onChange={onChangeUsername}
         readonly={readonly}
         data-testid="ProfileCard.username"
@@ -138,7 +138,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <Input
         className={cls.input}
         value={data?.avatar}
-        placeholder={t("Введите ссылку на аватар")}
+        placeholder={t('Введите ссылку на аватар')}
         onChange={onChangeAvatar}
         readonly={readonly}
         data-testid="ProfileCard.url"

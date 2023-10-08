@@ -1,7 +1,7 @@
 // entities/Currency/ui//CurrencySelect/CurrencySelect.tsx
-import { memo } from "react";
-import { ListBox } from "@/shared/ui/Popups";
-import { Currency } from "../../modal/types/currency";
+import { memo } from 'react';
+import { ListBox } from '@/shared/ui/Popups';
+import { Currency } from '../../modal/types/currency';
 
 interface CurrencySelectProps {
   className?: string;
@@ -20,8 +20,8 @@ const options = [
 
 export const CurrencySelect = memo((props: CurrencySelectProps) => {
   const {
- className, value, onChange, readonly
-} = props;
+    className, value, onChange, readonly
+  } = props;
 
   const onChangeHandler = (value: string) => {
     onChange?.(value as Currency);

@@ -1,10 +1,10 @@
 // entities/Notification/ui/NotificationItem/NotificationItem.tsx
-import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Card, CardTheme } from "@/shared/ui/Card";
-import { Text } from "@/shared/ui/Text";
-import cls from "./NotificationItem.module.scss";
-import { Notifications } from "../../model/types/notifications";
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Card, CardTheme } from '@/shared/ui/Card';
+import { Text } from '@/shared/ui/Text';
+import cls from './NotificationItem.module.scss';
+import { Notifications } from '../../model/types/notifications';
 
 interface NotificationItemProps {
   className?: string;

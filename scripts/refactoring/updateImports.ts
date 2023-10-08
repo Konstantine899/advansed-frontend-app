@@ -1,17 +1,17 @@
 // scripts/refactoring/updateImports.js
-import { Project } from "ts-morph";
+import { Project } from 'ts-morph';
 
 const project = new Project({});
 
 // добавляю файлы исходного кода с которыми работаю
-project.addSourceFilesAtPaths("src/**/*.ts");
-project.addSourceFilesAtPaths("src/**/*.tsx");
+project.addSourceFilesAtPaths('src/**/*.ts');
+project.addSourceFilesAtPaths('src/**/*.tsx');
 
 // получаю все файлы проекта
 const files = project.getSourceFiles();
 
 function isAbsolute(value: string): boolean {
-  const layers = ["app", "shared", "entities", "features", "widgets", "pages"];
+  const layers = ['app', 'shared', 'entities', 'features', 'widgets', 'pages'];
   return layers.some((layer) => value.startsWith(layer));
 }
 

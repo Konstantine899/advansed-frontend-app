@@ -1,21 +1,21 @@
 // config/storybook/webpack.config.ts
-import webpack, { RuleSetRule, DefinePlugin } from "webpack";
-import path from "path";
-import { BuildPath } from "../build/types/config";
-import { buildCssLoader } from "../build/loaders/buildCssLoader";
+import webpack, { RuleSetRule, DefinePlugin } from 'webpack';
+import path from 'path';
+import { BuildPath } from '../build/types/config';
+import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
 export default ({ config }: { config: webpack.Configuration }) => {
   const paths: BuildPath = {
-    build: "", // не интересующие нас поля
-    html: "", // не интересующие нас поля
-    entry: "", // не интересующие нас поля
-    src: path.resolve(__dirname, "..", "..", "src"),
-    locales: "",
-    buildLocales: "",
+    build: '', // не интересующие нас поля
+    html: '', // не интересующие нас поля
+    entry: '', // не интересующие нас поля
+    src: path.resolve(__dirname, '..', '..', 'src'),
+    locales: '',
+    buildLocales: '',
   };
   config.resolve!.modules!.push(paths.src); // прокидываем путь до папки с исходным кодом
-  config.resolve!.alias = { ...config.resolve!.alias, "@": paths.src }; // Разворачиваем старые aliases и добавляю свой alias.
-  config.resolve!.extensions!.push("ts", "tsx"); // указываю расширения скриншотный файлов для файлов stories
+  config.resolve!.alias = { ...config.resolve!.alias, '@': paths.src }; // Разворачиваем старые aliases и добавляю свой alias.
+  config.resolve!.extensions!.push('ts', 'tsx'); // указываю расширения скриншотный файлов для файлов stories
   config.module!.rules!.push(buildCssLoader(true)); // добавляю loader в правила. true будет использоваться только для development
 
   /* Правила для обработки svg */
@@ -35,15 +35,15 @@ export default ({ config }: { config: webpack.Configuration }) => {
   // Добавляю правило для обработки svg
   config.module!.rules.push({
     test: /\.svg$/,
-    use: ["@svgr/webpack"],
+    use: ['@svgr/webpack'],
   });
 
   config.plugins!.push(
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
-      __API__: JSON.stringify("https://testapi.com"), // записываем сюда любое значение
-      __PROJECT__: JSON.stringify("storybook"),
-    })
+      __API__: JSON.stringify('https://testapi.com'), // записываем сюда любое значение
+      __PROJECT__: JSON.stringify('storybook'),
+    }),
   );
 
   return config;

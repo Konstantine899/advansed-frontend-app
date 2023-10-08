@@ -1,14 +1,14 @@
 // entities/model/slice/profileSlice.ts
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { USER_LOCALSTORAGE_KEY } from "@/shared/const/localstorage";
-import { User, UserSchema } from "../types/user";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
+import { User, UserSchema } from '../types/user';
 
 const initialState: UserSchema = {
   _inited: false, // получение данных о пользователе, если получили данные о пользовалеле перевожу в true
 };
 
 export const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState,
   reducers: {
     setAuthData: (state, action: PayloadAction<User>) => {

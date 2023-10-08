@@ -1,16 +1,16 @@
 // features/AuthByUserName/model/slice/loginSlice.ts
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { loginByUserName } from "../services/loginByUserName/loginByUserName";
-import { LoginSchema } from "../types/LoginSchema";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { loginByUserName } from '../services/loginByUserName/loginByUserName';
+import { LoginSchema } from '../types/LoginSchema';
 
 const initialState: LoginSchema = {
   isLoading: false,
-  username: "",
-  password: "",
+  username: '',
+  password: '',
 };
 
 export const loginSlice = createSlice({
-  name: "login",
+  name: 'login',
   initialState,
   reducers: {
     setUsername(state, action: PayloadAction<string>) {

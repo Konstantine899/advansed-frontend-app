@@ -1,7 +1,7 @@
 // shared/ui/Select/Select.tsx
-import { ChangeEvent, useMemo } from "react";
-import { classNames, Mods } from "@/shared/lib/classNames/classNames";
-import cls from "./Select.module.scss";
+import { ChangeEvent, useMemo } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import cls from './Select.module.scss';
 
 export interface SelectOption<T extends string> {
   value: T;
@@ -19,8 +19,8 @@ interface SelectProps<T extends string> {
 
 export const Select = <T extends string>(props: SelectProps<T>) => {
   const {
- className, label, options, value, onChange, readonly
-} = props;
+    className, label, options, value, onChange, readonly
+  } = props;
 
   const onChangeHandler = (event: ChangeEvent<HTMLSelectElement>) => {
     onChange?.(event.target.value as T);
@@ -28,15 +28,15 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
 
   const optionList = useMemo(
     () => options?.map((element) => (
-        <option
-          className={cls.option}
-          value={element.value}
-          key={element.value}
-        >
-          {element.content}
-        </option>
-      )),
-    [options]
+      <option
+        className={cls.option}
+        value={element.value}
+        key={element.value}
+      >
+        {element.content}
+      </option>
+    )),
+    [options],
   );
 
   const mods: Mods = {};

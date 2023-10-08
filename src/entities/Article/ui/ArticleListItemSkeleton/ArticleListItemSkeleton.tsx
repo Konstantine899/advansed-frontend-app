@@ -1,11 +1,11 @@
 // entities/Article/ui/ArticleListItem/ArticleListItemSkeleton.tsx
 
-import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { ArticleView } from "../../model/consts/consts";
-import { Card } from "../../../../shared/ui/Card/Card";
-import { Skeleton } from "../../../../shared/ui/Skeleton/Skeleton";
-import cls from "./ArticleListItemSkeleton.module.scss";
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { ArticleView } from '../../model/consts/consts';
+import { Card } from '../../../../shared/ui/Card/Card';
+import { Skeleton } from '../../../../shared/ui/Skeleton/Skeleton';
+import cls from './ArticleListItemSkeleton.module.scss';
 
 interface ArticleListItemSkeletonProps {
   className?: string;
@@ -56,5 +56,5 @@ export const ArticleListItemSkeleton = memo(
         </Card>
       </div>
     );
-  }
+  },
 );

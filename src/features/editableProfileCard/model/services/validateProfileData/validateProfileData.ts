@@ -1,7 +1,7 @@
 // features/editableProfileCard/model/services/validateProfileData/validateProfileData.ts
-import { Profile } from "@/entities/Profile";
+import { Profile } from '@/entities/Profile';
 
-import { ValidateProfileError } from "../../consts/consts";
+import { ValidateProfileError } from '../../consts/consts';
 
 // eslint-disable-next-line consistent-return
 export const validateProfileData = (profile?: Profile) => {
@@ -9,8 +9,8 @@ export const validateProfileData = (profile?: Profile) => {
     return [ValidateProfileError.NO_DATA];
   }
   const {
- firstname, lastname, age, country
-} = profile;
+    firstname, lastname, age, country
+  } = profile;
 
   const errors: ValidateProfileError[] = [];
 

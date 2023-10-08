@@ -1,17 +1,17 @@
 // features/AuthByUserName/model/selectors/getLoginUsername/getLoginUsername.test.ts
 
-import { StateSchema } from "@/app/providers/StoreProvider";
-import { getLoginUsername } from "../../selectors/getLoginUsername/getLoginUsername";
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { getLoginUsername } from '../../selectors/getLoginUsername/getLoginUsername';
 
-describe("getLoginUsername.test", () => {
-  test("should return username", () => {
+describe('getLoginUsername.test', () => {
+  test('should return username', () => {
     const state: DeepPartial<StateSchema> = {
-      loginForm: { username: "Константин" },
+      loginForm: { username: 'Константин' },
     };
-    expect(getLoginUsername(state as StateSchema)).toEqual("Константин");
+    expect(getLoginUsername(state as StateSchema)).toEqual('Константин');
   });
-  test("should work with empty state", () => {
+  test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getLoginUsername(state as StateSchema)).toEqual("");
+    expect(getLoginUsername(state as StateSchema)).toEqual('');
   });
 });

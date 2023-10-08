@@ -1,15 +1,15 @@
 // src/shared/ui/Loader/Loader.stories.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Loader } from "./Loader";
-import { Theme } from "@/shared/const/theme";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Loader } from './Loader';
+import { Theme } from '@/shared/const/theme';
 
 export default {
-  title: "shared/Loader", // название stories
+  title: 'shared/Loader', // название stories
   component: Loader, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof Loader>;
 

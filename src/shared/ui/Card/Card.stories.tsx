@@ -1,13 +1,13 @@
 // shared/ui/Card/Card.stories.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Text } from "../../ui/Text/Text";
-import { Card } from "./Card";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Text } from '../../ui/Text/Text';
+import { Card } from './Card';
 
 export default {
-  title: "shared/Card",
+  title: 'shared/Card',
   component: Card,
-  argTypes: { backgroundColor: { color: "color" } },
+  argTypes: { backgroundColor: { color: 'color' } },
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;

@@ -1,11 +1,11 @@
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ArticleEditForm } from "./articleEditForm";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ArticleEditForm } from './articleEditForm';
 
 export default {
-  title: "features/articleEditForm/articleEditForm",
+  title: 'features/articleEditForm/articleEditForm',
   component: ArticleEditForm,
-  argTypes: { backgroundColor: { color: "color" } },
+  argTypes: { backgroundColor: { color: 'color' } },
 } as ComponentMeta<typeof ArticleEditForm>;
 
 const Template: ComponentStory<typeof ArticleEditForm> = (args) => (

@@ -1,15 +1,15 @@
 // src/widgets/PageError/ui/PageError.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { PageError } from "./PageError";
-import { Theme } from "@/shared/const/theme";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { PageError } from './PageError';
+import { Theme } from '@/shared/const/theme';
 
 export default {
-  title: "widgets/PageError", // название stories
+  title: 'widgets/PageError', // название stories
   component: PageError, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof PageError>;
 

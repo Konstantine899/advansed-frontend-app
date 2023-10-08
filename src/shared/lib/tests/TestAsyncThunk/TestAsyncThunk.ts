@@ -1,13 +1,13 @@
 // shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts
-import { AsyncThunkAction } from "@reduxjs/toolkit";
-import axios, { AxiosStatic } from "axios";
-import { StateSchema } from "@/app/providers/StoreProvider";
+import { AsyncThunkAction } from '@reduxjs/toolkit';
+import axios, { AxiosStatic } from 'axios';
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 type actionCreatorType<Return, Arg, RejectedValue> = (
-  arg: Arg
+  arg: Arg,
 ) => AsyncThunkAction<Return, Arg, { rejectValue: RejectedValue }>;
 
-jest.mock("axios"); // мокаем модуль
+jest.mock('axios'); // мокаем модуль
 
 const mockedAxios = jest.mocked(axios, true); // Глубокое моканье модуля. С захватом внутренних полей
 
@@ -23,7 +23,10 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 
   api: jest.MockedFunctionDeep<AxiosStatic>;
 
-  constructor(actionCreator: actionCreatorType<Return, Arg, RejectedValue>, state?: DeepPartial<StateSchema>) {
+  constructor(
+    actionCreator: actionCreatorType<Return, Arg, RejectedValue>,
+    state?: DeepPartial<StateSchema>,
+  ) {
     this.actionCreator = actionCreator;
     this.dispatch = jest.fn();
     this.navigate = jest.fn();

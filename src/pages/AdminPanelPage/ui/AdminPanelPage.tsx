@@ -1,11 +1,11 @@
 // pages/AdminPanelPage/ui/AdminPanelPage.tsx
-import React, { memo } from "react";
-import { useTranslation } from "react-i18next";
-import { Page } from "@/widgets/Page";
+import React, { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Page } from '@/widgets/Page';
 
 const AdminPanelPage = memo(() => {
-  const { t } = useTranslation("admin-panel-page");
-  return <Page data-testid="AdminPanelPage">{t("Админ панель")}</Page>;
+  const { t } = useTranslation('admin-panel-page');
+  return <Page data-testid="AdminPanelPage">{t('Админ панель')}</Page>;
 });
 
 export default AdminPanelPage;

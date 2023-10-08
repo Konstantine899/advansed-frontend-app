@@ -1,15 +1,15 @@
 // widgets/ThemeSwitcher/ThemeSwitcher.stories.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { ThemeSwitcher } from "./ThemeSwitcher";
-import { Theme } from "@/shared/const/theme";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeSwitcher } from './ThemeSwitcher';
+import { Theme } from '@/shared/const/theme';
 
 export default {
-  title: "widgets/ThemeSwitcher", // название stories
+  title: 'widgets/ThemeSwitcher', // название stories
   component: ThemeSwitcher, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof ThemeSwitcher>;
 

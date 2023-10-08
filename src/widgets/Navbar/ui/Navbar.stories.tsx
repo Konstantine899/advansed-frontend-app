@@ -1,16 +1,16 @@
 // src/widgets/Navbar/Navbar.stories.tsx
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import { Navbar } from "../../Navbar";
-import { Theme } from "@/shared/const/theme";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Navbar } from '../../Navbar';
+import { Theme } from '@/shared/const/theme';
 
 export default {
-  title: "widgets/Navbar", // название stories
+  title: 'widgets/Navbar', // название stories
   component: Navbar, // компонент с которым мы работаем указываем здесь
   argTypes: {
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof Navbar>;
 

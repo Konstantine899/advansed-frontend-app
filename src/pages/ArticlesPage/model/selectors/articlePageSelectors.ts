@@ -1,7 +1,7 @@
 // pages/ArticlesPage/model/selectors/articlePageSelectors.ts
 
-import { StateSchema } from "@/app/providers/StoreProvider";
-import { ArticleSortField, ArticleType, ArticleView } from "@/entities/Article";
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 
 export const getArticlePageIsLoading = (state: StateSchema) => state.articlesPage?.isLoading || false;
 export const getArticlePageIsError = (state: StateSchema) => state.articlesPage?.error;
@@ -16,7 +16,7 @@ export const getArticlePageInited = (state: StateSchema) => state.articlesPage?.
 // В таком случае лучше использовать Nullish operator
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 // Пустой строкой state проинициализируется только тогда когда левый операнд у нас null или undefined
-export const getArticlePageOrder = (state: StateSchema) => state.articlesPage?.order ?? `asc`;
+export const getArticlePageOrder = (state: StateSchema) => state.articlesPage?.order ?? 'asc';
 export const getArticlePageSort = (state: StateSchema) => state.articlesPage?.sort ?? ArticleSortField.CREATED;
-export const getArticlePageSearch = (state: StateSchema) => state.articlesPage?.search ?? "";
+export const getArticlePageSearch = (state: StateSchema) => state.articlesPage?.search ?? '';
 export const getArticlePageType = (state: StateSchema) => state.articlesPage?.type ?? ArticleType.ALL;

@@ -1,9 +1,9 @@
 // pages/ArticleEditPage/ui/ArticleEditPage/ArticleEditPage.tsx
-import { useTranslation } from "react-i18next";
-import { memo } from "react";
-import { useParams } from "react-router-dom";
-import { Page } from "@/widgets/Page";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
+import { useParams } from 'react-router-dom';
+import { Page } from '@/widgets/Page';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface ArticleEditPageProps {
   className?: string;
@@ -19,7 +19,7 @@ const ArticleEditPage = memo((props: ArticleEditPageProps) => {
     <Page className={classNames('', {}, [className])}>
       {isEdit
         ? t(`Редактирование статьи с ID = ${id}`)
-        : t(`Создание новой статьи`)}
+        : t('Создание новой статьи')}
     </Page>
   );
 });

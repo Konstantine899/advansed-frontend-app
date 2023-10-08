@@ -1,4 +1,4 @@
 // pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.async.tsx
-import { lazy } from "react";
+import { lazy } from 'react';
 
-export const ArticlesPageAsync = lazy(() => import("./ArticlesPage"));
+export const ArticlesPageAsync = lazy(() => import('./ArticlesPage'));

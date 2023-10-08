@@ -1,6 +1,6 @@
 // entities/model/types/user.ts
 
-import { UserRole } from "../../model/consts/consts";
+import { UserRole } from '../../model/consts/consts';
 
 export interface User {
   id: string;

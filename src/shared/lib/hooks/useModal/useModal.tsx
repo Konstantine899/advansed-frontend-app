@@ -5,7 +5,7 @@ import {
   useEffect,
   useRef,
   useState,
-} from "react";
+} from 'react';
 
 interface UseModalProps {
   onClose?: () => void;
@@ -40,20 +40,20 @@ export function useModal({ onClose, isOpen, animationDelay }: UseModalProps) {
   // Закрываю модальное окно при нажатии Escape
   const onKeyDown = useCallback(
     (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+      if (event.key === 'Escape') {
         close();
       }
     },
-    [close]
+    [close],
   );
 
   useEffect(() => {
     if (isOpen) {
-      window.addEventListener("keydown", onKeyDown);
+      window.addEventListener('keydown', onKeyDown);
     }
     return () => {
       clearTimeout(timerRef.current);
-      window.removeEventListener("keydown", onKeyDown); // очищаю слушатель события
+      window.removeEventListener('keydown', onKeyDown); // очищаю слушатель события
     };
   }, [isOpen, onKeyDown]);
 

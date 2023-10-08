@@ -1,11 +1,11 @@
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { CommentCard } from "./CommentCard";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { CommentCard } from './CommentCard';
 
 export default {
-  title: "entities/Comment/CommentCard",
+  title: 'entities/Comment/CommentCard',
   component: CommentCard,
-  argTypes: { backgroundColor: { color: "color" } },
+  argTypes: { backgroundColor: { color: 'color' } },
 } as ComponentMeta<typeof CommentCard>;
 
 const Template: ComponentStory<typeof CommentCard> = (args) => (
@@ -15,9 +15,9 @@ const Template: ComponentStory<typeof CommentCard> = (args) => (
 export const Normal = Template.bind({});
 Normal.args = {
   comment: {
-    id: "1",
-    text: "hello world",
-    user: { id: "1", username: "Vasya" },
+    id: '1',
+    text: 'hello world',
+    user: { id: '1', username: 'Vasya' },
   },
   isLoading: false,
 };

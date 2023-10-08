@@ -1,9 +1,9 @@
 // pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList.ts
 
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Article, ArticleType } from "@/entities/Article";
-import { ThunkConfig } from "@/app/providers/StoreProvider";
-import { addQueryParams } from "@/shared/url/addQueryParams/addQueryParams";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { Article, ArticleType } from '@/entities/Article';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
+import { addQueryParams } from '@/shared/url/addQueryParams/addQueryParams';
 import {
   getArticlePageLimit,
   getArticlePageNum,
@@ -11,7 +11,7 @@ import {
   getArticlePageSearch,
   getArticlePageSort,
   getArticlePageType,
-} from "../../selectors/articlePageSelectors";
+} from '../../selectors/articlePageSelectors';
 
 interface FetchArticleListProps {
   replace?: boolean;
@@ -21,7 +21,7 @@ export const fetchArticlesList = createAsyncThunk<
   Article[],
   FetchArticleListProps,
   ThunkConfig<string>
->(`ArticlesPage/fetchArticlesList`, async (props, thunkAPI) => {
+>('ArticlesPage/fetchArticlesList', async (props, thunkAPI) => {
   const { extra, rejectWithValue, getState } = thunkAPI;
   const limit = getArticlePageLimit(getState());
   const page = getArticlePageNum(getState());
@@ -32,17 +32,20 @@ export const fetchArticlesList = createAsyncThunk<
 
   try {
     addQueryParams({
- sort, order, search, type
-}); // добавляю query параметры к строке запроса
-    const response = await extra.api.get<Article[]>(`/articles`, {
+      sort,
+      order,
+      search,
+      type,
+    }); // добавляю query параметры к строке запроса
+    const response = await extra.api.get<Article[]>('/articles', {
       params: {
-        _expand: `user`,
+        _expand: 'user',
         _limit: limit,
         _page: page,
         _sort: sort,
         _order: order,
         q: search, // в документации это просто поле q
-        type: type === ArticleType.ALL ? undefined : type // если type выбран как ALL, то тогда на сервер ничего не отправляем
+        type: type === ArticleType.ALL ? undefined : type, // если type выбран как ALL, то тогда на сервер ничего не отправляем
       },
     });
 
@@ -51,6 +54,6 @@ export const fetchArticlesList = createAsyncThunk<
     }
     return response.data;
   } catch (error) {
-    return rejectWithValue(`error`);
+    return rejectWithValue('error');
   }
 });

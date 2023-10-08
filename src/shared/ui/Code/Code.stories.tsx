@@ -1,13 +1,13 @@
 // shared/ui/Code/Code.stories.tsx
 
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Code } from "./Code";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Code } from './Code';
 
 export default {
-  title: "shared/Code",
+  title: 'shared/Code',
   component: Code,
-  argTypes: { backgroundColor: { color: "color" } },
+  argTypes: { backgroundColor: { color: 'color' } },
 } as ComponentMeta<typeof Code>;
 
 const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
@@ -38,5 +38,5 @@ export const Code = memo((props: CodeProps) => {
       <code>{text}</code>
     </pre>
   );
-});`
+});`,
 };

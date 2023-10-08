@@ -7,9 +7,7 @@
     "views": 500,
     "createdAt": "26.02.2000",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -74,9 +72,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -88,9 +84,7 @@
     "views": 700,
     "createdAt": "26.02.2001",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -155,9 +149,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -169,9 +161,7 @@
     "views": 2010,
     "createdAt": "26.02.2010",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -236,9 +226,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -250,9 +238,7 @@
     "views": 3045,
     "createdAt": "26.02.2011",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -317,9 +303,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -331,9 +315,7 @@
     "views": 2013,
     "createdAt": "26.02.2013",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -398,9 +380,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -412,9 +392,7 @@
     "views": 7777,
     "createdAt": "26.02.2013",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -479,9 +457,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -493,9 +469,7 @@
     "views": 4788,
     "createdAt": "26.02.2014",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -560,9 +534,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -574,9 +546,7 @@
     "views": 1000,
     "createdAt": "26.02.2015",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -641,9 +611,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   },
@@ -655,9 +623,7 @@
     "views": 2000,
     "createdAt": "26.02.2018",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -722,9 +688,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-54.userapi.com/impg/g454Mgz5jY1rIvhdRgllsNPzF3ltWFFPeeKoSw/FhY_lkGEiso.jpg?size=915x900&quality=95&sign=90bf3cd6eb70557b20d4db99daf88a94&type=album"
     }
   }

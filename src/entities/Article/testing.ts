@@ -3,4 +3,4 @@ export {
   articleDetailsReducer,
   articleDetailsActions,
   articleDetailsSlice,
-} from "./model/slice/articleDetailsSlice";
+} from './model/slice/articleDetailsSlice';

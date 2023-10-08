@@ -1,14 +1,14 @@
 // features/articleRating/ui/ArticleRating/ArticleRating.stories.tsx
 
-import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import ArticleRating from "./ArticleRating";
-import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import ArticleRating from './ArticleRating';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-  title: "features/articleRating/ArticleRating",
+  title: 'features/articleRating/ArticleRating',
   component: ArticleRating,
-  argTypes: { backgroundColor: { color: "color" } },
+  argTypes: { backgroundColor: { color: 'color' } },
 } as ComponentMeta<typeof ArticleRating>;
 
 const Template: ComponentStory<typeof ArticleRating> = (args) => (
@@ -16,13 +16,13 @@ const Template: ComponentStory<typeof ArticleRating> = (args) => (
 );
 
 export const Normal = Template.bind({});
-Normal.args = { articleId: "1" };
-Normal.decorators = [StoreDecorator({ user: { authData: { id: "1" } } })];
+Normal.args = { articleId: '1' };
+Normal.decorators = [StoreDecorator({ user: { authData: { id: '1' } } })];
 Normal.parameters = {
   mockData: [
     {
       url: `${__API__}/article-ratings?userId=1&articleId=1`,
-      method: "GET",
+      method: 'GET',
       status: 200,
       response: [{ rate: 4 }],
     },
@@ -30,12 +30,12 @@ Normal.parameters = {
 };
 
 export const WithoutRate = Template.bind({});
-WithoutRate.decorators = [StoreDecorator({ user: { authData: { id: "1" } } })];
+WithoutRate.decorators = [StoreDecorator({ user: { authData: { id: '1' } } })];
 WithoutRate.parameters = {
   mockData: [
     {
       url: `${__API__}/article-ratings?userId=1&articleId=1`,
-      method: "GET",
+      method: 'GET',
       status: 200,
       response: [],
     },

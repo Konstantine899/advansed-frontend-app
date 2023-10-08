@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/shared/ui/Button";
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Button } from '@/shared/ui/Button';
 
 // Компонент для тестирования
 export const BugButton = () => {
@@ -17,7 +17,7 @@ export const BugButton = () => {
 
   return (
     <div>
-      <Button onClick={onThrow}>{t("Throw Error")}</Button>
+      <Button onClick={onThrow}>{t('Throw Error')}</Button>
     </div>
   );
 };

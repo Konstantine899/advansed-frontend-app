@@ -1,3 +1,3 @@
 // shared/ui/AppImage/index.ts
 
-export { AppImage } from "./AppImage";
+export { AppImage } from './AppImage';
