@@ -1,0 +1,11 @@
+{
+  "id": "4",
+  "firstname": "testuser",
+  "lastname": "testuser",
+  "age": 33,
+  "currency": "BYN",
+  "country": "Belarus",
+  "city": "Vitebsk",
+  "username": "admin",
+  "avatar": "https://www.pngarts.com/files/3/Avatar-PNG-Pic.png"
+}
