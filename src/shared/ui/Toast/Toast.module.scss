@@ -1,0 +1,75 @@
+// shared/ui/Toast/Toast.module.scss
+.Toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+  color: white;
+  font-family: var(--font-family-main);
+
+  &.success {
+    background-color: #4caf50;
+  }
+
+  &.error {
+    background-color: #f44336;
+  }
+
+  &.info {
+    background-color: #2196f3;
+  }
+
+  &.warning {
+    background-color: #ff9800;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .message {
+    flex: 1;
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
