@@ -39,3 +39,5 @@ export const ArticleImageFallback = memo((props: ArticleImageFallbackProps) => {
     </div>
   );
 });
+
+ArticleImageFallback.displayName = 'ArticleImageFallback';

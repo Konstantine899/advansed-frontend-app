@@ -59,3 +59,5 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
     />
   );
 });
+
+AvatarDropdown.displayName = 'AvatarDropdown';

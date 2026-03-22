@@ -2,3 +2,5 @@
 import { lazy } from 'react';
 
 export const ArticlesPageAsync = lazy(() => import('./ArticlesPage'));
+
+ArticlesPageAsync.displayName = 'ArticlesPageAsync';

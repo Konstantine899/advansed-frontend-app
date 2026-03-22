@@ -39,3 +39,5 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     />
   );
 });
+
+CountrySelect.displayName = 'CountrySelect';

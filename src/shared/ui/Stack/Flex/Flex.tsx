@@ -76,3 +76,5 @@ export const Flex = (props: FlexProps) => {
     </div>
   );
 };
+
+Flex.displayName = 'Flex';

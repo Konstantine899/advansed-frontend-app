@@ -7,3 +7,5 @@ export const SuspenseDecorator = (StoryComponent: Story) => (
     <StoryComponent />
   </Suspense>
 );
+
+SuspenseDecorator.displayName = 'SuspenseDecorator';

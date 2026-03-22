@@ -21,3 +21,7 @@ export const BugButton = () => {
     </div>
   );
 };
+
+BugButton.displayName = 'BugButton';
+
+BugButton.displayName = 'BugButton';

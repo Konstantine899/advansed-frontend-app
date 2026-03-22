@@ -10,3 +10,5 @@ export const ArticleEditForm = memo((props: articleEditFormProps) => {
 
   return <div className={classNames('', {}, [className])}>{}</div>;
 });
+
+ArticleEditForm.displayName = 'ArticleEditForm';

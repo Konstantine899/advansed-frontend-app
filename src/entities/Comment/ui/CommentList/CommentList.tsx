@@ -41,3 +41,5 @@ export const CommentList = memo((props: CommentListProps) => {
     </VStack>
   );
 });
+
+CommentList.displayName = 'CommentList';

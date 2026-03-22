@@ -39,3 +39,5 @@ export const NotificationList = memo((props: NotificationListProps) => {
     </VStack>
   );
 });
+
+NotificationList.displayName = 'NotificationList';

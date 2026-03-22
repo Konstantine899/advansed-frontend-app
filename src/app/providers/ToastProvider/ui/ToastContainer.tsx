@@ -20,3 +20,5 @@ export const ToastContainer = memo(() => {
     </>
   );
 });
+
+ToastContainer.displayName = 'ToastContainer';

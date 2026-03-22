@@ -40,3 +40,5 @@ export const Code = memo((props: CodeProps) => {
   );
 });`,
 };
+
+Normal.displayName = 'Normal';

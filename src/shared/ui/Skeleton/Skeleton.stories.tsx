@@ -45,3 +45,5 @@ CircleDark.args = {
   height: 100,
 };
 CircleDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+Normal.displayName = 'Normal';

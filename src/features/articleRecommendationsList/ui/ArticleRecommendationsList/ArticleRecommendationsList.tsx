@@ -35,3 +35,5 @@ export const ArticleRecommendationsList = memo(
     );
   },
 );
+
+ArticleRecommendationsList.displayName = 'ArticleRecommendationsList';

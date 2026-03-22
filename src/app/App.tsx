@@ -31,3 +31,7 @@ export const App = () => {
     </ToastProvider>
   );
 };
+
+App.displayName = 'App';
+
+App.displayName = 'App';

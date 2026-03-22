@@ -32,3 +32,5 @@ export const Popover = memo((props: PopoverProps) => {
     </HPopover>
   );
 });
+
+Popover.displayName = 'Popover';

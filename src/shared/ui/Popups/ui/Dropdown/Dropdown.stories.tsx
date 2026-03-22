@@ -18,3 +18,5 @@ Normal.args = {
   trigger: <Button>Open</Button>,
   items: [{ content: 'first' }, { content: 'second' }, { content: 'third' }],
 };
+
+Normal.displayName = 'Normal';

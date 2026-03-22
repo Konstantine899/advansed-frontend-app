@@ -50,3 +50,5 @@ export const NotificationButton = memo((props: notificationButtonProps) => {
     </>
   );
 });
+
+NotificationButton.displayName = 'NotificationButton';

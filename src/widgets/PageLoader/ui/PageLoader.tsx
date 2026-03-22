@@ -12,3 +12,5 @@ export const PageLoader = memo(({ className }: PageLoaderProps) => (
     <Loader />
   </div>
 ));
+
+PageLoader.displayName = 'PageLoader';

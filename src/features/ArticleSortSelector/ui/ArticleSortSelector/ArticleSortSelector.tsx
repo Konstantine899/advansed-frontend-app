@@ -58,3 +58,5 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     </div>
   );
 });
+
+ArticleSortSelector.displayName = 'ArticleSortSelector';

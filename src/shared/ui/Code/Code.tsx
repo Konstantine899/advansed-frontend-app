@@ -30,3 +30,5 @@ export const Code = memo((props: CodeProps) => {
     </pre>
   );
 });
+
+Code.displayName = 'Code';

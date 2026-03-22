@@ -27,3 +27,5 @@ Dark.args = {
   children: 'lorem100',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+Primary.displayName = 'Primary';

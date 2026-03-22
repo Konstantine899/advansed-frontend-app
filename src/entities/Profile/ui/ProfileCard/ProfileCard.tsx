@@ -160,3 +160,5 @@ export const ProfileCard = (props: ProfileCardProps) => {
     </VStack>
   );
 };
+
+ProfileCard.displayName = 'ProfileCard';

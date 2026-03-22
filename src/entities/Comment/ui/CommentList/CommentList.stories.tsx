@@ -36,3 +36,5 @@ Empty.args = {
   comments: [],
   isLoading: false,
 };
+
+Normal.displayName = 'Normal';

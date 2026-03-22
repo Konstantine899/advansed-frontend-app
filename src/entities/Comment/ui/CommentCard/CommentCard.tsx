@@ -62,3 +62,5 @@ export const CommentCard = memo((props: CommentCardProps) => {
     </VStack>
   );
 });
+
+CommentCard.displayName = 'CommentCard';

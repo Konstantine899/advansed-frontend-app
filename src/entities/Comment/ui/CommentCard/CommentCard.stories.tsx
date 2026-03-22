@@ -27,3 +27,5 @@ Loading.args = {
   comment: undefined,
   isLoading: true,
 };
+
+Normal.displayName = 'Normal';

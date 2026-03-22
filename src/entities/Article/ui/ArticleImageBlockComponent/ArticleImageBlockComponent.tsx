@@ -24,3 +24,5 @@ export const ArticleImageBlockComponent = memo(
     );
   },
 );
+
+ArticleImageBlockComponent.displayName = 'ArticleImageBlockComponent';

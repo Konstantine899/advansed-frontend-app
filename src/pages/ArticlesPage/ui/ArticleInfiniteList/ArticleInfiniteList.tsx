@@ -36,3 +36,5 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     />
   );
 });
+
+ArticleInfiniteList.displayName = 'ArticleInfiniteList';

@@ -1,8 +1,8 @@
 // src/widgets/PageError/ui/PageError.tsx
-import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui/Button';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import cls from './PageError.module.scss';
 
 interface PageErrorProps {
@@ -24,3 +24,5 @@ export const PageError = memo(({ className }: PageErrorProps) => {
     </div>
   );
 });
+
+PageError.displayName = 'PageError';

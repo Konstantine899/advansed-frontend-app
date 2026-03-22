@@ -161,3 +161,5 @@ Small.args = {
   article,
   view: ArticleView.SMALL,
 };
+
+Big.displayName = 'Big';

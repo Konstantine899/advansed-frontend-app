@@ -118,3 +118,5 @@ export const Drawer = (props: DrawerProps) => (
     <DrawerAsync {...props} />
   </AnimationProvider>
 );
+
+Drawer.displayName = 'Drawer';

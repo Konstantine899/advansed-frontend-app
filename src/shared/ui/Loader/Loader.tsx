@@ -14,3 +14,5 @@ export const Loader = ({ className }: LoaderProps) => (
     <div />
   </div>
 );
+
+Loader.displayName = 'Loader';

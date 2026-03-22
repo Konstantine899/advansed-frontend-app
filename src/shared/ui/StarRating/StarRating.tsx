@@ -63,3 +63,5 @@ export const StarRating = memo((props: StarRatingProps) => {
     </div>
   );
 });
+
+StarRating.displayName = 'StarRating';

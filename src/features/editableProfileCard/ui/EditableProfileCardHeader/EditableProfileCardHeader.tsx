@@ -82,3 +82,5 @@ export const EditableProfileCardHeader = memo(
     );
   },
 );
+
+EditableProfileCardHeader.displayName = 'EditableProfileCardHeader';

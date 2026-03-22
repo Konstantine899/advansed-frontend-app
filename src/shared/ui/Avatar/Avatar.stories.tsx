@@ -27,3 +27,5 @@ Small.args = {
   src: AvatarImg,
   alt: '',
 };
+
+Large.displayName = 'Large';

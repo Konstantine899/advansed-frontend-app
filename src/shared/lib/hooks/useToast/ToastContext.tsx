@@ -52,3 +52,5 @@ export const ToastProvider = ({ children }: ToastProviderProps) => {
     </ToastContext.Provider>
   );
 };
+
+ToastContext.displayName = 'ToastContext';

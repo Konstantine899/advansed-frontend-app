@@ -23,3 +23,5 @@ export const ArticleCodeBlockComponent = memo(
     );
   },
 );
+
+ArticleCodeBlockComponent.displayName = 'ArticleCodeBlockComponent';

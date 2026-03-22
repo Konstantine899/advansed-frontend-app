@@ -114,3 +114,5 @@ Disabled.args = {
   theme: ButtonTheme.OUTLINE,
   disabled: true,
 };
+
+Primary.displayName = 'Primary';

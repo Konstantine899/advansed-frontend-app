@@ -40,3 +40,5 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     />
   );
 });
+
+CurrencySelect.displayName = 'CurrencySelect';

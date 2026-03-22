@@ -44,3 +44,5 @@ export const Toast = memo((props: ToastProps) => {
     </div>
   );
 });
+
+Toast.displayName = 'Toast';

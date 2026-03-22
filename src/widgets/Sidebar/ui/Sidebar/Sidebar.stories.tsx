@@ -33,3 +33,5 @@ Dark.decorators = [
 export const NoAuth = Template.bind({});
 NoAuth.args = {};
 NoAuth.decorators = [StoreDecorator({ user: {} })]; // что бы пользователь был не авторизован, просто не передаю authData: {}
+
+Light.displayName = 'Light';

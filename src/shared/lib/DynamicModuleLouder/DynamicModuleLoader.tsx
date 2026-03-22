@@ -62,3 +62,5 @@ export const DynamicModuleLoader = (props: DynamicModuleLouderProps) => {
   // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{children}</>;
 };
+
+DynamicModuleLoader.displayName = 'DynamicModuleLoader';

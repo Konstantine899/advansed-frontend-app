@@ -114,3 +114,5 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     </div>
   );
 });
+
+ArticlesPageFilters.displayName = 'ArticlesPageFilters';

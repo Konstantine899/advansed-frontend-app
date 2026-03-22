@@ -15,3 +15,7 @@ export const ToastProvider = ({ children }: ToastProviderProps) => {
     </BaseToastProvider>
   );
 };
+
+ToastProvider.displayName = 'ToastProvider';
+
+ToastProvider.displayName = 'ToastProvider';

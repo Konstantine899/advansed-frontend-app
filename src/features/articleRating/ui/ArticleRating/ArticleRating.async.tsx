@@ -10,3 +10,5 @@ export const ArticleRatingAsync = (props: ArticleRatingProps) => (
     <ArticleRatingLazy {...props} />
   </Suspense>
 );
+
+ArticleRatingLazy.displayName = 'ArticleRatingLazy';

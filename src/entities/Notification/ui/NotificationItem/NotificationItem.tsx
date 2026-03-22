@@ -33,3 +33,5 @@ export const NotificationItem = memo((props: NotificationItemProps) => {
 
   return content;
 });
+
+NotificationItem.displayName = 'NotificationItem';

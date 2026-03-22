@@ -17,3 +17,5 @@ const Template: ComponentStory<typeof ArticleSortSelector> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
+
+Normal.displayName = 'Normal';

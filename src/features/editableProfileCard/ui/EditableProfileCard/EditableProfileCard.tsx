@@ -154,3 +154,5 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     </DynamicModuleLoader>
   );
 });
+
+EditableProfileCard.displayName = 'EditableProfileCard';

@@ -85,3 +85,5 @@ SizeL.args = {
   text: 'Text Text Text Text Text Text',
   size: TextSize.L,
 };
+
+Primary.displayName = 'Primary';

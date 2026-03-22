@@ -49,3 +49,5 @@ export const ArticleDetailsPageHeader = memo(
     );
   },
 );
+
+ArticleDetailsPageHeader.displayName = 'ArticleDetailsPageHeader';

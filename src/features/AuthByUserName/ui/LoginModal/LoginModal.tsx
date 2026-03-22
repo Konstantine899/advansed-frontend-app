@@ -27,3 +27,5 @@ export const LoginModal = (props: LoginModalProps) => {
     </Modal>
   );
 };
+
+LoginModal.displayName = 'LoginModal';

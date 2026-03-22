@@ -58,3 +58,5 @@ export const ArticleDetailsComments = memo(
     );
   },
 );
+
+ArticleDetailsComments.displayName = 'ArticleDetailsComments';

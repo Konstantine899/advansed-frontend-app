@@ -51,3 +51,5 @@ export const Avatar = (props: AvatarProps) => {
     />
   );
 };
+
+Avatar.displayName = 'Avatar';

@@ -26,3 +26,5 @@ export const ArticleTextBlockComponent = memo(
     );
   },
 );
+
+ArticleTextBlockComponent.displayName = 'ArticleTextBlockComponent';

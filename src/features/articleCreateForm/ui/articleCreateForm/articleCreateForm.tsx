@@ -118,3 +118,5 @@ export const ArticleCreateForm = memo((props: ArticleCreateFormProps) => {
     </Card>
   );
 });
+
+ArticleCreateForm.displayName = 'ArticleCreateForm';

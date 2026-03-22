@@ -16,3 +16,5 @@ const Template: ComponentStory<typeof Popover> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
+
+Normal.displayName = 'Normal';

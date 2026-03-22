@@ -43,3 +43,5 @@ Loading.decorators = [
     loginForm: { isLoading: true },
   }),
 ];
+
+Primary.displayName = 'Primary';

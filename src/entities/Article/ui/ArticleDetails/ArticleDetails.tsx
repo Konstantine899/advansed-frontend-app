@@ -155,3 +155,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     </DynamicModuleLoader>
   );
 });
+
+ArticleDetails.displayName = 'ArticleDetails';
+
+ArticleDetails.displayName = 'ArticleDetails';

@@ -107,3 +107,5 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     </AppLink>
   );
 });
+
+ArticleListItem.displayName = 'ArticleListItem';

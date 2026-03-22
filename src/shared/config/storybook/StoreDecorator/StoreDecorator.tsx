@@ -24,3 +24,5 @@ export const StoreDecorator = (state: DeepPartial<StateSchema>, asyncReducers?: 
     <StoryComponent />
   </StoreProvider>
 );
+
+StoreDecorator.displayName = 'StoreDecorator';

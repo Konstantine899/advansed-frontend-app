@@ -23,3 +23,5 @@ Primary.args = {
     { value: '4', content: 'Четвертый пункт' },
   ],
 };
+
+Primary.displayName = 'Primary';

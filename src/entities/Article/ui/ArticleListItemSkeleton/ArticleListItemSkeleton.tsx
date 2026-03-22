@@ -58,3 +58,5 @@ export const ArticleListItemSkeleton = memo(
     );
   },
 );
+
+ArticleListItemSkeleton.displayName = 'ArticleListItemSkeleton';

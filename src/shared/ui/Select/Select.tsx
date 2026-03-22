@@ -55,3 +55,5 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
     </div>
   );
 };
+
+Select.displayName = 'Select';

@@ -39,3 +39,5 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
     </AppLink>
   );
 });
+
+SidebarItem.displayName = 'SidebarItem';

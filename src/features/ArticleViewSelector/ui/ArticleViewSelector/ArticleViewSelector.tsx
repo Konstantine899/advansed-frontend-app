@@ -45,3 +45,5 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     </div>
   );
 });
+
+ArticleViewSelector.displayName = 'ArticleViewSelector';

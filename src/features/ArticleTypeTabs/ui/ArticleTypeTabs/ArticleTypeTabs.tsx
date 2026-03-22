@@ -32,3 +32,5 @@ export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
 
   return <Tabs tabs={typesTabs} value={value} onTabClick={onTabClick} />;
 });
+
+ArticleTypeTabs.displayName = 'ArticleTypeTabs';

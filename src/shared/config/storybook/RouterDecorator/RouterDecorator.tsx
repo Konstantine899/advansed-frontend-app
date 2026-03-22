@@ -7,3 +7,5 @@ export const RouterDecorator = (StoryComponent: Story) => (
     <StoryComponent />
   </BrowserRouter>
 );
+
+RouterDecorator.displayName = 'RouterDecorator';

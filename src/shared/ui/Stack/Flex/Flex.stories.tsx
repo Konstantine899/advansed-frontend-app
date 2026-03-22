@@ -158,3 +158,5 @@ ColumnGap32.args = {
     </>
   ),
 };
+
+Row.displayName = 'Row';

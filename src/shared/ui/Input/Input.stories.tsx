@@ -18,3 +18,5 @@ Primary.args = {
   placeholder: 'Type text',
   value: '123',
 };
+
+Primary.displayName = 'Primary';

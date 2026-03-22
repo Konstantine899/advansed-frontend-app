@@ -56,3 +56,5 @@ export const Modal = (props: ModalProps) => {
     </Portal>
   );
 };
+
+Modal.displayName = 'Modal';

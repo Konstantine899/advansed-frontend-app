@@ -63,3 +63,5 @@ export const Page = memo((props: PageProps) => {
     </main>
   );
 });
+
+PAGE_ID.displayName = 'PAGE_ID';

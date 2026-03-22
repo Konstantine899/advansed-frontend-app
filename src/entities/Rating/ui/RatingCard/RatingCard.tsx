@@ -110,3 +110,5 @@ export const RatingCard = memo((props: RatingCardProps) => {
     </Card>
   );
 });
+
+RatingCard.displayName = 'RatingCard';
