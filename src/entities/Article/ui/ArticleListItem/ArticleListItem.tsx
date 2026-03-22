@@ -1,21 +1,22 @@
 // entities/Article/ui/ArticleListItem/ArticleListItem.tsx
-import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import { Icon } from '@/shared/ui/Icon';
-import { Card } from '@/shared/ui/Card';
+import { getRouteArticleDetails } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppImage } from '@/shared/ui/AppImage';
+import { AppLink } from '@/shared/ui/AppLink';
+import { ArticleImageFallback } from '@/shared/ui/ArticleImageFallback';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { AppLink } from '@/shared/ui/AppLink';
-import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { Article, ArticleTextBlock } from '../../model/types/article';
-import cls from './ArticleListItem.module.scss';
-import { getRouteArticleDetails } from '@/shared/const/router';
-import { AppImage } from '@/shared/ui/AppImage';
+import { Card } from '@/shared/ui/Card';
+import { Icon } from '@/shared/ui/Icon';
 import { Skeleton } from '@/shared/ui/Skeleton';
+import { Text } from '@/shared/ui/Text';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
+import { Article, ArticleTextBlock } from '../../model/types/article';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemProps {
   className?: string;
@@ -25,9 +26,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-  const {
-    className, article, view, target
-  } = props;
+  const { className, article, view, target } = props;
   const { t } = useTranslation();
 
   const types = <Text className={cls.types} text={article.type.join(', ')} />;
@@ -58,6 +57,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           {types}
           <AppImage
             fallback={<Skeleton width="100%" height={250} />}
+            errorFallback={<ArticleImageFallback width="100%" height={250} />}
             className={cls.img}
             src={article.img}
             alt={article.title}
@@ -91,6 +91,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         <div className={cls.imageWrapper}>
           <AppImage
             fallback={<Skeleton width={200} height={200} />}
+            errorFallback={<ArticleImageFallback width={200} height={200} />}
             className={cls.img}
             src={article.img}
             alt={article.title}
