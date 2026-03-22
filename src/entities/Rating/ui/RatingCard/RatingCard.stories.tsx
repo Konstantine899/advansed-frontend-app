@@ -16,4 +16,3 @@ const Template: ComponentStory<typeof RatingCard> = (args) => (
 export const Normal = Template.bind({});
 Normal.args = {};
 
-Normal.displayName = 'Normal';

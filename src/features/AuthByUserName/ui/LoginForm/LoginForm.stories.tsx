@@ -44,4 +44,3 @@ Loading.decorators = [
   }),
 ];
 
-Primary.displayName = 'Primary';

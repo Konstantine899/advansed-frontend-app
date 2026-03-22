@@ -28,4 +28,3 @@ Small.args = {
   alt: '',
 };
 
-Large.displayName = 'Large';

@@ -66,4 +66,3 @@ BottomRight.args = {
   ],
 };
 
-TopLeft.displayName = 'TopLeft';

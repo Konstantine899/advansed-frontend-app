@@ -23,4 +23,3 @@ Normal.args = {
   onTabClick: action('onTabClick'),
 };
 
-Normal.displayName = 'Normal';

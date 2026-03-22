@@ -46,4 +46,3 @@ SecondaryDark.args = {
 };
 SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-Primary.displayName = 'Primary';

@@ -46,4 +46,3 @@ CircleDark.args = {
 };
 CircleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-Normal.displayName = 'Normal';

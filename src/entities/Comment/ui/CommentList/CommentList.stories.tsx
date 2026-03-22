@@ -37,4 +37,3 @@ Empty.args = {
   isLoading: false,
 };
 
-Normal.displayName = 'Normal';

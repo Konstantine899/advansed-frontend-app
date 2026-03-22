@@ -42,4 +42,3 @@ WithoutRate.parameters = {
   ],
 };
 
-Normal.displayName = 'Normal';

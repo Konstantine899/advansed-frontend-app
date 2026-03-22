@@ -115,4 +115,3 @@ Disabled.args = {
   disabled: true,
 };
 
-Primary.displayName = 'Primary';

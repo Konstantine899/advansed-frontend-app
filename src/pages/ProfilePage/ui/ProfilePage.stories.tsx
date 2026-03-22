@@ -61,4 +61,3 @@ Dark.decorators = [
   }),
 ];
 
-Normal.displayName = 'Normal';

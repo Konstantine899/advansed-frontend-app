@@ -24,4 +24,3 @@ Primary.args = {
   ],
 };
 
-Primary.displayName = 'Primary';

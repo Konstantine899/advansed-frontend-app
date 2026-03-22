@@ -18,4 +18,3 @@ const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => (
 export const Normal = Template.bind({});
 Normal.args = {};
 
-Normal.displayName = 'Normal';

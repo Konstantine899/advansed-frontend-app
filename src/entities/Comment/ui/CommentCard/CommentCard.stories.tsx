@@ -28,4 +28,3 @@ Loading.args = {
   isLoading: true,
 };
 
-Normal.displayName = 'Normal';

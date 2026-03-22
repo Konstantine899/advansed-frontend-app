@@ -29,4 +29,3 @@ export const AuthNavbar = Template.bind({});
 AuthNavbar.args = {};
 AuthNavbar.decorators = [StoreDecorator({ user: { authData: {} } })];
 
-Light.displayName = 'Light';

@@ -25,4 +25,3 @@ export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)];
 
-Normal.displayName = 'Normal';

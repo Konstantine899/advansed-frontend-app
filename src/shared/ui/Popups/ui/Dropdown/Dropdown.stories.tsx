@@ -19,4 +19,3 @@ Normal.args = {
   items: [{ content: 'first' }, { content: 'second' }, { content: 'third' }],
 };
 
-Normal.displayName = 'Normal';

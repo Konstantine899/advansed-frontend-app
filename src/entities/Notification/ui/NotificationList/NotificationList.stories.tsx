@@ -44,4 +44,3 @@ Normal.parameters = {
   ],
 };
 
-Normal.displayName = 'Normal';

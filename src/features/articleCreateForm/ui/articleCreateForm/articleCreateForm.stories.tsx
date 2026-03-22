@@ -15,4 +15,3 @@ const Template: ComponentStory<typeof ArticleCreateForm> = (args) => (
 export const Normal = Template.bind({});
 Normal.args = {};
 
-Normal.displayName = 'Normal';

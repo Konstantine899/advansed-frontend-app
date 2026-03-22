@@ -42,4 +42,3 @@ Loading.args = {
   isLoading: true,
 };
 
-Primary.displayName = 'Primary';

@@ -28,4 +28,3 @@ Dark.args = {
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
-Primary.displayName = 'Primary';
