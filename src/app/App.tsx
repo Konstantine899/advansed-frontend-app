@@ -33,5 +33,3 @@ export const App = () => {
 };
 
 App.displayName = 'App';
-
-App.displayName = 'App';

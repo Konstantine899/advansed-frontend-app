@@ -1,6 +1,7 @@
 // entities/Currency/ui//CurrencySelect/CurrencySelect.tsx
-import { memo } from 'react';
 import { ListBox } from '@/shared/ui/Popups';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Currency } from '../../modal/types/currency';
 
 interface CurrencySelectProps {
@@ -19,9 +20,9 @@ const options = [
 ];
 
 export const CurrencySelect = memo((props: CurrencySelectProps) => {
-  const {
-    className, value, onChange, readonly
-  } = props;
+  const { className, value, onChange, readonly } = props;
+
+  const { t } = useTranslation('profile'); // создаю новое пространство имен
 
   const onChangeHandler = (value: string) => {
     onChange?.(value as Currency);
@@ -31,8 +32,8 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     <ListBox
       className={className}
       value={value}
-      defaultValue="Укажите валюту"
-      label="Укажите валюту"
+      defaultValue={t('Укажите валюту')}
+      label={t('Укажите валюту')}
       items={options}
       readonly={readonly}
       direction="top right"

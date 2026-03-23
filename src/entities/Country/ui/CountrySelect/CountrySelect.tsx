@@ -1,6 +1,7 @@
 // entities/Currency/ui//CurrencySelect/CurrencySelect.tsx
-import { memo } from 'react';
 import { ListBox } from '@/shared/ui/Popups';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Country } from '../../model/types/country';
 
 interface CountrySelectProps {
@@ -18,9 +19,9 @@ const options = [
 ];
 
 export const CountrySelect = memo((props: CountrySelectProps) => {
-  const {
-    className, value, onChange, readonly
-  } = props;
+  const { className, value, onChange, readonly } = props;
+
+  const { t } = useTranslation('profile'); // создаю новое пространство имен
 
   const onChangeHandler = (value: string) => {
     onChange?.(value as Country);
@@ -31,8 +32,8 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
       className={className}
       items={options}
       value={value}
-      defaultValue="Укажите страну"
-      label="Укажите страну"
+      defaultValue={t('Укажите страну')}
+      label={t('Укажите страну')}
       readonly={readonly}
       direction="top right"
       onChange={onChangeHandler}
