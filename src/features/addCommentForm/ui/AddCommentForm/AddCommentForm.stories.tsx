@@ -20,4 +20,3 @@ Normal.args = {
 };
 
 Normal.decorators = [StoreDecorator({})];
-

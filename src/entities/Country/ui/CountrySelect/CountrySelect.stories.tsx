@@ -17,4 +17,3 @@ const Template: ComponentStory<typeof CountrySelect> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
-

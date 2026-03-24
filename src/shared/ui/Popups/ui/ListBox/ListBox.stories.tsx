@@ -65,4 +65,3 @@ BottomRight.args = {
     { content: '3333333333333', value: '3' },
   ],
 };
-

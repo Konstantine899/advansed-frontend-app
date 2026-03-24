@@ -23,4 +23,3 @@ Primary.args = {
     { value: '4', content: 'Четвертый пункт' },
   ],
 };
-

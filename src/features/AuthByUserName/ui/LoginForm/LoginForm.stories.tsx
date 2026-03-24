@@ -43,4 +43,3 @@ Loading.decorators = [
     loginForm: { isLoading: true },
   }),
 ];
-

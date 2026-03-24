@@ -45,4 +45,3 @@ SecondaryDark.args = {
   theme: AppLinkTheme.SECONDARY,
 };
 SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-

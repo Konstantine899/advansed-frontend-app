@@ -47,8 +47,8 @@ export const ArticleCreateForm = memo((props: ArticleCreateFormProps) => {
           title,
           subtitle,
           img:
-            img ||
-            'https://tekmedia.org/uploads/posts/2021-04/1617791181_39-prikolno-kartinki-s-krasivim-vidom-prirody-42.jpg',
+            img
+            || 'https://tekmedia.org/uploads/posts/2021-04/1617791181_39-prikolno-kartinki-s-krasivim-vidom-prirody-42.jpg',
           type: [type],
           blocks: [],
         }),

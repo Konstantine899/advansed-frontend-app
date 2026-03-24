@@ -60,4 +60,3 @@ Dark.decorators = [
     },
   }),
 ];
-

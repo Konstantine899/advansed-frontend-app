@@ -163,4 +163,3 @@ Error.decorators = [StoreDecorator({ articleDetails: { error: 'error' } })];
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({ articleDetails: { data: article } })];
-

@@ -1,6 +1,12 @@
 // shared/lib/hooks/useToast/ToastContext.tsx
 import { ToastType } from '@/shared/ui/Toast';
-import { createContext, ReactNode, useCallback, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useMemo,
+  useState,
+} from 'react';
 
 export interface ToastMessage {
   id: string;
@@ -29,7 +35,12 @@ export const ToastProvider = ({ children }: ToastProviderProps) => {
   const showToast = useCallback(
     (message: string, type: ToastType = 'info', duration = 3000) => {
       const id = Date.now().toString();
-      const newToast: ToastMessage = { id, message, type, duration };
+      const newToast: ToastMessage = {
+        id,
+        message,
+        type,
+        duration,
+      };
 
       setToasts((prev) => [...prev, newToast]);
 
@@ -46,8 +57,17 @@ export const ToastProvider = ({ children }: ToastProviderProps) => {
     setToasts((prev) => prev.filter((toast) => toast.id !== id));
   }, []);
 
+  const contextValue = useMemo(
+    () => ({
+      toasts,
+      showToast,
+      removeToast,
+    }),
+    [toasts, showToast, removeToast],
+  );
+
   return (
-    <ToastContext.Provider value={{ toasts, showToast, removeToast }}>
+    <ToastContext.Provider value={contextValue}>
       {children}
     </ToastContext.Provider>
   );

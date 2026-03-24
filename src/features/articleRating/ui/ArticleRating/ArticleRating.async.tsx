@@ -10,4 +10,3 @@ export const ArticleRatingAsync = (props: ArticleRatingProps) => (
     <ArticleRatingLazy {...props} />
   </Suspense>
 );
-

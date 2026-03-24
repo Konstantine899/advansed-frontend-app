@@ -27,4 +27,3 @@ Small.args = {
   src: AvatarImg,
   alt: '',
 };
-

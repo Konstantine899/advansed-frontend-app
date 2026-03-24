@@ -22,8 +22,7 @@ export const ArticleImageFallback = memo((props: ArticleImageFallbackProps) => {
   } = props;
 
   const { i18n } = useTranslation();
-  const FallbackSVG =
-    i18n.language === 'ru' ? ArticleErrorFallbackRU : ArticleErrorFallbackEN;
+  const FallbackSVG = i18n.language === 'ru' ? ArticleErrorFallbackRU : ArticleErrorFallbackEN;
 
   const containerStyle = {
     width: typeof width === 'number' ? `${width}px` : width,

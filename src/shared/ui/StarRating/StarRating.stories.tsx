@@ -16,4 +16,3 @@ const Template: ComponentStory<typeof StarRating> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
-

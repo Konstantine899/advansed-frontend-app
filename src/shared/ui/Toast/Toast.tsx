@@ -23,6 +23,7 @@ export const Toast = memo((props: ToastProps) => {
       }, duration);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [duration, onClose]);
 
   const mods = {
@@ -34,6 +35,7 @@ export const Toast = memo((props: ToastProps) => {
       <div className={cls.content}>
         <span className={cls.message}>{message}</span>
         <button
+          type="button"
           className={cls.closeButton}
           onClick={onClose}
           aria-label="Close"

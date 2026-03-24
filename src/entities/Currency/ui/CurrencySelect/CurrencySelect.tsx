@@ -20,7 +20,9 @@ const options = [
 ];
 
 export const CurrencySelect = memo((props: CurrencySelectProps) => {
-  const { className, value, onChange, readonly } = props;
+  const {
+    className, value, onChange, readonly
+  } = props;
 
   const { t } = useTranslation('profile'); // создаю новое пространство имен
 

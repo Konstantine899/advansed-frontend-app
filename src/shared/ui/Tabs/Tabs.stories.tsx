@@ -22,4 +22,3 @@ Normal.args = {
   value: 'tab 2', // это выбранный tab
   onTabClick: action('onTabClick'),
 };
-

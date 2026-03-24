@@ -19,4 +19,3 @@ const Template: ComponentStory<typeof CurrencySelect> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
-

@@ -14,4 +14,3 @@ const Template: ComponentStory<typeof AppImage> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
-

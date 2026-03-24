@@ -24,7 +24,6 @@
     "@typescript-eslint",
     "i18next",
     "react-hooks",
-    "konstantine899-plugin",
     "unused-imports"
   ],
   "rules": {
@@ -70,26 +69,7 @@
       }
     ],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "konstantine899-plugin/path-cheker": ["error", { "alias": "@" }],
-    "konstantine899-plugin/public-api-imports": [
-      "error",
-      {
-        "alias": "@",
-        "testFilesPatterns": [
-          "**/*.test.*",
-          "**/*.stories.*",
-          "**/StoreDecorator.tsx"
-        ]
-      }
-    ],
-    "konstantine899-plugin/layer-imports": [
-      "error",
-      {
-        "alias": "@",
-        "ignoreImportPatterns": ["**/StoreProvider", "**/testing"]
-      }
-    ]
+    "react-hooks/exhaustive-deps": "error"
   },
   "globals": {
     "__IS_DEV__": true,

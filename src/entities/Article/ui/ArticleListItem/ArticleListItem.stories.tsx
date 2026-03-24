@@ -161,4 +161,3 @@ Small.args = {
   article,
   view: ArticleView.SMALL,
 };
-

@@ -7,14 +7,12 @@ interface ToastProviderProps {
   children: ReactNode;
 }
 
-export const ToastProvider = ({ children }: ToastProviderProps) => {
-  return (
-    <BaseToastProvider>
-      {children}
-      <ToastContainer />
-    </BaseToastProvider>
-  );
-};
+export const ToastProvider = ({ children }: ToastProviderProps) => (
+  <BaseToastProvider>
+    {children}
+    <ToastContainer />
+  </BaseToastProvider>
+);
 
 ToastProvider.displayName = 'ToastProvider';
 

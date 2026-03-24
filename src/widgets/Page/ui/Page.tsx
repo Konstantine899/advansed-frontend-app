@@ -63,4 +63,3 @@ export const Page = memo((props: PageProps) => {
     </main>
   );
 });
-

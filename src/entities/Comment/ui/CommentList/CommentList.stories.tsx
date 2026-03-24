@@ -36,4 +36,3 @@ Empty.args = {
   comments: [],
   isLoading: false,
 };
-

@@ -17,4 +17,3 @@ const Template: ComponentStory<typeof ArticleViewSelector> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
-
