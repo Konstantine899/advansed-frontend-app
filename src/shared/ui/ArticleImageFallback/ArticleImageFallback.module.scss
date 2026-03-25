@@ -1,21 +1,21 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  overflow: hidden; // Важно для масштабирования
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden; // Важно для масштабирования
 
-  .svg {
-    // Масштабируем SVG до нужного размера
-    transform: scale(var(--scale, 1));
-    transform-origin: center;
+    .svg {
+        // Масштабируем SVG до нужного размера
+        transform: scale(var(--scale, 1));
+        transform-origin: center;
 
-    // Или используем viewBox для контроля
-    width: 100%;
-    height: 100%;
-    max-width: 200px; // Оригинальный размер SVG
-    max-height: 150px; // Оригинальный размер SVG
-  }
+        // Или используем viewBox для контроля
+        width: 100%;
+        height: 100%;
+        max-width: 200px; // Оригинальный размер SVG
+        max-height: 150px; // Оригинальный размер SVG
+    }
 }

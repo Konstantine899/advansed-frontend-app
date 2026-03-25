@@ -65,6 +65,7 @@
   "Сортировать ПО": "Sort by",
   "Сохранить": "Save",
   "Спасибо за оценку": "Thank you for rating",
+  "Статьи": "Articles",
   "Статьи не найдены": "Articles not found",
   "Статья не найдена": "Article not found",
   "Страница не найдена": "Page not found",
@@ -78,6 +79,5 @@
   "названию": "title",
   "по": "by",
   "просмотрам": "views",
-  "убыванию": "descending",
-  "Статьи": "Articles"
+  "убыванию": "descending"
 }
