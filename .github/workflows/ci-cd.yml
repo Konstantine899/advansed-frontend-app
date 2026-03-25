@@ -2,9 +2,9 @@ name: CI/CD Pipeline - Linting, Testing, Building
 
 on:
   push:
-    branches: [master]
+    branches: [gh-pages]
   pull_request:
-    branches: [master]
+    branches: [gh-pages]
 
 permissions:
   contents: read
