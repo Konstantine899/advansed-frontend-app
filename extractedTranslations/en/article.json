@@ -10,6 +10,13 @@
   "Наука": "Science",
   "Ошибка при создании статьи": "Error creating article",
   "Рекомендуем": "Recommended",
+  "Создание": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Создание новой статьи": "Create new article",
   "Создать статью": "Create article",
   "Статья не найдена": "Article not found",

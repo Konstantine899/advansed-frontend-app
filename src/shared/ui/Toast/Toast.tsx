@@ -14,7 +14,9 @@ interface ToastProps {
 }
 
 export const Toast = memo((props: ToastProps) => {
-  const { className, message, type = 'info', duration = 3000, onClose } = props;
+  const {
+    className, message, type = 'info', duration = 3000, onClose
+  } = props;
 
   useEffect(() => {
     if (duration > 0) {
