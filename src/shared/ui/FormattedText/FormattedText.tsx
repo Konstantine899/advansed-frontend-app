@@ -43,21 +43,39 @@ export const FormattedText = memo((props: FormattedTextProps) => {
   const formatContent = (text: string) => {
     if (!text) return null;
 
+    // Заменяем все возможные варианты переносов строк
+    const normalizedText = text
+      .replace(/\\\\n/g, '\n')  // \\n -> \n
+      .replace(/\\n/g, '\n')    // \n -> \n
+      .replace(/\\r\\n/g, '\n') // \\r\\n -> \n
+      .replace(/\\r/g, '\n');   // \\r -> \n
+    
     // Разделяем текст на строки
-    const lines = text.split('\\n');
+    const lines = normalizedText.split('\n');
 
     return lines.map((line, index) => {
+      // Пропускаем пустые строки
+      if (!line.trim()) return null;
+      
       // Обрабатываем жирный текст **текст**
-      let formattedLine = line.replace(
-        /\\*\\*(.*?)\\*\\*/g,
-        '<strong>$1</strong>',
-      );
+      let formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
       // Обрабатываем ссылки [текст](URL)
       formattedLine = formattedLine.replace(
-        /\\[(.*?)\\]\\((.*?)\\)/g,
+        /\[(.*?)\]\((.*?)\)/g,
         '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
       );
+
+      // Обрабатываем обычные URL (http/https) - только если они не уже внутри тега <a>
+      formattedLine = formattedLine.replace(
+        /(https?:\/\/[^\s<]+)(?![^<]*>)/g,
+        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>',
+      );
+
+      // Обрабатываем маркированные списки (• элемент) - добавляем отступ
+      if (line.trim().startsWith('•')) {
+        formattedLine = `<div style="margin-left: 20px;">${formattedLine}</div>`;
+      }
 
       return (
         <div
@@ -66,7 +84,7 @@ export const FormattedText = memo((props: FormattedTextProps) => {
           dangerouslySetInnerHTML={{ __html: formattedLine }}
         />
       );
-    });
+    }).filter(Boolean); // Убираем null элементы
   };
 
   return (
