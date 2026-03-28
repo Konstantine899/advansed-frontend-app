@@ -1,0 +1,1 @@
+import{r as s,b as e,f as t,P as r,j as a,C as n}from"./index.9fa1a025.js";const o=s.exports.memo(()=>{const{t:u}=e("main");return t(r,{"data-testid":"MainPage",children:[a(n,{}),a("div",{children:u("\u0413\u043B\u0430\u0432\u043D\u0430\u044F \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430")})]})});export{o as default};

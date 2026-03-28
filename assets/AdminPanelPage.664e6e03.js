@@ -1,1 +1,0 @@
-import{r as e,b as u,j as t,P as n}from"./index.f3bfbe80.js";const r=e.exports.memo(()=>{const{t:a}=u("admin-panel-page");return t(n,{"data-testid":"AdminPanelPage",children:a("\u0410\u0434\u043C\u0438\u043D \u043F\u0430\u043D\u0435\u043B\u044C")})});export{r as default};
