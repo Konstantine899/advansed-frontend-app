@@ -1,60 +1,60 @@
 // src/shared/ui/FormattedText/FormattedText.module.scss
 .FormattedText {
-  &.left {
-    text-align: left;
-  }
-
-  &.right {
-    text-align: right;
-  }
-
-  &.center {
-    text-align: center;
-  }
-
-  &.size_s {
-    font-size: var(--font-size-s);
-    line-height: var(--font-line-s);
-  }
-
-  &.size_m {
-    font-size: var(--font-size-m);
-    line-height: var(--font-line-m);
-  }
-
-  &.size_l {
-    font-size: var(--font-size-l);
-    line-height: var(--font-line-l);
-  }
-
-  .line {
-    margin-bottom: 12px;
-    
-    &:last-child {
-      margin-bottom: 0;
+    &.left {
+        text-align: left;
     }
-    
-    strong {
-      font-weight: 700;
-      color: var(--primary-color);
+
+    &.right {
+        text-align: right;
     }
-    
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--primary-color);
-      transition: all 0.2s ease;
-      
-      &:hover {
-        color: var(--inverted-primary-color);
-        border-bottom-color: var(--inverted-primary-color);
-      }
+
+    &.center {
+        text-align: center;
     }
-    
-    // Стили для маркированных списков
-    div[style*="margin-left"] {
-      margin-top: 4px;
-      margin-bottom: 4px;
+
+    &.size_s {
+        font-size: var(--font-size-s);
+        line-height: var(--font-line-s);
     }
-  }
+
+    &.size_m {
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+    }
+
+    &.size_l {
+        font-size: var(--font-size-l);
+        line-height: var(--font-line-l);
+    }
+
+    .line {
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary-color);
+            transition: all 0.2s ease;
+
+            &:hover {
+                color: var(--inverted-primary-color);
+                border-bottom-color: var(--inverted-primary-color);
+            }
+        }
+
+        // Стили для маркированных списков
+        div[style*="margin-left"] {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    }
 }
