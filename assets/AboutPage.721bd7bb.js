@@ -1,0 +1,1 @@
+import{r as a,b as e,j as s,P as u}from"./index.f3bfbe80.js";const r=a.exports.memo(()=>{const{t}=e("about");return s(u,{"data-testid":"AboutPage",children:t("\u041E \u0441\u0430\u0439\u0442\u0435")})});export{r as default};

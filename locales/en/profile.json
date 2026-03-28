@@ -1,0 +1,17 @@
+{
+  "Ваш город": "Your city",
+  "Ваша возраст": "Your age",
+  "Ваша фамилия": "Your last name",
+  "Ваше имя": "Your first name",
+  "Введите имя пользователя": "Enter username",
+  "Введите ссылку на аватар": "Enter avatar URL",
+  "Данные не указаны": "Data not specified",
+  "Имя и фамилия обязательны": "First and last name are required",
+  "Не корректное название страны": "Invalid country name",
+  "Не корректный возраст": "Invalid age",
+  "Попробуйте обновить страницу": "Try refreshing the page",
+  "Произошла ошибка при загрузке профиля": "Error loading profile",
+  "Серверная ошибка при сохранении": "Server error when saving",
+  "Укажите валюту": "Select currency",
+  "Укажите страну": "Select country"
+}

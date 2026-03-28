@@ -1,0 +1,17 @@
+{
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.useESLintClass": true,
+  "eslint.options": {
+    "overrideConfigFile": ".eslintrc.js"
+  },
+  "testing.automaticallyOpenTestResults": "neverOpen"
+}
