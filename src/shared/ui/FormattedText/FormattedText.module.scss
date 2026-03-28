@@ -1,0 +1,42 @@
+// src/shared/ui/FormattedText/FormattedText.module.scss
+.FormattedText {
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.size_s {
+    font-size: var(--font-size-s);
+    line-height: var(--font-line-s);
+  }
+
+  &.size_m {
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
+  }
+
+  &.size_l {
+    font-size: var(--font-size-l);
+    line-height: var(--font-line-l);
+  }
+
+  .line {
+    margin-bottom: 8px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    strong {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+  }
+}

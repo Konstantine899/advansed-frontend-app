@@ -1,3 +1,29 @@
 {
-  "О сайте": "About"
+  "О сайте": "About",
+  "title": "Advansed Frontend App - Demo Project",
+  "description": "This is a full-featured React application developed to showcase modern frontend development skills, DevOps practices, and the complete development cycle from code to production.",
+
+  "tech_stack_title": "🛠 Complete Technology Stack",
+  "tech_stack": "**Core Technologies:**\\n• React 18.2.0 with TypeScript 4.5.5\\n• Redux Toolkit 1.9.0 + RTK Query\\n• React Router DOM 6.2.1\\n• i18next 21.9.0 for internationalization\\n\\n**Build & Tools:**\\n• Webpack 5.74.0 with custom configuration\\n• Vite 3.2.7 for development server\\n• Babel with i18next-extract plugins\\n• ESLint with custom plugin (eslint-plugin-konstantine899-plugin)\\n• Prettier for formatting\\n• Stylelint for SCSS\\n• Husky for pre-commit hooks\\n\\n**Testing:**\\n• Jest 27.5.1 with 84 unit tests\\n• Testing Library (React, DOM, User Event)\\n• Storybook 6.5.13 for components\\n• Loki 0.30.3 for visual testing\\n• Cypress 11.0.0 for E2E tests\\n\\n**UI Libraries & Animations:**\\n• @headlessui/react for accessible components\\n• @react-spring/web for animations\\n• @use-gesture/react for gestures\\n• react-device-detect for responsiveness\\n\\n**API & Data:**\\n• Axios for HTTP requests\\n• JSON Server for mock API\\n• JSON Web Token for authentication\\n• ts-morph for AST manipulation\\n\\n**DevOps & Deployment:**\\n• GitHub Actions for CI/CD\\n• GitHub Pages for frontend\\n• Vercel Serverless Functions for API\\n• gh-pages for manual deployment",
+
+  "architecture_title": "🏗 Architecture & Structure",
+  "architecture": "Project built using **Feature-Sliced Design (FSD)** methodology with clear separation of concerns:\\n\\n**Architecture Layers:**\\n• **Entities** - business logic (User, Article, Comment, Profile)\\n• **Features** - user scenarios (Auth, ArticleRating, ThemeSwitcher)\\n• **Widgets** - composite components (Page, Sidebar)\\n• **Pages** - application pages\\n• **Shared** - reusable components and utilities\\n\\n**Key Principles:**\\n• Strict TypeScript typing\\n• Module and dependency isolation\\n• Code splitting and lazy loading\\n• Dependency inversion through abstractions",
+
+  "features_title": "⭐ Key Features & Capabilities",
+  "features": "**Functionality:**\\n• Full CRUD for articles with validation\\n• JWT authentication with roles (admin/user)\\n• Internationalization (Russian/English)\\n• Dark/light theme with localStorage persistence\\n• Responsive design for all devices\\n• Notification system\\n• Article rating with animations\\n• Article comments\\n\\n**Performance:**\\n• Route-based code splitting\\n• Lazy loading of components\\n• Bundle optimization (Tree shaking)\\n• Request caching via RTK Query\\n\\n**UX/UI:**\\n• Accessibility (ARIA attributes)\\n• Semantic markup\\n• Smooth animations\\n• Intuitive navigation",
+
+  "ci_cd_title": "🚀 CI/CD & Deployment",
+  "ci_cd": "**Complete GitHub Actions Pipeline:**\\n• Automatic runs on push/pull request\\n• TypeScript and SCSS linting\\n• 84 unit tests with HTML reports\\n• Webpack and Vite builds\\n• Visual testing (Loki)\\n• Automatic deployment to GitHub Pages\\n\\n**Multi-platform Deployment:**\\n• **Frontend:** GitHub Pages (https://konstantine899.github.io/advansed-frontend-app/)\\n• **Backend:** Vercel Serverless Functions (https://advansed-frontend-app-xry5.vercel.app/)\\n• **Documentation:** Storybook static build\\n\\n**Code Quality:**\\n• Pre-commit hooks with linting\\n• Automatic formatting\\n• TypeScript type checking\\n• Test coverage reports",
+
+  "testing_title": "🧪 Testing & Quality",
+  "testing": "**Multi-level Testing:**\\n• **84 unit tests** with Jest\\n• **Visual testing** with Loki\\n• **Component testing** with Storybook\\n• **E2E tests** with Cypress\\n• **API integration tests**\\n\\n**Quality Tools:**\\n• ESLint with 8+ configurations\\n• Stylelint for SCSS\\n• Prettier for consistent style\\n• TypeScript strict mode\\n• Circular dependency detection",
+
+  "demo_title": "🎯 Demo for Employers",
+  "demo": "**Test Accounts:**\\n• 👑 Administrator: `admin` / `123` (full access)\\n• 👤 User: `user` / `123` (limited access)\\n\\n**What to Test:**\\n1. **CRUD Operations:** Create, read, update, delete articles\\n2. **Authentication:** Login/logout, protected routes\\n3. **Internationalization:** Language switching\\n4. **Themes:** Light/dark theme\\n5. **Responsiveness:** Different screen sizes\\n6. **Performance:** Fast loading, lazy loading\\n\\n**Check Links:**\\n• App: https://konstantine899.github.io/advansed-frontend-app/\\n• API: https://advansed-frontend-app-xry5.vercel.app/\\n• CI/CD: https://github.com/Konstantine899/advansed-frontend-app/actions\\n• Code: https://github.com/Konstantine899/advansed-frontend-app",
+
+  "project_goal_title": "🎯 Project Goals",
+  "project_goal": "**Skill Demonstration:**\\n• Modern frontend development stack\\n• Architectural patterns and best practices\\n• Complete CI/CD and deployment cycle\\n• Testing and quality assurance\\n• Real API and state management work\\n\\n**For Employers:**\\n• Show ability to create production-ready applications\\n• Demonstrate understanding of full development cycle\\n• Work with modern tools and practices\\n• Create maintainable and scalable code",
+
+  "contact_title": "📞 Contacts & Links",
+  "contact": "**Developer:** Konstantin\\n**GitHub:** https://github.com/Konstantine899\\n**Project:** https://github.com/Konstantine899/advansed-frontend-app\\n**LinkedIn:** [your LinkedIn link]\\n**Email:** [your email]\\n\\n**Technical Documentation:**\\n• EMPLOYER_DEMO_GUIDE.md - complete demonstration guide\\n• DEMO_QUICK_START.md - 5-minute quick start\\n• DEPLOY_API_GUIDE.md - API deployment instructions\\n• VERCEL_DEPLOYMENT.md - Vercel setup"
 }

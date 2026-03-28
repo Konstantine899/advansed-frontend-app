@@ -1,3 +1,29 @@
 {
-  "О сайте": "О сайте"
+  "О сайте": "О сайте",
+  "title": "Advansed Frontend App - Демонстрационный проект",
+  "description": "Это полнофункциональное React приложение разработано для демонстрации современных навыков фронтенд-разработки, DevOps практик и полного цикла разработки от кода до продакшена.",
+
+  "tech_stack_title": "🛠 Полный технологический стек",
+  "tech_stack": "**Основные технологии:**\\n• React 18.2.0 с TypeScript 4.5.5\\n• Redux Toolkit 1.9.0 + RTK Query\\n• React Router DOM 6.2.1\\n• i18next 21.9.0 для интернационализации\\n\\n**Сборка и инструменты:**\\n• Webpack 5.74.0 с кастомной конфигурацией\\n• Vite 3.2.7 для development сервера\\n• Babel с плагинами для i18next-extract\\n• ESLint с кастомным плагином (eslint-plugin-konstantine899-plugin)\\n• Prettier для форматирования\\n• Stylelint для SCSS\\n• Husky для pre-commit хуков\\n\\n**Тестирование:**\\n• Jest 27.5.1 с 84 юнит-тестами\\n• Testing Library (React, DOM, User Event)\\n• Storybook 6.5.13 для компонентов\\n• Loki 0.30.3 для визуального тестирования\\n• Cypress 11.0.0 для E2E тестов\\n\\n**UI библиотеки и анимации:**\\n• @headlessui/react для доступных компонентов\\n• @react-spring/web для анимаций\\n• @use-gesture/react для жестов\\n• react-device-detect для адаптивности\\n\\n**API и данные:**\\n• Axios для HTTP запросов\\n• JSON Server для mock API\\n• JSON Web Token для аутентификации\\n• ts-morph для работы с AST\\n\\n**DevOps и деплой:**\\n• GitHub Actions для CI/CD\\n• GitHub Pages для фронтенда\\n• Vercel Serverless Functions для API\\n• gh-pages для ручного деплоя",
+
+  "architecture_title": "🏗 Архитектура и структура",
+  "architecture": "Проект построен по методологии **Feature-Sliced Design (FSD)** с четким разделением ответственности:\\n\\n**Слои архитектуры:**\\n• **Entities (сущности)** - бизнес-логика (User, Article, Comment, Profile)\\n• **Features (фичи)** - пользовательские сценарии (Auth, ArticleRating, ThemeSwitcher)\\n• **Widgets (виджеты)** - композитные компоненты (Page, Sidebar)\\n• **Pages (страницы)** - страницы приложения\\n• **Shared (общие)** - переиспользуемые компоненты и утилиты\\n\\n**Ключевые принципы:**\\n• Строгая типизация TypeScript\\n• Изоляция модулей и зависимостей\\n• Code splitting и lazy loading\\n• Dependency inversion через абстракции",
+
+  "features_title": "⭐ Ключевые возможности и фичи",
+  "features": "**Функциональность:**\\n• Полный CRUD для статей с валидацией\\n• JWT аутентификация с ролями (admin/user)\\n• Интернационализация (русский/английский)\\n• Темная/светлая тема с сохранением в localStorage\\n• Адаптивный дизайн для всех устройств\\n• Система уведомлений\\n• Рейтинг статей с анимациями\\n• Комментарии к статьям\\n\\n**Производительность:**\\n• Code splitting по роутам\\n• Lazy loading компонентов\\n• Оптимизация бандла (Tree shaking)\\n• Кэширование запросов через RTK Query\\n\\n**UX/UI:**\\n• Доступность (ARIA атрибуты)\\n• Семантическая верстка\\n• Плавные анимации\\n• Интуитивная навигация",
+
+  "ci_cd_title": "🚀 CI/CD и деплой",
+  "ci_cd": "**Полный пайплайн GitHub Actions:**\\n• Автоматический запуск на push/pull request\\n• Линтинг TypeScript и SCSS\\n• 84 юнит-теста с отчетом в HTML\\n• Сборка Webpack и Vite\\n• Визуальное тестирование (Loki)\\n• Автоматический деплой на GitHub Pages\\n\\n**Мульти-платформенный деплой:**\\n• **Frontend:** GitHub Pages (https://konstantine899.github.io/advansed-frontend-app/)\\n• **Backend:** Vercel Serverless Functions (https://advansed-frontend-app-xry5.vercel.app/)\\n• **Документация:** Storybook статическая сборка\\n\\n**Качество кода:**\\n• Pre-commit хуки с линтингом\\n• Автоматическое форматирование\\n• Проверка типов TypeScript\\n• Отчеты о покрытии тестами",
+
+  "testing_title": "🧪 Тестирование и качество",
+  "testing": "**Многоуровневое тестирование:**\\n• **84 юнит-теста** с Jest\\n• **Визуальное тестирование** с Loki\\n• **Компонентное тестирование** со Storybook\\n• **E2E тесты** с Cypress\\n• **Интеграционные тесты** API\\n\\n**Инструменты качества:**\\n• ESLint с 8+ конфигурациями\\n• Stylelint для SCSS\\n• Prettier для единого стиля\\n• TypeScript strict mode\\n• Circular dependency detection",
+
+  "demo_title": "🎯 Демонстрация для работодателя",
+  "demo": "**Тестовые аккаунты:**\\n• 👑 Администратор: `admin` / `123` (полный доступ)\\n• 👤 Пользователь: `user` / `123` (ограниченный доступ)\\n\\n**Что можно протестировать:**\\n1. **CRUD операции:** Создание, чтение, редактирование, удаление статей\\n2. **Аутентификация:** Вход/выход, защищенные роуты\\n3. **Интернационализация:** Переключение языков\\n4. **Темы:** Светлая/темная тема\\n5. **Адаптивность:** Разные размеры экрана\\n6. **Производительность:** Быстрая загрузка, lazy loading\\n\\n**Ссылки для проверки:**\\n• Приложение: https://konstantine899.github.io/advansed-frontend-app/\\n• API: https://advansed-frontend-app-xry5.vercel.app/\\n• CI/CD: https://github.com/Konstantine899/advansed-frontend-app/actions\\n• Код: https://github.com/Konstantine899/advansed-frontend-app",
+
+  "project_goal_title": "🎯 Цели проекта",
+  "project_goal": "**Демонстрация навыков:**\\n• Современный стек фронтенд-разработки\\n• Архитектурные паттерны и лучшие практики\\n• Полный цикл CI/CD и деплой\\n• Тестирование и обеспечение качества\\n• Работа с реальным API и состоянием\\n\\n**Для работодателя:**\\n• Показать способность создавать production-ready приложения\\n• Демонстрировать понимание полного цикла разработки\\n• Уметь работать с современными инструментами и практиками\\n• Создавать поддерживаемый и масштабируемый код",
+
+  "contact_title": "📞 Контакты и ссылки",
+  "contact": "**Разработчик:** Константин\\n**GitHub:** https://github.com/Konstantine899\\n**Проект:** https://github.com/Konstantine899/advansed-frontend-app\\n**LinkedIn:** [ссылка на LinkedIn]\\n**Email:** [ваш email]\\n\\n**Техническая документация:**\\n• EMPLOYER_DEMO_GUIDE.md - полное руководство для демонстрации\\n• DEMO_QUICK_START.md - быстрый старт за 5 минут\\n• DEPLOY_API_GUIDE.md - инструкция по деплою API\\n• VERCEL_DEPLOYMENT.md - настройка Vercel"
 }
