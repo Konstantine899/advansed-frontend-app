@@ -1,6 +1,6 @@
 // webpack.config.ts
-import webpack from 'webpack';
 import path from 'path';
+import webpack from 'webpack';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { BuildEnv, BuildMode, BuildPath } from './config/build/types/config';
 
@@ -9,7 +9,7 @@ function getApiUrl(mode: BuildMode, apiUrl?: string) {
     return apiUrl;
   }
   if (mode === 'production') {
-    return '/api';
+    return 'https://advansed-frontend-app-xry5.vercel.app';
   }
   return 'http://localhost:8000';
 }

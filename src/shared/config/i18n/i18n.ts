@@ -17,7 +17,10 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath:
+        process.env.NODE_ENV === 'production'
+          ? '/advansed-frontend-app/locales/{{lng}}/{{ns}}.json'
+          : '/locales/{{lng}}/{{ns}}.json',
     },
     detection: {
       order: [

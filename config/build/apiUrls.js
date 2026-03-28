@@ -1,7 +1,7 @@
 // Конфигурация API URL для разных окружений
 export const API_URLS = {
   development: 'http://localhost:8000',
-  production: 'https://advansed-frontend-api.vercel.app', // Замените на ваш Vercel URL
+  production: 'https://advansed-frontend-app-xry5.vercel.app',
   test: '',
   storybook: 'https://testapi.com',
 };
