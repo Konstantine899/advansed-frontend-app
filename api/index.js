@@ -14,7 +14,7 @@ server.use(jsonServer.bodyParser);
 
 // Задержка для имитации реального API
 server.use((req, res, next) => {
-  setTimeout(next, 800);
+  setTimeout(next, 300);
 });
 
 // Эндпоинт для логина
@@ -38,9 +38,24 @@ server.post('/login', (req, res) => {
   }
 });
 
+// Тестовый эндпоинт для проверки работы API
+server.get('/health', (req, res) => {
+  res.json({
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    nodeVersion: process.version,
+    environment: process.env.NODE_ENV || 'production',
+    features: {
+      crud: true,
+      authentication: true,
+      realTimeUpdates: true,
+    },
+  });
+});
+
 // Middleware для проверки авторизации (опционально)
 server.use((req, res, next) => {
-  if (req.path === '/login') {
+  if (req.path === '/login' || req.path === '/health') {
     return next();
   }
 
