@@ -19,29 +19,29 @@ const AboutPage = memo(() => {
           align={TextAlign.CENTER}
         />
 
-        <Text title={t('tech_stack_title')} size={TextSize.M} />
-        <FormattedText content={t('tech_stack')} size={TextSize.S} />
+        <Text title={t('tech_stack_title')} size={TextSize.L} />
+        <FormattedText content={t('tech_stack')} size={TextSize.M} />
 
-        <Text title={t('architecture_title')} size={TextSize.M} />
-        <FormattedText content={t('architecture')} size={TextSize.S} />
+        <Text title={t('architecture_title')} size={TextSize.L} />
+        <FormattedText content={t('architecture')} size={TextSize.M} />
 
-        <Text title={t('features_title')} size={TextSize.M} />
-        <FormattedText content={t('features')} size={TextSize.S} />
+        <Text title={t('features_title')} size={TextSize.L} />
+        <FormattedText content={t('features')} size={TextSize.M} />
 
-        <Text title={t('ci_cd_title')} size={TextSize.M} />
-        <FormattedText content={t('ci_cd')} size={TextSize.S} />
+        <Text title={t('ci_cd_title')} size={TextSize.L} />
+        <FormattedText content={t('ci_cd')} size={TextSize.M} />
 
-        <Text title={t('testing_title')} size={TextSize.M} />
-        <FormattedText content={t('testing')} size={TextSize.S} />
+        <Text title={t('testing_title')} size={TextSize.L} />
+        <FormattedText content={t('testing')} size={TextSize.M} />
 
-        <Text title={t('demo_title')} size={TextSize.M} />
-        <FormattedText content={t('demo')} size={TextSize.S} />
+        <Text title={t('demo_title')} size={TextSize.L} />
+        <FormattedText content={t('demo')} size={TextSize.M} />
 
-        <Text title={t('project_goal_title')} size={TextSize.M} />
-        <FormattedText content={t('project_goal')} size={TextSize.S} />
+        <Text title={t('project_goal_title')} size={TextSize.L} />
+        <FormattedText content={t('project_goal')} size={TextSize.M} />
 
-        <Text title={t('contact_title')} size={TextSize.M} />
-        <FormattedText content={t('contact')} size={TextSize.S} />
+        <Text title={t('contact_title')} size={TextSize.L} />
+        <FormattedText content={t('contact')} size={TextSize.M} />
       </VStack>
     </Page>
   );

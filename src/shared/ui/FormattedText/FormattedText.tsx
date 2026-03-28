@@ -1,6 +1,6 @@
 // src/shared/ui/FormattedText/FormattedText.tsx
-import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { memo } from 'react';
 import cls from './FormattedText.module.scss';
 
 export enum TextAlign {
@@ -39,20 +39,29 @@ export const FormattedText = memo((props: FormattedTextProps) => {
 
   const additional = [className];
 
-  // Функция для форматирования текста с поддержкой **жирного текста** и переносов строк
+  // Функция для форматирования текста с поддержкой **жирного текста**, [ссылок] и переносов строк
   const formatContent = (text: string) => {
     if (!text) return null;
-    
+
     // Разделяем текст на строки
     const lines = text.split('\\n');
-    
+
     return lines.map((line, index) => {
       // Обрабатываем жирный текст **текст**
-      const formattedLine = line.replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>');
-      
+      let formattedLine = line.replace(
+        /\\*\\*(.*?)\\*\\*/g,
+        '<strong>$1</strong>',
+      );
+
+      // Обрабатываем ссылки [текст](URL)
+      formattedLine = formattedLine.replace(
+        /\\[(.*?)\\]\\((.*?)\\)/g,
+        '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
+      );
+
       return (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className={cls.line}
           dangerouslySetInnerHTML={{ __html: formattedLine }}
         />
@@ -61,7 +70,7 @@ export const FormattedText = memo((props: FormattedTextProps) => {
   };
 
   return (
-    <div 
+    <div
       className={classNames(cls.FormattedText, mods, additional)}
       data-testid={dataTestId}
     >
