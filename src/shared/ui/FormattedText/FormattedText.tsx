@@ -45,18 +45,18 @@ export const FormattedText = memo((props: FormattedTextProps) => {
 
     // Заменяем все возможные варианты переносов строк
     const normalizedText = text
-      .replace(/\\\\n/g, '\n')  // \\n -> \n
-      .replace(/\\n/g, '\n')    // \n -> \n
+      .replace(/\\\\n/g, '\n') // \\n -> \n
+      .replace(/\\n/g, '\n') // \n -> \n
       .replace(/\\r\\n/g, '\n') // \\r\\n -> \n
-      .replace(/\\r/g, '\n');   // \\r -> \n
-    
+      .replace(/\\r/g, '\n'); // \\r -> \n
+
     // Разделяем текст на строки
     const lines = normalizedText.split('\n');
 
     return lines.map((line, index) => {
       // Пропускаем пустые строки
       if (!line.trim()) return null;
-      
+
       // Обрабатываем жирный текст **текст**
       let formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
